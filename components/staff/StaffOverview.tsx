@@ -91,24 +91,19 @@ export function StaffOverview({
     .slice(0, 5);
 
   return (
-    <section className="min-h-full bg-[#edf1ed] px-4 py-5 sm:px-6 lg:px-8 lg:py-7">
+    <section className="min-h-full bg-[#edf1ed] px-4 py-4 sm:px-6 lg:px-8 lg:py-5">
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-wrap items-end justify-between gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#607568]">
-              Field desk / overview
-            </p>
-            <h1 className="mt-1 text-2xl font-semibold tracking-[-0.04em] text-[#183e32] sm:text-[30px]">
+            <h1 className="text-[30px] font-semibold tracking-[-0.04em] text-[#183e32]">
               What needs attention?
             </h1>
-            <p className="mt-2 max-w-xl text-[12px] leading-5 text-[#6f8378]">
-              A live read of the HaruKas demo queue. Counts reflect the reports loaded from the shared report store.
-            </p>
+            <p className="mt-1 text-[12px] text-[#6f8378]">Demo data · no municipal actions</p>
           </div>
           <button
             type="button"
             onClick={onOpenReports}
-            className="inline-flex min-h-11 items-center rounded-xl bg-[#183e32] px-4 text-[12px] font-semibold text-white shadow-[0_4px_12px_rgba(24,62,50,0.16)] transition hover:bg-[#255441] focus:outline-none focus:ring-2 focus:ring-[#7da18d] focus:ring-offset-2"
+            className="inline-flex min-h-10 items-center rounded-lg bg-[#183e32] px-4 text-[12px] font-semibold text-white transition hover:bg-[#255441] focus:outline-none focus:ring-2 focus:ring-[#7da18d] focus:ring-offset-2"
           >
             Open report desk
             <span aria-hidden="true" className="ml-2 text-base">→</span>
@@ -121,27 +116,27 @@ export function StaffOverview({
           </div>
         ) : null}
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-4">
           <SummaryCard label="Reports in snapshot" value={reports.length} detail="All seeded and citizen reports" />
           <SummaryCard label="Active reports" value={activeReports.length} detail={`${reports.length - activeReports.length} resolved in demo`} tone="green" />
           <SummaryCard label="Urgent review" value={urgentReports.length} detail="Active human review queue" tone="red" />
           <SummaryCard label="Reviewed obstructions" value={reviewedObstructions.length} detail="Active public warning markers" tone="amber" />
         </div>
 
-        <div className="mt-4 grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
-          <section className="rounded-lg border border-[#dce6dd] bg-white p-4 sm:p-5">
+        <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
+          <section className="rounded-lg border border-[#dce6dd] bg-white p-4">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#72867a]">Triage mix</p>
-                <h2 className="mt-1 text-[17px] font-semibold tracking-[-0.02em] text-[#234d3e]">Priority across the queue</h2>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[#72867a]">Triage mix</p>
+                <h2 className="mt-1 text-lg font-semibold tracking-[-0.02em] text-[#234d3e]">Priority across the queue</h2>
               </div>
-              <span className="rounded-full border border-[#d9e5db] bg-[#f7faf7] px-2.5 py-1 text-[10px] text-[#708277]">{reports.length} total</span>
+              <span className="rounded-full border border-[#d9e5db] bg-[#f7faf7] px-2.5 py-1 text-[12px] text-[#708277]">{reports.length} total</span>
             </div>
-            <div className="mt-5 grid gap-3">
+            <div className="mt-4 grid gap-2.5">
               {priorityOrder.map((priority) => {
                 const count = countBy(priorities, priority);
                 return (
-                  <div key={priority} className="grid grid-cols-[120px_1fr_28px] items-center gap-3 text-[11px]">
+                  <div key={priority} className="grid grid-cols-[132px_1fr_28px] items-center gap-3 text-[13px]">
                     <span className="font-medium text-[#526a5d]">{priorityLabel(priority)}</span>
                     <div className="h-2.5 overflow-hidden rounded-full bg-[#edf2ed]" aria-hidden="true">
                       <div
@@ -154,24 +149,21 @@ export function StaffOverview({
                 );
               })}
             </div>
-            <p className="mt-5 text-[10px] leading-4 text-[#87978e]">
-              Priority is a HaruKas inspection suggestion. It does not represent a municipal severity code or a prediction of failure.
-            </p>
           </section>
 
-          <section className="rounded-lg border border-[#dce6dd] bg-white p-4 sm:p-5">
+          <section className="rounded-lg border border-[#dce6dd] bg-white p-4">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#72867a]">Workflow</p>
-                <h2 className="mt-1 text-[17px] font-semibold tracking-[-0.02em] text-[#234d3e]">Where reports are now</h2>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[#72867a]">Workflow</p>
+                <h2 className="mt-1 text-lg font-semibold tracking-[-0.02em] text-[#234d3e]">Where reports are now</h2>
               </div>
-              <span className="text-[10px] text-[#87978e]">Current status</span>
+              <span className="text-[12px] text-[#87978e]">Current status</span>
             </div>
-            <div className="mt-5 grid gap-3">
+            <div className="mt-4 grid gap-2.5">
               {statusOrder.map((status) => {
                 const count = countBy(statuses, status);
                 return (
-                  <div key={status} className="flex items-center gap-3 text-[11px]">
+                  <div key={status} className="flex items-center gap-3 text-[13px]">
                     <span aria-hidden="true" className={`h-2 w-2 shrink-0 rounded-full ${statusTone(status)}`} />
                     <span className="min-w-0 flex-1 truncate text-[#526a5d]">{shortStatusLabel(status)}</span>
                     <span className="font-semibold tabular-nums text-[#294f40]">{count}</span>
@@ -182,43 +174,39 @@ export function StaffOverview({
                 );
               })}
             </div>
-            <p className="mt-5 text-[10px] leading-4 text-[#87978e]">
-              Simulated responses stay inside this demo. No crew, utility, or municipal system is contacted.
-            </p>
           </section>
         </div>
 
-        <section className="mt-4 rounded-lg border border-[#dce6dd] bg-white">
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#e6ece6] px-4 py-4 sm:px-5">
+        <section className="mt-3 rounded-lg border border-[#dce6dd] bg-white">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#e6ece6] px-4 py-3">
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#72867a]">Latest reports</p>
-              <h2 className="mt-1 text-[17px] font-semibold tracking-[-0.02em] text-[#234d3e]">Start with the newest evidence</h2>
+              <h2 className="text-lg font-semibold tracking-[-0.02em] text-[#234d3e]">Latest reports</h2>
             </div>
-            <button type="button" onClick={onOpenReports} className="text-[11px] font-semibold text-[#3c6d57] hover:text-[#183e32]">
+            <button type="button" onClick={onOpenReports} className="text-[12px] font-semibold text-[#3c6d57] hover:text-[#183e32]">
               View all reports →
             </button>
           </div>
           <div className="divide-y divide-[#edf1ed]">
-            {recentReports.map((report) => (
+            {recentReports.slice(0, 3).map((report) => (
               <button
                 key={report.id}
                 type="button"
                 onClick={() => onSelectReport(report.id)}
-                className="flex min-h-[68px] w-full items-center gap-3 px-4 py-3 text-left transition hover:bg-[#f8fbf8] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#7da18d] sm:px-5"
+                className="flex min-h-[56px] w-full items-center gap-3 px-4 py-2.5 text-left transition hover:bg-[#f8fbf8] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#7da18d]"
               >
                 <span aria-hidden="true" className="h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: publicPriorityColor(report.effectivePriority) }} />
                 <span className="min-w-0 flex-1">
                   <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                    <span className="truncate text-[12px] font-semibold text-[#294f40]">{report.citizenDetails.title}</span>
-                    <span className="font-mono text-[10px] text-[#8a9a90]">{report.reference}</span>
+                    <span className="truncate text-[13px] font-semibold text-[#294f40]">{report.citizenDetails.title}</span>
+                    <span className="font-mono text-[11px] text-[#8a9a90]">{report.reference}</span>
                   </span>
-                  <span className="mt-1 block truncate text-[11px] text-[#82938a]">{report.location.label}</span>
+                  <span className="mt-0.5 block truncate text-[12px] text-[#82938a]">{report.location.label}</span>
                 </span>
                 <span className="hidden shrink-0 text-right sm:block">
-                  <span className={`inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold ${priorityTone(report.effectivePriority)}`}>
+                  <span className={`inline-flex rounded-full border px-2 py-0.5 text-[11px] font-semibold ${priorityTone(report.effectivePriority)}`}>
                     {priorityLabel(report.effectivePriority)}
                   </span>
-                  <span className="mt-1 block text-[10px] text-[#94a29a]">{formatStaffDate(report.createdAt, false)}</span>
+                  <span className="mt-0.5 block text-[11px] text-[#94a29a]">{formatStaffDate(report.createdAt, false)}</span>
                 </span>
                 <span aria-hidden="true" className="text-[#86a095]">›</span>
               </button>
@@ -249,9 +237,9 @@ function SummaryCard({
   }[tone];
   return (
     <div className="rounded-lg border border-[#dce6dd] bg-white p-3.5">
-      <p className="text-[10px] font-semibold uppercase tracking-[0.13em] text-[#72867a]">{label}</p>
-      <p className={`mt-2 text-[30px] font-semibold tracking-[-0.06em] ${valueClass}`}>{value}</p>
-      <p className="mt-1 text-[10px] text-[#87978e]">{detail}</p>
+      <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#72867a]">{label}</p>
+      <p className={`mt-1 text-[32px] font-semibold tracking-[-0.06em] ${valueClass}`}>{value}</p>
+      <p className="mt-0.5 text-[11px] text-[#87978e]">{detail}</p>
     </div>
   );
 }
