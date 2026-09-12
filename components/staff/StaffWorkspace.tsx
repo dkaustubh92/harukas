@@ -333,7 +333,7 @@ export default function StaffWorkspace() {
       </nav>
 
       {activeTab === "overview" ? (
-        <div className="relative min-h-[calc(100dvh-7rem)]">
+        <div className="relative min-h-[calc(100dvh-118px)]">
           <StaffOverview
             reports={reports}
             loading={loading}
@@ -387,7 +387,7 @@ export default function StaffWorkspace() {
         </div>
       ) : (
         <div className={[
-          "grid min-h-[calc(100dvh-7rem)] lg:h-[calc(100dvh-7rem)] lg:overflow-hidden",
+          "grid min-h-[calc(100dvh-118px)] lg:h-[calc(100dvh-118px)] lg:overflow-hidden",
           evidenceCollapsed
             ? "lg:grid-cols-[320px_minmax(420px,1fr)_48px]"
             : "lg:grid-cols-[320px_minmax(420px,1fr)_420px]",
