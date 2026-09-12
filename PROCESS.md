@@ -26,7 +26,7 @@ Full rubric in `rubric`. Scope rule in `scope-60`. Demo shape in `demo-script-90
 | Time | Block | Who | Skill |
 |---|---|---|---|
 | 9:00–9:10 | Challenge lands | Both | — |
-| 9:10–9:25 | Empathize + research — **hard cap 15 min** | Both | `halifax-data` |
+| 9:10–9:25 | Empathize + research — **hard cap 15 min**. Fan out across candidate challenges in parallel if several are live | Both | `halifax-data` |
 | 9:25–9:50 | Interactive ideation | Both | `ideation-grill-me` |
 | **9:50–10:00** | **★ KILL GATE** — rubric score, 60-min check, name the 3 WoWs | Both | `rubric`, `scope-60` |
 | 10:00–10:15 | **★ 90-second demo script** = the spec | Both | `demo-script-90` |
@@ -95,6 +95,7 @@ Rungs 3 and 4 are nearly invisible in 90 seconds. Reach for them early.
 - **Model in the app:** `claude-opus-5`. **Not** `claude-fable-5-1` — 2× cost, multi-minute turns, and forced tool use returns 400 (`claude-api-demo`)
 - **Model in Claude Code:** Fable 5.1 for ideation/planning/creative; Opus 5 `xhigh` for coding
 - **HA never touches the repo** — works from the deployed URL (`two-lane`)
+- **Skills, not subagents.** Personas are skills so they run in-session with full context. The only place to fan out to agents is the 9:10–9:25 research block
 - **Deploy early and often**, freeze at 14:00
 
 ---

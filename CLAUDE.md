@@ -41,6 +41,14 @@ Next.js (App Router) · TypeScript · Vercel AI SDK · Supabase · deployed on V
 | Demo | `demo-safe`, `pitch`, `qa-drill` |
 | Coordination | `two-lane` |
 
+## Skills, not subagents
+
+Use the persona **skills** above — not the Agent tool. A skill loads expertise into *this* session with full context; a subagent starts cold, costs latency, and can't see the conversation. On a 4-hour clock the bottleneck is KD's build throughput, and agents don't make code land faster.
+
+**One exception:** parallel research during the 9:10–9:25 block, when several challenges need evaluating under a hard 15-minute cap. Fan out there; nowhere else.
+
+HA's separate session is already the team's parallelism, and it's better than a subagent because a human steers it.
+
 ## Data
 
 Halifax open data is **verified and catalogued** in `halifax-data` — 339 public queryable layers, no auth, CORS open. Use `find.py` rather than guessing URLs. Do not query it live on the demo path; seed it (`demo-safe`).
