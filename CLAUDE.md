@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 @AGENTS.md
 
-Hackathon prototype — Claude Hackathon Halifax, 12 Sept 2026. Read `PROCESS.md` for the day's runbook.
+Hackathon prototype — Claude Hackathon Halifax, 12 Sept 2026. Read `docs/01-hackathon/runbook.md` for the day's runbook.
 
 ## Context that changes how you work here
 
@@ -12,7 +12,7 @@ This is a **4-hour hackathon build judged by a live demo**, not a product. The b
 
 - **If it isn't in the 90-second demo, don't build it.** See `scope-60`
 - **Deploy early and continuously.** Not at the end. See `ship-it`
-- **No auth, no settings, no responsive work** unless the demo shows it — the exception is a phone-sensor demo path, which forces 390px-wide layout. See "Phone as an input device" in `PROCESS.md`
+- **No auth, no settings, no responsive work** unless the demo shows it — the exception is a phone-sensor demo path, which forces 390px-wide layout. See "Phone as an input device" in `docs/01-hackathon/runbook.md`
 - Ugly-but-working beats elegant-but-unfinished
 
 ## Commands
@@ -110,4 +110,4 @@ python3 .claude/skills/halifax-data/scripts/find.py winter sidewalk
 
 `ANTHROPIC_API_KEY` and `SUPABASE_SERVICE_ROLE_KEY` are **server-only** — never `NEXT_PUBLIC_`. Claude calls go through a server route.
 
-**The repo is public**, so a committed key is exposed the moment it's pushed, not at release. Deleting the commit does not undo it — rotate the key instead. The project will be open-sourced after the event; the release checklist is at the end of `PROCESS.md`.
+**The repo is public**, so a committed key is exposed the moment it's pushed, not at release. Deleting the commit does not undo it — rotate the key instead. The project will be open-sourced after the event; the release checklist is at the end of `docs/01-hackathon/runbook.md`.

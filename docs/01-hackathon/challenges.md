@@ -4,7 +4,7 @@ Presented 10:00. Recorded verbatim from the slides. **Nothing chosen yet.**
 
 > **Four teams per problem. First to the board gets it.**
 
-Claiming is a race, not a deliberation. `PROCESS.md` budgets 10 minutes to pick — if a
+Claiming is a race, not a deliberation. `docs/01-hackathon/runbook.md` budgets 10 minutes to pick — if a
 problem is clearly ours, put a name on the board before finishing the analysis.
 
 ---
@@ -93,7 +93,7 @@ reward a small thing that works, and none reward ambition. Cut early (`scope-60`
 
 ## The demo is 3 minutes, not 90 seconds
 
-**This changes the plan.** `demo-script-90` and the "90 sec" figure in `PROCESS.md` are
+**This changes the plan.** `demo-script-90` and the "90 sec" figure in `docs/01-hackathon/runbook.md` are
 written for 90 seconds; the real budget is **3 minutes**. Roughly double the room —
 but it is a presentation budget, not licence for more features. Scope stays where
 `scope-60` puts it.

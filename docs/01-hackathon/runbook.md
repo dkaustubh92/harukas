@@ -14,14 +14,14 @@ Goal: win. Optimize for demo impact and judge-facing polish, not maintainability
 
 | | |
 |---|---|
-| **×2** | Day-one impact — *could they use it Monday?* Double-weighted, the largest bucket by far. Full rubric in `CHALLENGES.md` |
+| **×2** | Day-one impact — *could they use it Monday?* Double-weighted, the largest bucket by far. Full rubric in `docs/01-hackathon/challenges.md` |
 | **60 min** | The core demo path must work end-to-end by **11:45** — 60 min after ideation ends |
 | **3 min** | The demo (**not 90 sec**). Judged on one thing: *are the problem and outcome obvious?* |
 | **14:00** | Freeze. Whatever is live then is what you demo |
 
-Rubric is in `CHALLENGES.md` and **overrides the `rubric` skill's assumed weights**. Scope rule in `scope-60`. Demo shape in `demo-script-90` — **written for 90 sec, real budget is 3 min**.
+Rubric is in `docs/01-hackathon/challenges.md` and **overrides the `rubric` skill's assumed weights**. Scope rule in `scope-60`. Demo shape in `demo-script-90` — **written for 90 sec, real budget is 3 min**.
 
-The five challenges and the judges' three stated questions are in `CHALLENGES.md`. Read it before ideation.
+The five challenges and the judges' three stated questions are in `docs/01-hackathon/challenges.md`. Read it before ideation.
 
 ---
 
@@ -29,7 +29,7 @@ The five challenges and the judges' three stated questions are in `CHALLENGES.md
 
 | Time | Block | Who | Skill |
 |---|---|---|---|
-| 10:00–10:10 | Challenge lands + pick — **four teams per problem, first to the board gets it**. Claim early | Both | `CHALLENGES.md` |
+| 10:00–10:10 | Challenge lands + pick — **four teams per problem, first to the board gets it**. Claim early | Both | `docs/01-hackathon/challenges.md` |
 | 10:10–10:25 | Empathize + research — **hard cap 15 min**. Fan out across candidate challenges in parallel if several are live | Both | `halifax-data` |
 | 10:25–10:40 | Interactive ideation — **15 min, not 25** | Both | `ideation-grill-me` |
 | **10:40–10:45** | **★ KILL GATE** — rubric score, 60-min check, name the 3 WoWs | Both | `rubric`, `scope-60` |
