@@ -16,10 +16,12 @@ Goal: win. Optimize for demo impact and judge-facing polish, not maintainability
 |---|---|
 | **30%** | Presentation — the largest rubric bucket. HA's lane is not optional |
 | **60 min** | The core demo path must work end-to-end by **11:45** — 60 min after ideation ends |
-| **90 sec** | The demo. The **judge types**; the agent responds |
+| **3 min** | The demo (**not 90 sec** — confirmed at the briefing). The **judge types**; the agent responds |
 | **14:00** | Freeze. Whatever is live then is what you demo |
 
-Full rubric in `rubric`. Scope rule in `scope-60`. Demo shape in `demo-script-90`.
+Full rubric in `rubric`. Scope rule in `scope-60`. Demo shape in `demo-script-90` — **written for 90 sec, real budget is 3 min**.
+
+The five challenges and the judges' three stated questions are in `CHALLENGES.md`. Read it before ideation.
 
 ---
 
@@ -27,11 +29,11 @@ Full rubric in `rubric`. Scope rule in `scope-60`. Demo shape in `demo-script-90
 
 | Time | Block | Who | Skill |
 |---|---|---|---|
-| 10:00–10:10 | Challenge lands + pick | Both | — |
+| 10:00–10:10 | Challenge lands + pick — **four teams per problem, first to the board gets it**. Claim early | Both | `CHALLENGES.md` |
 | 10:10–10:25 | Empathize + research — **hard cap 15 min**. Fan out across candidate challenges in parallel if several are live | Both | `halifax-data` |
 | 10:25–10:40 | Interactive ideation — **15 min, not 25** | Both | `ideation-grill-me` |
 | **10:40–10:45** | **★ KILL GATE** — rubric score, 60-min check, name the 3 WoWs | Both | `rubric`, `scope-60` |
-| 10:45–11:00 | **★ 90-second demo script** = the spec | Both | `demo-script-90` |
+| 10:45–11:00 | **★ 3-minute demo script** = the spec | Both | `demo-script-90` |
 | 10:45–11:00 | **★ Scaffold + FIRST DEPLOY** — live URL exists | KD | `ship-it` |
 | 11:00–11:30 | UI mock → image-gen prompt | HA | `creative-ui-ux-director` |
 | 11:00–11:45 | Core path working, **unstyled** | KD | `senior-ai-developer` |
@@ -58,7 +60,7 @@ Score each on 1–5:
 | Criterion | Ask |
 |---|---|
 | **Data availability** | Is there a verified public layer? Run `halifax-data` **before** committing |
-| **Crowding** | How many of the ~15 teams will pick this? Lower is better |
+| **Crowding** | Capped at four teams per problem. Assume all four slots fill on the popular ones |
 | **Demoability** | Can a judge type something and see value in 90 seconds? |
 | **Local resonance** | Will a Halifax judge feel this personally? |
 | **Our edge** | Do we know something about this domain others don't? |
