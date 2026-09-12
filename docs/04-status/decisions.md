@@ -16,8 +16,10 @@ for decisions made *on the day*.
 | 12 Sep, 10:00 | Rubric: day-one impact ×2; product, idea, demo ×1 each | From the judging slide — overrides the `rubric` skill's assumed weights |
 | 12 Sep, 10:xx | Docs consolidated under `docs/` | Four numbered folders; root keeps only CLAUDE.md, AGENTS.md, README.md |
 
+| 12 Sep, ~10:15 | Research: trees PURSUE, reporting PASS | Data verified live. Trees has 292 open tickets with 87% at one priority and an 80K-tree asset inventory nobody joins. Reporting's obvious build needs an adoption curve, which fails the ×2 Monday criterion |
+
 ## Not yet decided
 
-- **Which challenge.** Nothing claimed on the board
+- **Which challenge.** Nothing claimed on the board — recommendation is trees
 - Whether the build uses a phone sensor path
 - Whether Supabase is actually needed, or seeded JSON is enough
