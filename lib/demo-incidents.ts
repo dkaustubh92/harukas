@@ -244,7 +244,7 @@ const populationByReportId = new Map(
   (populationInputs as { reports: PopulationInput[] }).reports.map((entry) => [entry.reportId, entry]),
 );
 
-function seededPopulationContext(reportId: string): PopulationDensityContext | null {
+export function populationContextForSeededReport(reportId: string): PopulationDensityContext | null {
   const entry = populationByReportId.get(reportId);
   if (!entry) return null;
   return {
@@ -275,7 +275,7 @@ function seededPriority(
 
 export const DEMO_INCIDENTS: DemoIncident[] = (incidentInputs as SeedIncidentInput[]).map((input) => {
   const { expectedPriority, photoKey, staffSummary, possibleImpact, uncertainties, ...report } = input;
-  const population = seededPopulationContext(input.id);
+  const population = populationContextForSeededReport(input.id);
   // Per-report assets can arrive independently without breaking the seed batch.
   const photo = photos[input.reference] ?? photos[photoKey];
   if (

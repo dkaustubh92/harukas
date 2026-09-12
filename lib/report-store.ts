@@ -1,6 +1,6 @@
 import "server-only";
 import { randomUUID } from "node:crypto";
-import { createDemoIncidents } from "./demo-incidents";
+import { createDemoIncidents, populationContextForSeededReport } from "./demo-incidents";
 import { ReportError } from "./report-errors";
 import { getReportPersistence } from "./report-supabase";
 export { ReportError } from "./report-errors";
@@ -27,6 +27,25 @@ function seedReports(): Report[] {
       version: seed.version, isDemo: true,
     }],
   }));
+}
+
+// Existing shared-demo rows are intentionally never overwritten at seed time:
+// officer actions must survive deployments. Add newly available census context
+// on read instead, only for the stable fictional seed reports.
+function withPopulationContext(report: Report): Report {
+  if (report.context.population || report.source !== "seed") return report;
+  const population = populationContextForSeededReport(report.id);
+  if (!population) return report;
+  return {
+    ...report,
+    context: { ...report.context, population },
+    suggestedPriority: {
+      ...report.suggestedPriority,
+      supportingFields: [...report.suggestedPriority.supportingFields, "context.population.densityPerSquareKm"],
+      explanation: `${report.suggestedPriority.explanation} 2021 census density orders reports within the same severity band; it does not change the band.`,
+      withinBandRank: population.tier === "high" ? 2 : population.tier === "moderate" ? 1 : 0,
+    },
+  };
 }
 
 async function persistentStore() {
@@ -83,10 +102,10 @@ export function publicReport(report: Report): PublicReport {
 
 export async function readReport(id: string): Promise<Report> {
   const persistent = await persistentStore();
-  if (persistent) return persistent.read(id);
+  if (persistent) return withPopulationContext(await persistent.read(id));
   const report = store().reports.get(id);
   if (!report) throw new ReportError(404, "report_not_found", "This demo report was not found.");
-  return structuredClone(report);
+  return structuredClone(withPopulationContext(report));
 }
 
 export async function saveCitizenReport(report: Report, bytes: Uint8Array) {
@@ -127,10 +146,12 @@ export async function listReports(params: URLSearchParams) {
   const staff = params.get("view") === "staff";
   const persistent = await persistentStore();
   const reports = (persistent ? await persistent.list() : [...store().reports.values()])
+    .map(withPopulationContext)
     .filter((r) => !status || (status === "active" ? r.status !== "resolved" : r.status === status))
     .filter((r) => !priority || r.effectivePriority === priority)
     .sort((a, b) => Number(a.status === "resolved") - Number(b.status === "resolved")
       || REPORT_PRIORITIES.indexOf(a.effectivePriority) - REPORT_PRIORITIES.indexOf(b.effectivePriority)
+      || b.suggestedPriority.withinBandRank - a.suggestedPriority.withinBandRank
       || a.createdAt.localeCompare(b.createdAt) || a.id.localeCompare(b.id));
   return {
     reports: reports.map((r) => staff ? structuredClone(r) : publicReport(r)),
