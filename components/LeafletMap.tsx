@@ -5,10 +5,15 @@ import "leaflet/dist/leaflet.css";
 import "./geographic-map.css";
 import type { GeographicMapProps } from "./GeographicMap";
 const colors = { urgent: "#b54032", priority: "#b57920", routine: "#346553", unassessed: "#4b6e8a" };
-export default function LeafletMap({ points, selectedId, onSelect, onLocationPick }: GeographicMapProps) {
+function densityColor(value: unknown) {
+  const density = typeof value === "number" ? value : 0;
+  return density >= 7500 ? "#a63603" : density >= 3000 ? "#e6550d" : "#fdae6b";
+}
+export default function LeafletMap({ points, selectedId, onSelect, onLocationPick, showPopulationDensity = false }: GeographicMapProps) {
   const container = useRef<HTMLDivElement>(null);
   const map = useRef<L.Map | null>(null);
   const layers = useRef<L.LayerGroup | null>(null);
+  const densityLayer = useRef<L.GeoJSON | null>(null);
   const callbacks = useRef({ onSelect, onLocationPick });
   const fitted = useRef(false);
   const previousSelection = useRef(selectedId);
@@ -29,6 +34,19 @@ export default function LeafletMap({ points, selectedId, onSelect, onLocationPic
     resize.observe(container.current);
     return () => { resize.disconnect(); instance.remove(); map.current = null; layers.current = null; fitted.current = false; };
   }, []);
+  useEffect(() => {
+    densityLayer.current?.remove();
+    densityLayer.current = null;
+    if (!map.current || !showPopulationDensity) return;
+    let cancelled = false;
+    void fetch("/demo-context/population-density.geojson")
+      .then(response => response.ok ? response.json() : Promise.reject())
+      .then((data: GeoJSON.GeoJsonObject) => {
+        if (cancelled || !map.current) return;
+        densityLayer.current = L.geoJSON(data, { interactive: false, style: feature => ({ color: "#9a3412", weight: 0.5, opacity: 0.45, fillColor: densityColor(feature?.properties?.DAPOPDEN), fillOpacity: 0.34 }) }).addTo(map.current);
+      }).catch(() => undefined);
+    return () => { cancelled = true; densityLayer.current?.remove(); densityLayer.current = null; };
+  }, [showPopulationDensity]);
   useEffect(() => {
     if (!map.current || !layers.current) return;
     const instance = map.current;
@@ -62,6 +80,7 @@ export default function LeafletMap({ points, selectedId, onSelect, onLocationPic
   return <div className="relative isolate h-full w-full">
     <div ref={container} className="h-full w-full" role="region" aria-label={onLocationPick ? "Choose a location on the Halifax street map" : "Halifax street map with selectable incident markers"} />
     {tileError && <p role="status" className="absolute bottom-7 left-2 z-[1000] max-w-72 rounded bg-white px-3 py-2 text-xs text-red-800 shadow">Some map tiles could not load. Reports remain available in the list.</p>}
+    {showPopulationDensity && <div className="absolute bottom-7 right-3 z-[1000] rounded-md border border-[#d7c6b4] bg-white/95 px-2.5 py-2 text-[10px] text-[#5f4634] shadow" aria-label="2021 census population density legend"><p className="font-semibold">2021 resident density</p><p><span className="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-[#fdae6b]" />Under 3,000/km²</p><p><span className="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-[#e6550d]" />3,000–7,499/km²</p><p><span className="mr-1 inline-block h-2.5 w-2.5 rounded-sm bg-[#a63603]" />7,500+/km²</p></div>}
     <button type="button" className="absolute right-3 top-3 z-[1000] rounded-md border border-[#bcc8c1] bg-white px-3 py-2 text-xs font-semibold text-[#254b3c] shadow-sm" onClick={() => {
       const valid = points.filter(p => Number.isFinite(p.latitude) && Number.isFinite(p.longitude));
       if (valid.length) map.current?.fitBounds(L.latLngBounds(valid.map(p => [p.latitude, p.longitude])), { padding: [35, 35], maxZoom: valid.length === 1 ? 15 : 13 });

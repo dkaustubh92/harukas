@@ -66,6 +66,7 @@ export default function StaffWorkspace() {
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("active");
   const [priorityFilter, setPriorityFilter] = useState<PriorityFilter>("all");
   const [showScenario, setShowScenario] = useState(false);
+  const [showPopulationDensity, setShowPopulationDensity] = useState(false);
   const [loading, setLoading] = useState(true);
   const [feedError, setFeedError] = useState<string | null>(null);
   const [usingFallback, setUsingFallback] = useState(false);
@@ -410,8 +411,10 @@ export default function StaffWorkspace() {
             reports={visibleReports}
             selectedId={resolvedSelectedId}
             showScenario={showScenario}
+            showPopulationDensity={showPopulationDensity}
             onSelect={handleSelect}
             onToggleScenario={() => setShowScenario((value) => !value)}
+            onTogglePopulationDensity={() => setShowPopulationDensity((value) => !value)}
           />
           {evidenceCollapsed ? (
             <aside className="flex min-h-[540px] items-start justify-center border-l border-[#dfe6df] bg-[#fbfcfa] pt-4 lg:min-h-0">

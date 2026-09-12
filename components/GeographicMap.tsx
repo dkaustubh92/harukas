@@ -9,6 +9,7 @@ export interface GeographicMapProps {
   points: MapPoint[]; selectedId?: string | null;
   onSelect?: (id: string) => void;
   onLocationPick?: (latitude: number, longitude: number) => void;
+  showPopulationDensity?: boolean;
   className?: string;
 }
 const LeafletMap = dynamic(() => import("./LeafletMap"), {
