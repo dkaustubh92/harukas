@@ -1,6 +1,8 @@
 # HaruKas — Hackathon Runbook
 
-**Claude Hackathon Halifax · Saturday 12 September 2026 · 9:00–17:00 · Volta**
+**Claude Hackathon Halifax · Saturday 12 September 2026 · Volta**
+
+**Build window: 10:00–14:00.** Demos 15:00–17:00.
 
 Team: **KD** (technical + business, builds) · **HA** (presentation, language, UI/UX review)
 
@@ -13,7 +15,7 @@ Goal: win. Optimize for demo impact and judge-facing polish, not maintainability
 | | |
 |---|---|
 | **30%** | Presentation — the largest rubric bucket. HA's lane is not optional |
-| **60 min** | The core demo path must work end-to-end by **11:00** |
+| **60 min** | The core demo path must work end-to-end by **11:45** — 60 min after ideation ends |
 | **90 sec** | The demo. The **judge types**; the agent responds |
 | **14:00** | Freeze. Whatever is live then is what you demo |
 
@@ -25,27 +27,29 @@ Full rubric in `rubric`. Scope rule in `scope-60`. Demo shape in `demo-script-90
 
 | Time | Block | Who | Skill |
 |---|---|---|---|
-| 9:00–9:10 | Challenge lands | Both | — |
-| 9:10–9:25 | Empathize + research — **hard cap 15 min**. Fan out across candidate challenges in parallel if several are live | Both | `halifax-data` |
-| 9:25–9:50 | Interactive ideation | Both | `ideation-grill-me` |
-| **9:50–10:00** | **★ KILL GATE** — rubric score, 60-min check, name the 3 WoWs | Both | `rubric`, `scope-60` |
-| 10:00–10:15 | **★ 90-second demo script** = the spec | Both | `demo-script-90` |
-| 10:00–10:15 | **★ Scaffold + FIRST DEPLOY** — live URL exists | KD | `ship-it` |
-| 10:15–10:45 | UI mock → image-gen prompt | HA | `creative-ui-ux-director` |
-| 10:15–11:00 | Core path working, **unstyled** | KD | `senior-ai-developer` |
-| **11:00** | **SYNC (5 min)** — 60-min rule met? Art direction handed over | Both | `two-lane` |
-| 11:00–13:00 | WoW factors + art direction applied | KD | `agentic-ui-ux-designer`, `genui` |
-| 10:45–14:00 | Deck, narrative, copy — **parallel lane** | HA | `pitch` |
-| **12:30** | **SYNC (10 min)** — score, reallocate to weakest dimension | Both | `rubric` |
+| 10:00–10:10 | Challenge lands + pick | Both | — |
+| 10:10–10:25 | Empathize + research — **hard cap 15 min**. Fan out across candidate challenges in parallel if several are live | Both | `halifax-data` |
+| 10:25–10:40 | Interactive ideation — **15 min, not 25** | Both | `ideation-grill-me` |
+| **10:40–10:45** | **★ KILL GATE** — rubric score, 60-min check, name the 3 WoWs | Both | `rubric`, `scope-60` |
+| 10:45–11:00 | **★ 90-second demo script** = the spec | Both | `demo-script-90` |
+| 10:45–11:00 | **★ Scaffold + FIRST DEPLOY** — live URL exists | KD | `ship-it` |
+| 11:00–11:30 | UI mock → image-gen prompt | HA | `creative-ui-ux-director` |
+| 11:00–11:45 | Core path working, **unstyled** | KD | `senior-ai-developer` |
+| **11:45** | **SYNC (5 min)** — 60-min rule met? Art direction handed over | Both | `two-lane` |
+| 11:45–13:00 | WoW factors + art direction applied | KD | `agentic-ui-ux-designer`, `genui` |
+| 11:30–14:00 | Deck, narrative, copy — **parallel lane** | HA | `pitch` |
+| **12:45** | **SYNC (10 min)** — score, reallocate to weakest dimension | Both | `rubric` |
 | 13:00–14:00 | Demo hardening | Both | `demo-safe` |
 | 13:00–14:00 | Q&A prep | HA | `qa-drill` |
 | **14:00** | **★ FREEZE + SYNC (30 min)** — rehearse, stop building | Both | `two-lane` |
 | 14:00–15:00 | Buffer — **deliberately not build time** | Both | — |
 | 15:00–17:00 | Demos + judging | HA presents, KD drives | — |
 
+Ideation happens **inside** the build window, so it is cut to 45 minutes end-to-end (was 60). The kill gate is 5 minutes, not 10 — score, decide, move. If the challenge is published before 10:00, run the 10:00–10:45 block early and hand those 45 minutes back to the build.
+
 ---
 
-## Challenge selection (9:00–9:10)
+## Challenge selection (10:00–10:10)
 
 Challenges are provided; you pick. This is the highest-leverage decision of the day.
 
@@ -95,9 +99,32 @@ Rungs 3 and 4 are nearly invisible in 90 seconds. Reach for them early.
 - **Model in the app:** `claude-opus-5`. **Not** `claude-fable-5-1` — 2× cost, multi-minute turns, and forced tool use returns 400 (`claude-api-demo`)
 - **Model in Claude Code:** Fable 5.1 for ideation/planning/creative; Opus 5 `xhigh` for coding
 - **HA never touches the repo** — works from the deployed URL (`two-lane`)
-- **Skills, not subagents.** Personas are skills so they run in-session with full context. The only place to fan out to agents is the 9:10–9:25 research block
+- **Skills, not subagents.** Personas are skills so they run in-session with full context. The only place to fan out to agents is the 10:10–10:25 research block
 - **Deploy early and often**, freeze at 14:00
 - **End the demo on the QR screen** (press `Q`) — live app + GitHub, side by side. Leave it up through Q&A and voting. Built into the app, so it always shows the real deployed URL
+- **Phone sensors are on the table.** The deployed URL opens on a phone, so camera, mic, geolocation and motion are reachable from the browser — no native app, no extra stack. Use one only if it *is* a WoW; see below
+
+---
+
+## Phone as an input device
+
+The QR screen already puts the live URL on a judge's phone. That makes *"scan this and point your camera at it"* a closing move a slide deck cannot match — the judge holds the product. Consider it when the challenge involves something physical, situated, or spoken:
+
+| Sensor | Web API | Good for |
+|---|---|---|
+| Camera | `getUserMedia`, or `<input type="file" capture>` | Photograph a thing in the world, feed the frame to Claude vision |
+| Mic | `getUserMedia`, Web Speech API | Speak instead of type — removes the keyboard from the demo |
+| Location | `navigator.geolocation` | "What's happening on *my* street" against HRM layers |
+| Motion / orientation | `DeviceMotionEvent`, `DeviceOrientationEvent` | Rare, usually a gimmick — needs a real reason |
+
+**If you use one, these four will bite:**
+
+1. **HTTPS only.** All of the above need a secure context. The Vercel URL works; a phone hitting your laptop's LAN IP over `http://` does **not**. Deploy first, then test on the phone — do not try to debug this on localhost
+2. **Permission prompts sit on the demo path.** Pre-grant on the exact device you will demo with, and rehearse on that device (`demo-safe`). A cold prompt in front of judges costs ten seconds and all your momentum
+3. **iOS motion needs a gesture.** `DeviceOrientationEvent.requestPermission()` must be called from a real tap or it silently does nothing. Camera and mic are the safer bets
+4. **Seed a fallback.** A canned photo or clip that drives the identical code path if the camera fails — rung 2 of the cut ladder, decided in advance rather than on stage
+
+**Cost check:** a phone path means the UI must work at 390px wide, which contradicts "no responsive work" in `CLAUDE.md`. That is a real cost — take it only if the sensor *is* one of the three WoWs, not as a garnish.
 
 ---
 

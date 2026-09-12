@@ -8,11 +8,11 @@ Hackathon prototype — Claude Hackathon Halifax, 12 Sept 2026. Read `PROCESS.md
 
 ## Context that changes how you work here
 
-This is a **4-hour hackathon build judged by a live demo**, not a product. Optimize for demo impact, not maintainability. Speed and visible polish beat correctness at the margins.
+This is a **4-hour hackathon build judged by a live demo**, not a product. The build window is **10:00–14:00**, and ideation happens inside it. Optimize for demo impact, not maintainability. Speed and visible polish beat correctness at the margins.
 
 - **If it isn't in the 90-second demo, don't build it.** See `scope-60`
 - **Deploy early and continuously.** Not at the end. See `ship-it`
-- **No auth, no settings, no responsive work** unless the demo shows it
+- **No auth, no settings, no responsive work** unless the demo shows it — the exception is a phone-sensor demo path, which forces 390px-wide layout. See "Phone as an input device" in `PROCESS.md`
 - Ugly-but-working beats elegant-but-unfinished
 
 ## Commands
