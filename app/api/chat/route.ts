@@ -1,19 +1,20 @@
-import { anthropic } from "@ai-sdk/anthropic";
+import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { convertToModelMessages, streamText, type UIMessage } from "ai";
 
-// Server-only. ANTHROPIC_API_KEY must never reach the browser.
+// Server-only. OPENROUTER_API_KEY must never reach the browser.
 export const maxDuration = 60;
 
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
+  const key = process.env.OPENROUTER_API_KEY?.trim();
+  if (!key) return Response.json({ error: "The civic assistant is unavailable right now." }, { status: 503 });
+  const router = createOpenRouter({ apiKey: key });
 
   const result = streamText({
-    // Project decision: claude-opus-5 only. See CLAUDE.md and the
-    // claude-api-demo skill for why fable-5-1 is barred from this path.
-    model: anthropic("claude-opus-5"),
-    system:
-      "You are a civic assistant for Halifax, Nova Scotia. Be concise and concrete.",
+    model: router("openai/gpt-5.6-luna"),
+    system: "You are a concise civic assistant for the HaruKas Halifax tree incident demo. Explain evidence and uncertainty plainly. Never claim to contact Halifax, dispatch people, certify safety, or create an official request.",
     messages: await convertToModelMessages(messages),
+    providerOptions: { openrouter: { reasoning: { effort: "high" } } },
   });
 
   return result.toUIMessageStreamResponse();

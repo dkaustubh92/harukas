@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { StaffEvidence, type ResponseType } from "./StaffEvidence";
 import { StaffMap } from "./StaffMap";
+import { StaffOverview } from "./StaffOverview";
 import {
   StaffQueue,
   type PriorityFilter,
@@ -75,6 +76,9 @@ export default function StaffWorkspace() {
   } | null>(null);
   const [actionError, setActionError] = useState<string | null>(null);
   const [lastAction, setLastAction] = useState<ActionType | null>(null);
+  const [activeTab, setActiveTab] = useState<"overview" | "reports">("overview");
+  const [detailOpen, setDetailOpen] = useState(false);
+  const [evidenceCollapsed, setEvidenceCollapsed] = useState(false);
 
   const [priorityDraft, setPriorityDraft] = useState<StaffPriority>("unassessed");
   const [priorityNote, setPriorityNote] = useState("Visible evidence reviewed by demo officer.");
@@ -143,7 +147,7 @@ export default function StaffWorkspace() {
 
   const visibleReports = useMemo(() => {
     const query = search.trim().toLowerCase();
-    return reports
+      return reports
       .filter((report) => {
         if (statusFilter === "active" && report.status === "resolved") return false;
         if (statusFilter !== "active" && statusFilter !== "all" && report.status !== statusFilter) return false;
@@ -154,8 +158,14 @@ export default function StaffWorkspace() {
           .includes(query);
       })
       .sort((a, b) => {
-        if (a.source === "citizen" && b.source !== "citizen") return -1;
-        if (b.source === "citizen" && a.source !== "citizen") return 1;
+        const priorityRank: Record<StaffPriority, number> = {
+          urgent: 0,
+          priority: 1,
+          unassessed: 2,
+          routine: 3,
+        };
+        const priorityDifference = priorityRank[a.effectivePriority] - priorityRank[b.effectivePriority];
+        if (priorityDifference !== 0) return priorityDifference;
         return b.createdAt.localeCompare(a.createdAt);
       });
   }, [priorityFilter, reports, search, statusFilter]);
@@ -177,6 +187,11 @@ export default function StaffWorkspace() {
     setActionError(null);
     setActionMessage(null);
   }, [reports]);
+
+  const openReportDetail = useCallback((id: string) => {
+    handleSelect(id);
+    setDetailOpen(true);
+  }, [handleSelect]);
 
   const performAction = useCallback(
     async (type: ActionType) => {
@@ -291,55 +306,164 @@ export default function StaffWorkspace() {
         </div>
       ) : null}
 
-      <div className="grid min-h-[calc(100dvh-4rem)] lg:h-[calc(100dvh-4rem)] lg:grid-cols-[320px_minmax(420px,1fr)_420px] lg:overflow-hidden">
-        <StaffQueue
-          reports={reports}
-          visibleReports={visibleReports}
-          selectedId={resolvedSelectedId}
-          search={search}
-          statusFilter={statusFilter}
-          priorityFilter={priorityFilter}
-          onSearchChange={setSearch}
-          onStatusFilterChange={setStatusFilter}
-          onPriorityFilterChange={setPriorityFilter}
-          onSelect={handleSelect}
-        />
-        <StaffMap
-          reports={visibleReports}
-          selectedId={resolvedSelectedId}
-          showScenario={showScenario}
-          onSelect={handleSelect}
-          onToggleScenario={() => setShowScenario((value) => !value)}
-        />
-        <StaffEvidence
-          report={selectedReport}
-          actionBusy={actionBusy}
-          actionMessage={actionMessage}
-          actionError={actionError}
-          priorityDraft={priorityDraft}
-          priorityNote={priorityNote}
-          inspectionNote={inspectionNote}
-          responseType={responseType}
-          responseNote={responseNote}
-          obstructionLevel={obstructionLevel}
-          obstructionTarget={obstructionTarget}
-          obstructionNote={obstructionNote}
-          resolutionNote={resolutionNote}
-          onPriorityDraftChange={setPriorityDraft}
-          onPriorityNoteChange={setPriorityNote}
-          onInspectionNoteChange={setInspectionNote}
-          onResponseTypeChange={setResponseType}
-          onResponseNoteChange={setResponseNote}
-          onObstructionLevelChange={setObstructionLevel}
-          onObstructionTargetChange={setObstructionTarget}
-          onObstructionNoteChange={setObstructionNote}
-          onResolutionNoteChange={setResolutionNote}
-          onAction={(type) => void performAction(type)}
-          onRetry={() => {
-            if (lastAction) void performAction(lastAction);
-          }}
-        />
-      </div>
+      <nav className="flex items-center gap-1 border-b border-[#d8e1d9] bg-[#f9faf7] px-5 lg:px-6" aria-label="Officer workspace">
+        <button
+          type="button"
+          onClick={() => setActiveTab("overview")}
+          aria-current={activeTab === "overview" ? "page" : undefined}
+          className={[
+            "min-h-12 border-b-2 px-3 text-[12px] font-semibold transition",
+            activeTab === "overview" ? "border-[#2f7254] text-[#214f3d]" : "border-transparent text-[#7a8c81] hover:text-[#355c4c]",
+          ].join(" ")}
+        >
+          Overview
+        </button>
+        <button
+          type="button"
+          onClick={() => setActiveTab("reports")}
+          aria-current={activeTab === "reports" ? "page" : undefined}
+          className={[
+            "min-h-12 border-b-2 px-3 text-[12px] font-semibold transition",
+            activeTab === "reports" ? "border-[#2f7254] text-[#214f3d]" : "border-transparent text-[#7a8c81] hover:text-[#355c4c]",
+          ].join(" ")}
+        >
+          Reports
+          <span className="ml-1.5 rounded-full bg-[#e8f1e9] px-1.5 py-0.5 text-[10px] text-[#4c705b]">{reports.length}</span>
+        </button>
+      </nav>
+
+      {activeTab === "overview" ? (
+        <div className="relative min-h-[calc(100dvh-7rem)]">
+          <StaffOverview
+            reports={reports}
+            loading={loading}
+            onSelectReport={openReportDetail}
+            onOpenReports={() => setActiveTab("reports")}
+          />
+          {detailOpen ? (
+            <>
+              <button
+                type="button"
+                aria-label="Close report details"
+                onClick={() => setDetailOpen(false)}
+                className="fixed inset-0 z-30 cursor-default bg-[#183e32]/20 backdrop-blur-[1px]"
+              />
+              <div className="fixed inset-x-0 bottom-0 z-40 max-h-[92dvh] overflow-hidden rounded-t-2xl border border-[#d8e3da] bg-[#fbfcfa] shadow-[0_-12px_36px_rgba(24,62,50,0.18)] lg:inset-y-0 lg:left-auto lg:right-0 lg:top-0 lg:w-[440px] lg:rounded-none lg:border-y-0 lg:border-r-0 lg:border-l lg:shadow-[-12px_0_36px_rgba(24,62,50,0.12)]">
+                <div className="flex items-center justify-between border-b border-[#e2e8e2] px-4 py-3 lg:hidden">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#71867a]">Report details</span>
+                  <button type="button" onClick={() => setDetailOpen(false)} className="min-h-10 rounded-lg border border-[#d3dfd5] px-3 text-[11px] font-semibold text-[#426453]">Close</button>
+                </div>
+                <StaffEvidence
+                  report={selectedReport}
+                  actionBusy={actionBusy}
+                  actionMessage={actionMessage}
+                  actionError={actionError}
+                  priorityDraft={priorityDraft}
+                  priorityNote={priorityNote}
+                  inspectionNote={inspectionNote}
+                  responseType={responseType}
+                  responseNote={responseNote}
+                  obstructionLevel={obstructionLevel}
+                  obstructionTarget={obstructionTarget}
+                  obstructionNote={obstructionNote}
+                  resolutionNote={resolutionNote}
+                  onPriorityDraftChange={setPriorityDraft}
+                  onPriorityNoteChange={setPriorityNote}
+                  onInspectionNoteChange={setInspectionNote}
+                  onResponseTypeChange={setResponseType}
+                  onResponseNoteChange={setResponseNote}
+                  onObstructionLevelChange={setObstructionLevel}
+                  onObstructionTargetChange={setObstructionTarget}
+                  onObstructionNoteChange={setObstructionNote}
+                  onResolutionNoteChange={setResolutionNote}
+                  onAction={(type) => void performAction(type)}
+                  onRetry={() => {
+                    if (lastAction) void performAction(lastAction);
+                  }}
+                />
+              </div>
+            </>
+          ) : null}
+        </div>
+      ) : (
+        <div className={[
+          "grid min-h-[calc(100dvh-7rem)] lg:h-[calc(100dvh-7rem)] lg:overflow-hidden",
+          evidenceCollapsed
+            ? "lg:grid-cols-[320px_minmax(420px,1fr)_48px]"
+            : "lg:grid-cols-[320px_minmax(420px,1fr)_420px]",
+        ].join(" ")}>
+          <StaffQueue
+            reports={reports}
+            visibleReports={visibleReports}
+            selectedId={resolvedSelectedId}
+            search={search}
+            statusFilter={statusFilter}
+            priorityFilter={priorityFilter}
+            onSearchChange={setSearch}
+            onStatusFilterChange={setStatusFilter}
+            onPriorityFilterChange={setPriorityFilter}
+            onSelect={handleSelect}
+          />
+          <StaffMap
+            reports={visibleReports}
+            selectedId={resolvedSelectedId}
+            showScenario={showScenario}
+            onSelect={handleSelect}
+            onToggleScenario={() => setShowScenario((value) => !value)}
+          />
+          {evidenceCollapsed ? (
+            <aside className="flex min-h-[540px] items-start justify-center border-l border-[#dfe6df] bg-[#fbfcfa] pt-4 lg:min-h-0">
+              <button
+                type="button"
+                aria-expanded="false"
+                onClick={() => setEvidenceCollapsed(false)}
+                className="min-h-11 rounded-lg border border-[#d5e1d7] bg-white px-2 text-[10px] font-semibold text-[#426453] [writing-mode:vertical-rl] hover:bg-[#f2f8f2]"
+              >
+                Open details
+              </button>
+            </aside>
+          ) : (
+            <div className="relative min-h-0 min-w-0 overflow-y-auto">
+              <button
+                type="button"
+                aria-expanded="true"
+                onClick={() => setEvidenceCollapsed(true)}
+                className="absolute right-3 top-3 z-10 min-h-9 rounded-lg border border-[#d5e1d7] bg-white/90 px-2.5 text-[10px] font-semibold text-[#426453] shadow-sm backdrop-blur hover:bg-[#f2f8f2]"
+              >
+                Hide details
+              </button>
+              <StaffEvidence
+                report={selectedReport}
+                actionBusy={actionBusy}
+                actionMessage={actionMessage}
+                actionError={actionError}
+                priorityDraft={priorityDraft}
+                priorityNote={priorityNote}
+                inspectionNote={inspectionNote}
+                responseType={responseType}
+                responseNote={responseNote}
+                obstructionLevel={obstructionLevel}
+                obstructionTarget={obstructionTarget}
+                obstructionNote={obstructionNote}
+                resolutionNote={resolutionNote}
+                onPriorityDraftChange={setPriorityDraft}
+                onPriorityNoteChange={setPriorityNote}
+                onInspectionNoteChange={setInspectionNote}
+                onResponseTypeChange={setResponseType}
+                onResponseNoteChange={setResponseNote}
+                onObstructionLevelChange={setObstructionLevel}
+                onObstructionTargetChange={setObstructionTarget}
+                onObstructionNoteChange={setObstructionNote}
+                onResolutionNoteChange={setResolutionNote}
+                onAction={(type) => void performAction(type)}
+                onRetry={() => {
+                  if (lastAction) void performAction(lastAction);
+                }}
+              />
+            </div>
+          )}
+        </div>
+      )}
     </main>
   );
 }

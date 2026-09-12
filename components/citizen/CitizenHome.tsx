@@ -29,13 +29,6 @@ const priorityLabels: Record<CitizenPriority, string> = {
   unassessed: "Needs assessment",
 };
 
-const priorityStyles: Record<CitizenPriority, string> = {
-  urgent: "border-[#e6b0a6] bg-[#fff2ef] text-[#8f2f24]",
-  priority: "border-[#ebd4a7] bg-[#fff8e9] text-[#85500e]",
-  routine: "border-[#c4d7c7] bg-[#eef5ef] text-[#355c4c]",
-  unassessed: "border-[#c3d3df] bg-[#eff5fa] text-[#365c75]",
-};
-
 const statusLabels: Record<string, string> = {
   submitted: "Submitted · awaiting review",
   reviewed: "Reviewed by staff · demo",
@@ -263,6 +256,8 @@ export default function CitizenHome() {
   const [isLoading, setIsLoading] = useState(true);
   const [feedError, setFeedError] = useState("");
   const [usingFallback, setUsingFallback] = useState(false);
+  const [activeSurface, setActiveSurface] = useState<"map" | "list">("map");
+  const [detailOpen, setDetailOpen] = useState(false);
 
   const loadReports = useCallback(async (showLoading = false) => {
     if (showLoading) setIsLoading(true);
@@ -300,9 +295,23 @@ export default function CitizenHome() {
     };
   }, [loadReports]);
 
+  useEffect(() => {
+    if (!detailOpen) return;
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setDetailOpen(false);
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [detailOpen]);
+
   const activeReports = useMemo(() => reports.filter((report) => report.status !== "resolved"), [reports]);
   const selectedReport = reports.find((report) => report.id === selectedId) ?? activeReports[0] ?? null;
   const reviewedCount = activeReports.filter(isPublicObstruction).length;
+
+  const selectReport = (report: CitizenReport) => {
+    setSelectedId(report.id);
+    setDetailOpen(true);
+  };
 
   const handleSaved = (savedReceipt: CitizenReceipt) => {
     setReceipt(savedReceipt);
@@ -317,76 +326,73 @@ export default function CitizenHome() {
 
   return (
     <main className="min-h-dvh overflow-x-hidden bg-[#f7f8f3] text-[#183e32]">
-      <header className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
+      <header className="mx-auto flex max-w-7xl items-center justify-between border-b border-[#e1e7e0] px-5 py-3 sm:px-8 lg:px-10">
         <Link href="/" className="group inline-flex items-center gap-2.5 rounded-lg focus-visible:outline-offset-4" aria-label="HaruKas home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#183e32] text-[#dce8d8] shadow-sm transition group-hover:bg-[#255644]"><Icon name="leaf" size={19} strokeWidth={1.7} /></span>
-          <span><span className="block text-[15px] font-semibold tracking-[-0.02em] text-[#183e32]">HaruKas</span><span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-[#718474]">Halifax tree reports</span></span>
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#183e32] text-[#dce8d8] transition group-hover:bg-[#255644]"><Icon name="leaf" size={17} strokeWidth={1.7} /></span>
+          <span className="text-[15px] font-semibold tracking-[-0.02em] text-[#183e32]">HaruKas</span>
         </Link>
-        <Link href="/staff" className="inline-flex min-h-11 items-center gap-2 rounded-xl border border-[#bccbbd] bg-white px-3.5 text-sm font-semibold text-[#355c4c] shadow-sm transition hover:border-[#7da48a] hover:bg-[#f8fbf7]"><span className="hidden sm:inline">Officer</span> demo <Icon name="arrow-up-right" size={16} /></Link>
+        <Link href="/staff" className="inline-flex min-h-10 items-center gap-2 rounded-lg px-2 text-sm font-semibold text-[#486b5c] underline-offset-4 transition hover:bg-[#eef5ef] hover:underline">Staff demo <Icon name="arrow-up-right" size={15} /></Link>
       </header>
 
-      <section className="mx-auto grid max-w-7xl gap-7 px-5 pb-10 pt-5 sm:px-8 sm:pt-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end lg:gap-16 lg:px-10 lg:pb-14">
-        <div>
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#c8d9ca] bg-[#eef5ef] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#416953]"><Icon name="tree" size={14} /> A calmer way to report</div>
-          <h1 className="max-w-xl text-[clamp(2.55rem,8vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.065em] text-[#183e32]">Look after the trees around you.</h1>
-          <p className="mt-5 max-w-lg text-base leading-7 text-[#607568] sm:text-lg">Share a photo and a confirmed location. Your note helps make a visible tree concern easier for a human to review.</p>
-          <div className="mt-7 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
-            <button type="button" onClick={() => setReportOpen(true)} className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl bg-[#183e32] px-5 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(24,62,50,0.18)] transition hover:bg-[#255644]">Report a tree incident <Icon name="arrow-right" size={18} /></button>
-            <a href="#reports" className="inline-flex min-h-13 items-center justify-center gap-2 rounded-xl px-4 text-sm font-semibold text-[#486b5c] transition hover:bg-[#eef5ef]">See nearby reports <Icon name="chevron-right" size={17} /></a>
+      <section className="mx-auto max-w-7xl px-5 py-4 sm:px-8 lg:px-10">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+          <div className="min-w-0">
+            <h1 className="truncate text-[clamp(1.8rem,4vw,2rem)] font-semibold leading-[1.08] tracking-[-0.045em] text-[#183e32]">Halifax tree reports</h1>
+            <p className="mt-1 text-xs text-[#718474]">Demo snapshot · fictional reports · not sent to Halifax.</p>
           </div>
-          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-[#718474]"><span className="inline-flex items-center gap-1.5"><Icon name="shield" size={14} className="text-[#4d896d]" /> No account required</span><span className="inline-flex items-center gap-1.5"><Icon name="check" size={14} className="text-[#4d896d]" /> Not sent to Halifax</span></div>
-        </div>
-        <div className="relative hidden min-h-[235px] overflow-hidden rounded-[2rem] border border-[#cfddcf] bg-[#dce9d8] lg:block">
-          <div className="absolute -right-16 -top-14 h-60 w-60 rounded-full border-[28px] border-[#c2dbc5]/70" />
-          <div className="absolute -bottom-28 -left-16 h-72 w-72 rounded-full border-[34px] border-[#c2dbc5]/70" />
-          <div className="absolute left-[15%] top-[28%] h-px w-[74%] rotate-[-17deg] bg-white/80" /><div className="absolute left-[28%] top-[62%] h-px w-[58%] rotate-[22deg] bg-white/80" />
-          <div className="absolute left-[53%] top-[47%] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"><span className="flex h-20 w-20 items-center justify-center rounded-full border-8 border-white/80 bg-[#183e32] text-[#dce8d8] shadow-[0_14px_30px_rgba(24,62,50,0.22)]"><Icon name="tree" size={34} strokeWidth={1.4} /></span><span className="mt-3 rounded-full bg-white/85 px-3 py-1.5 text-xs font-semibold text-[#355c4c] shadow-sm">Your neighbourhood</span></div>
-          <div className="absolute bottom-5 left-6 right-6 flex items-end justify-between"><span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#5d7866]">Halifax, Nova Scotia</span><span className="rounded-full bg-white/70 px-2.5 py-1 text-[10px] font-medium text-[#607568]">People-powered context</span></div>
+          <button type="button" onClick={() => setReportOpen(true)} className="inline-flex min-h-10 w-full shrink-0 items-center justify-center gap-2 rounded-lg bg-[#183e32] px-4 text-sm font-semibold text-white shadow-[0_7px_16px_rgba(24,62,50,0.16)] transition hover:bg-[#255644] sm:w-auto">Report an incident <Icon name="arrow-right" size={17} /></button>
         </div>
       </section>
 
       {receipt && <ReceiptCard receipt={receipt} />}
 
-      <section id="reports" className="mx-auto max-w-7xl scroll-mt-4 px-5 pb-16 sm:px-8 lg:px-10 lg:pb-24">
-        <div className="mb-5 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
-          <div><p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#607568]">Explore the snapshot</p><h2 className="mt-1.5 text-2xl font-semibold tracking-[-0.035em] text-[#183e32] sm:text-3xl">Reports around Halifax</h2></div>
-          <div className="flex items-center gap-3 text-xs text-[#718474]"><span className="rounded-full border border-[#d7e0d8] bg-white px-3 py-1.5 font-medium">{activeReports.length} active demo reports</span><button type="button" className="inline-flex min-h-10 items-center gap-1.5 rounded-lg px-2 font-semibold text-[#486b5c] hover:bg-[#eef5ef]" onClick={() => void loadReports(true)}><Icon name="refresh" size={14} /> Refresh</button></div>
+      <section id="reports" className="mx-auto max-w-7xl scroll-mt-4 px-5 pb-14 sm:px-8 lg:px-10 lg:pb-20">
+        <div className="mb-3 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
+          <h2 className="sr-only">Community reports</h2>
+          <div className="flex items-center gap-3 text-sm text-[#718474]"><span>{activeReports.length} active demo reports</span><button type="button" className="inline-flex min-h-10 items-center gap-1.5 rounded-lg px-2 text-sm font-semibold text-[#486b5c] hover:bg-[#eef5ef]" onClick={() => void loadReports(true)}><Icon name="refresh" size={14} /> Refresh</button></div>
         </div>
 
-        {feedError && <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[#ebd4a7] bg-[#fff8e9] px-4 py-3 text-sm text-[#85500e]" role="status"><span><strong className="font-semibold">Showing a cached demo snapshot.</strong> {feedError}</span><button type="button" className="min-h-10 rounded-lg border border-[#d9bd82] bg-white px-3 font-semibold text-[#85500e] hover:bg-[#fffdf7]" onClick={() => void loadReports(true)}>Try again</button></div>}
-        {usingFallback && !feedError && <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d7e0d8] bg-white px-3 py-1.5 text-xs text-[#607568]"><Icon name="check" size={14} className="text-[#4d896d]" /> Cached demo snapshot · fictional reports</div>}
+        {feedError && <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#ebd4a7] bg-[#fff8e9] px-4 py-3 text-sm text-[#85500e]" role="status"><span><strong className="font-semibold">Showing a cached demo snapshot.</strong> {feedError}</span><button type="button" className="min-h-10 rounded-lg border border-[#d9bd82] bg-white px-3 font-semibold text-[#85500e] hover:bg-[#fffdf7]" onClick={() => void loadReports(true)}>Try again</button></div>}
+        {usingFallback && !feedError && <p className="mb-4 inline-flex items-center gap-2 text-xs text-[#607568]"><Icon name="check" size={14} className="text-[#4d896d]" /> Cached demo snapshot · fictional reports</p>}
 
-        <div className="grid gap-6 lg:grid-cols-[1.25fr_.75fr] lg:items-start">
-          <IncidentMap reports={activeReports} selectedId={selectedId} onSelect={(report) => setSelectedId(report.id)} />
-          <div className="space-y-4">
-            <div className="rounded-[1.5rem] border border-[#d7e0d8] bg-white p-5 shadow-[0_12px_32px_rgba(24,62,50,0.05)] sm:p-6">
-              <div className="mb-4 flex items-start justify-between gap-4"><div><p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#607568]">Selected report</p><h3 className="mt-1 text-lg font-semibold text-[#183e32]">A closer look</h3></div>{selectedReport && <span className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold ${priorityStyles[effectivePriority(selectedReport)]}`}>{priorityLabels[effectivePriority(selectedReport)]}</span>}</div>
-              {selectedReport ? <SelectedReport report={selectedReport} /> : <p className="text-sm leading-6 text-[#718474]">Select a marker to see the report summary.</p>}
-            </div>
-            <div className="rounded-[1.5rem] border border-[#d7e0d8] bg-[#f1f6ef] p-5 sm:p-6"><div className="flex items-start gap-3"><span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#4d896d]"><Icon name="shield" size={18} /></span><div><p className="text-sm font-semibold text-[#355c4c]">A note on this map</p><p className="mt-1 text-xs leading-5 text-[#607568]">This is a HaruKas demo snapshot of fictional reports. It is not a live municipal queue and does not mark official road closures.</p></div></div></div>
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <div className="inline-flex rounded-lg border border-[#ccd8cd] bg-white p-1" role="tablist" aria-label="Choose report view">
+            <button type="button" role="tab" id="map-tab" aria-selected={activeSurface === "map"} aria-controls="map-panel" onClick={() => setActiveSurface("map")} className={`inline-flex min-h-9 items-center gap-2 rounded-md px-3 text-sm font-semibold transition ${activeSurface === "map" ? "bg-[#183e32] text-white" : "text-[#607568] hover:bg-[#eef5ef]"}`}><Icon name="map-pin" size={15} /> Map</button>
+            <button type="button" role="tab" id="list-tab" aria-selected={activeSurface === "list"} aria-controls="list-panel" onClick={() => setActiveSurface("list")} className={`inline-flex min-h-9 items-center gap-2 rounded-md px-3 text-sm font-semibold transition ${activeSurface === "list" ? "bg-[#183e32] text-white" : "text-[#607568] hover:bg-[#eef5ef]"}`}><Icon name="tree" size={15} /> List</button>
           </div>
+          <p className="text-xs text-[#718474]">{reviewedCount} staff-reviewed obstruction{reviewedCount === 1 ? "" : "s"}</p>
         </div>
 
-        <div className="mt-10">
-          <div className="mb-4 flex items-center justify-between gap-4"><div><p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#607568]">Readable fallback</p><h3 className="mt-1 text-xl font-semibold tracking-[-0.025em] text-[#183e32]">Recent reports</h3></div><span className="text-xs text-[#718474]">{reviewedCount} staff-reviewed obstruction{reviewedCount === 1 ? "" : "s"}</span></div>
-          {isLoading && reports.length === 0 ? <div className="rounded-2xl border border-dashed border-[#c8d9ca] bg-white p-8 text-center text-sm text-[#718474]">Loading the Halifax snapshot…</div> : <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{activeReports.slice(0, 9).map((report) => <ReportListItem key={report.id} report={report} selected={report.id === selectedId} onSelect={() => setSelectedId(report.id)} />)}</div>}
-        </div>
+        {activeSurface === "map" ? <div id="map-panel" role="tabpanel" aria-labelledby="map-tab"><IncidentMap reports={activeReports} selectedId={selectedId} onSelect={selectReport} /></div> : <div id="list-panel" role="tabpanel" aria-labelledby="list-tab">{isLoading && reports.length === 0 ? <div className="rounded-xl border border-dashed border-[#c8d9ca] bg-white p-8 text-center text-sm text-[#718474]">Loading the Halifax snapshot…</div> : <div className="overflow-hidden rounded-xl border border-[#d7e0d8] bg-white divide-y divide-[#e5ebe4]">{activeReports.slice(0, 9).map((report) => <ReportListItem key={report.id} report={report} selected={report.id === selectedId} onSelect={() => selectReport(report)} />)}</div>}</div>}
+
+        {detailOpen && selectedReport && <ReportDrawer report={selectedReport} onClose={() => setDetailOpen(false)} />}
       </section>
-
-      <footer className="border-t border-[#d7e0d8] bg-[#eef3ec] px-5 py-8 sm:px-8 lg:px-10"><div className="mx-auto flex max-w-7xl flex-col gap-3 text-xs leading-5 text-[#718474] sm:flex-row sm:items-center sm:justify-between"><p>HaruKas is a prototype for a clearer, safer tree-incident handoff.</p><p>Demo only · No requests are sent to Halifax.</p></div></footer>
 
       <ReportSheet open={reportOpen} onClose={() => setReportOpen(false)} onSaved={handleSaved} onSaveLocal={saveLocalReport} />
     </main>
   );
 }
 
+function ReportDrawer({ report, onClose }: { report: CitizenReport; onClose: () => void }) {
+  return <aside id="report-detail-drawer" role="dialog" aria-labelledby="report-drawer-title" className="fixed inset-x-3 bottom-3 z-40 max-h-[min(80vh,42rem)] overflow-y-auto rounded-2xl border border-[#cbd8cb] bg-white shadow-[0_20px_60px_rgba(24,62,50,0.2)] sm:inset-auto sm:bottom-5 sm:right-5 sm:w-[min(27rem,calc(100vw-2.5rem))]">
+    <div className="flex items-start justify-between gap-4 border-b border-[#e4ebe3] px-4 py-3.5">
+      <div>
+        <p id="report-drawer-title" className="text-sm font-semibold text-[#183e32]">Report details</p>
+        <p className="mt-0.5 text-xs text-[#718474]">{report.reference} · demo</p>
+      </div>
+      <button type="button" onClick={onClose} aria-label="Close report details" className="inline-flex min-h-9 min-w-9 items-center justify-center rounded-lg text-[#607568] hover:bg-[#eef5ef] hover:text-[#183e32]"><Icon name="close" size={17} /></button>
+    </div>
+    <div className="p-4"><SelectedReport report={report} /></div>
+  </aside>;
+}
+
 function SelectedReport({ report }: { report: CitizenReport }) {
   const reviewed = isPublicObstruction(report);
   const photoUrl = report.photo.url || report.photo.accessUrl || report.photo.signedUrl || REPRESENTATIVE_PHOTO_URL;
   return <div>
-    <div className="mb-4 flex gap-3"><div className="relative h-20 w-24 shrink-0 overflow-hidden rounded-xl bg-[#dce9eb]"><Image src={photoUrl} alt={report.photo.alt || "Tree incident"} fill sizes="96px" unoptimized className="object-cover" /></div><div className="min-w-0"><p className="truncate text-base font-semibold text-[#183e32]">{report.citizenDetails.title}</p><p className="mt-1 flex items-center gap-1.5 text-xs text-[#718474]"><Icon name="map-pin" size={13} /> {report.location.label}</p><p className="mt-1 text-xs font-medium text-[#607568]">{report.reference} · {formatRelativeDate(report.createdAt)}</p></div></div>
+    <div className="mb-4 flex gap-3"><div className="relative h-16 w-20 shrink-0 overflow-hidden rounded-lg bg-[#dce9eb]"><Image src={photoUrl} alt={report.photo.alt || "Tree incident"} fill sizes="80px" unoptimized className="object-cover" /></div><div className="min-w-0"><p className="truncate text-base font-semibold text-[#183e32]">{report.citizenDetails.title}</p><p className="mt-1 flex items-center gap-1.5 text-xs text-[#718474]"><Icon name="map-pin" size={13} /> {report.location.label}</p><p className="mt-1 text-xs font-medium text-[#607568]">{formatRelativeDate(report.createdAt)}</p></div></div>
     <p className="text-sm leading-6 text-[#486b5c]">{report.citizenDetails.observations}</p>
-    <div className="mt-4 flex flex-wrap gap-2"><span className="rounded-full bg-[#eef5ef] px-2.5 py-1 text-[11px] font-medium text-[#416953]">{categoryLabels[report.citizenDetails.category]}</span><span className="rounded-full bg-[#f3f5f2] px-2.5 py-1 text-[11px] font-medium text-[#607568]">Near {report.citizenDetails.targets.map((target) => targetLabels[target]).join(", ")}</span>{reviewed && <span className="rounded-full bg-[#fff8e9] px-2.5 py-1 text-[11px] font-medium text-[#85500e]">Reported obstruction · Demo</span>}</div>
+    <p className="mt-3 text-xs font-medium text-[#607568]">{categoryLabels[report.citizenDetails.category]} · Near {report.citizenDetails.targets.map((target) => targetLabels[target]).join(", ")}{reviewed ? " · Reported obstruction (demo)" : ""}</p>
     <div className="mt-4 border-t border-[#e3eae2] pt-4"><p className="text-xs font-semibold text-[#355c4c]">{statusLabels[report.status] || "Demo report status"}</p><p className="mt-1 text-xs leading-5 text-[#718474]">{reviewed ? "Staff review identified a possible access impact. This is not an official closure." : "This report is visible for demo review and has not been confirmed as an obstruction."}</p></div>
     {report.url && report.url.startsWith("/") && <a href={report.url} className="mt-4 inline-flex min-h-10 items-center gap-1.5 text-sm font-semibold text-[#2f6a4e] hover:text-[#183e32]">Open report <Icon name="arrow-up-right" size={15} /></a>}
   </div>;
@@ -394,7 +400,7 @@ function SelectedReport({ report }: { report: CitizenReport }) {
 
 function ReportListItem({ report, selected, onSelect }: { report: CitizenReport; selected: boolean; onSelect: () => void }) {
   const priority = effectivePriority(report);
-  return <button type="button" onClick={onSelect} aria-pressed={selected} className={`w-full rounded-2xl border p-4 text-left transition ${selected ? "border-[#7da48a] bg-[#f1f7ef] shadow-sm" : "border-[#d7e0d8] bg-white hover:border-[#a9c0af] hover:bg-[#fbfdf9]"}`}><div className="flex items-start justify-between gap-3"><div className="min-w-0"><p className="truncate text-sm font-semibold text-[#355c4c]">{report.citizenDetails.title}</p><p className="mt-1 truncate text-xs text-[#839487]">{report.location.label}</p></div><span className={`mt-0.5 h-2.5 w-2.5 shrink-0 rounded-full ${priority === "urgent" ? "bg-[#a83c2e]" : priority === "priority" ? "bg-[#a36314]" : priority === "routine" ? "bg-[#557267]" : "bg-[#486b86]"}`} aria-hidden="true" /></div><div className="mt-3 flex items-center justify-between gap-2"><span className="text-[11px] font-medium text-[#718474]">{report.reference}</span><span className="text-[11px] font-semibold text-[#607568]">{isPublicObstruction(report) ? "Reported obstruction" : priorityLabels[priority]}</span></div></button>;
+  return <button type="button" onClick={onSelect} aria-pressed={selected} className={`group flex w-full items-start justify-between gap-4 px-4 py-4 text-left transition focus-visible:z-10 ${selected ? "bg-[#f1f7ef]" : "hover:bg-[#fafcf8]"}`}><div className="min-w-0"><div className="flex items-center gap-2"><span className={`h-2.5 w-2.5 shrink-0 rounded-full ${priority === "urgent" ? "bg-[#a83c2e]" : priority === "priority" ? "bg-[#a36314]" : priority === "routine" ? "bg-[#557267]" : "bg-[#486b86]"}`} aria-hidden="true" /><p className="truncate text-sm font-semibold text-[#355c4c]">{report.citizenDetails.title}</p></div><p className="mt-1 truncate pl-[18px] text-xs text-[#839487]">{report.location.label}</p></div><div className="shrink-0 text-right"><p className="text-[11px] font-semibold text-[#607568]">{isPublicObstruction(report) ? "Obstruction" : priorityLabels[priority]}</p><p className="mt-1 text-[11px] font-medium text-[#718474]">{report.reference}</p></div></button>;
 }
 
 function ReceiptCard({ receipt }: { receipt: CitizenReceipt }) {

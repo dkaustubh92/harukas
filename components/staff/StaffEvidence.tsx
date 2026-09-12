@@ -11,6 +11,7 @@ import {
   type StaffPriority,
   type StaffReport,
 } from "./types";
+import { LlmReportDraft } from "./LlmReportDraft";
 
 export type ResponseType = "inspection" | "clearance" | "specialist_review";
 
@@ -268,6 +269,8 @@ export function StaffEvidence({
               </div>
             </div>
           </section>
+
+          <LlmReportDraft key={report.id} report={report} />
 
           <section className="rounded-xl border border-[#e0e8e1] bg-white p-3.5">
             <div className="flex items-start justify-between gap-3">

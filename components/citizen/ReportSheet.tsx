@@ -8,6 +8,8 @@ import {
   useState,
 } from "react";
 import Image from "next/image";
+import { GeographicMap } from "../GeographicMap";
+import { AiDraftButton } from "./AiDraftButton";
 import { Icon } from "./Icons";
 import {
   REPRESENTATIVE_PHOTO_URL,
@@ -441,16 +443,13 @@ export function ReportSheet({ open, onClose, onSaved, onSaveLocal }: ReportSheet
                     </button>
                   </div>
                   <div className="overflow-hidden rounded-2xl border border-[#c8d9ca] bg-[#e3eee3]">
-                    <div className="relative h-36 overflow-hidden bg-[linear-gradient(135deg,#d9e9dc_25%,#cde2e5_25%,#cde2e5_42%,#d9e9dc_42%,#d9e9dc_61%,#cde2e5_61%)] bg-[length:26px_26px]">
-                      <div className="absolute left-[10%] top-[62%] h-1 w-[82%] rotate-[-11deg] rounded-full bg-white/80 shadow-sm" />
-                      <div className="absolute left-[28%] top-[28%] h-1 w-[62%] rotate-[21deg] rounded-full bg-white/75 shadow-sm" />
-                      <div className="absolute left-[47%] top-[17%] h-[76%] w-1 rotate-[12deg] rounded-full bg-white/70 shadow-sm" />
-                      <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
-                        <span className="flex h-10 w-10 items-center justify-center rounded-full border-4 border-white bg-[#183e32] text-white shadow-[0_6px_14px_rgba(24,62,50,0.24)]"><Icon name="tree" size={19} strokeWidth={1.9} /></span>
-                        <span className="mt-1 rounded-full bg-[#183e32]/90 px-2 py-1 text-[10px] font-semibold text-white">Tree location</span>
-                      </div>
-                      <span className="absolute bottom-2 left-3 rounded-full bg-white/85 px-2 py-1 text-[10px] font-medium text-[#607568]">Approximate pin · move if needed</span>
-                    </div>
+                    <GeographicMap className="h-64" points={[{ id: "tree-pin", latitude: location.latitude, longitude: location.longitude, title: "Tree location", priority: "routine" }]} selectedId="tree-pin" onLocationPick={(latitude, longitude) => {
+                      setLocation(current => ({ ...current, latitude, longitude, method: "pin" }));
+                      setLocationConfirmed(false);
+                      setLocationError("");
+                      setAcknowledged(false);
+                    }} />
+                    <p className="bg-white px-3 py-2 text-xs text-[#52645a]">Click the map to place the tree pin, then confirm its location. The address label does not move the pin.</p>
                     <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#c8d9ca] bg-[#f4f8f2] px-3.5 py-3">
                       <div className="min-w-0">
                         <p className="truncate text-sm font-medium text-[#355c4c]">{locationLabel || "Add a location"}</p>
@@ -483,6 +482,10 @@ export function ReportSheet({ open, onClose, onSaved, onSaveLocal }: ReportSheet
             </div>
           ) : (
             <form className="space-y-6" onSubmit={submitReport}>
+              <AiDraftButton photo={photoFile} locationLabel={locationLabel} observations={details.observations} onDraft={draft => {
+                setDetails(current => ({ ...current, title: draft.title, category: draft.category, observations: draft.observations, targets: draft.targets, damageAboveTarget: draft.damageAboveTarget, obstruction: draft.obstruction, utilityConcern: draft.utilityConcern }));
+                setAcknowledged(false);
+              }} />
               <div className="rounded-2xl border border-[#c8d9ca] bg-[#eef5ef] p-4 sm:p-5">
                 <div className="flex items-start gap-3">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#4d896d]"><Icon name="sparkle" size={18} /></span>
