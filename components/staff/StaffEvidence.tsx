@@ -4,7 +4,6 @@ import {
   categoryLabel,
   formatCoordinates,
   formatStaffDate,
-  priorityLabel,
   statusLabel,
   type ActionType,
   type ObstructionLevel,
@@ -12,6 +11,7 @@ import {
   type StaffReport,
 } from "./types";
 import { LlmReportDraft } from "./LlmReportDraft";
+import { PriorityReason } from "./PriorityReason";
 
 export type ResponseType = "inspection" | "clearance" | "specialist_review";
 
@@ -47,30 +47,13 @@ const fieldClass =
 const textareaClass =
   "min-h-[58px] w-full resize-y rounded-lg border border-[#d8e3da] bg-white px-2.5 py-2 text-[11px] leading-4 text-[#294f40] outline-none transition placeholder:text-[#98a79e] focus:border-[#7da18d] focus:ring-2 focus:ring-[#cfe2d5]";
 
-function priorityClass(priority: StaffPriority): string {
-  switch (priority) {
-    case "urgent":
-      return "border-[#e7beb8] bg-[#fff4f1] text-[#96382d]";
-    case "priority":
-      return "border-[#ecd5a8] bg-[#fff8ea] text-[#8d6018]";
-    case "routine":
-      return "border-[#c9dbd1] bg-[#f0f7f1] text-[#426453]";
-    default:
-      return "border-[#c8d8e2] bg-[#f0f6fa] text-[#42627a]";
-  }
-}
-
 function answerLabel(value: string): string {
   if (value === "yes") return "Yes";
   if (value === "no") return "No";
+  if (value === "full") return "Fully blocked";
+  if (value === "partial") return "Partly blocked";
+  if (value === "none") return "No blockage reported";
   return "Unknown";
-}
-
-function fieldLabel(value: string): string {
-  return value
-    .replace(/^citizenDetails\./, "")
-    .replace(/([A-Z])/g, " $1")
-    .replace(/^./, (char) => char.toUpperCase());
 }
 
 function actionLabel(type: string): string {
@@ -191,6 +174,7 @@ export function StaffEvidence({
             </p>
           </div>
         </div>
+        <PriorityReason report={report} />
         {!isResolved ? (
           <button
             type="button"
@@ -271,31 +255,6 @@ export function StaffEvidence({
           </section>
 
           <LlmReportDraft key={report.id} report={report} />
-
-          <section className="rounded-xl border border-[#e0e8e1] bg-white p-3.5">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.13em] text-[#72867a]">Triage suggestion</p>
-                <p className="mt-1 text-[11px] text-[#84968c]">Rule: {report.suggestedPriority.ruleId}</p>
-              </div>
-              <span className={"rounded-full border px-2 py-1 text-[10px] font-semibold " + priorityClass(report.effectivePriority)}>
-                {priorityLabel(report.effectivePriority)}
-              </span>
-            </div>
-            <p className="mt-2.5 text-[12px] leading-5 text-[#4f685b]">{report.suggestedPriority.explanation}</p>
-            <div className="mt-2.5 rounded-lg bg-[#f5f8f4] px-2.5 py-2 text-[10px] leading-4 text-[#687c70]">
-              <span className="font-semibold text-[#4c6c5b]">Supporting fields:</span>{" "}
-              {report.suggestedPriority.supportingFields.length
-                ? report.suggestedPriority.supportingFields.map(fieldLabel).join(" · ")
-                : "None supplied"}
-            </div>
-            {report.officerPriority ? (
-              <div className="mt-2 rounded-lg border border-[#c9dfcf] bg-[#eff8f0] px-2.5 py-2 text-[10px] leading-4 text-[#4f715c]">
-                <span className="font-semibold">Human override:</span> {priorityLabel(report.officerPriority.level)}
-                {report.officerPriority.reason ? " · " + report.officerPriority.reason : ""}
-              </div>
-            ) : null}
-          </section>
 
           {missingEvidence.length ? (
             <section className="rounded-xl border border-[#e5d9c5] bg-[#fffbf4] p-3.5">
