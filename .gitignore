@@ -8,3 +8,10 @@ build/
 .vercel
 .DS_Store
 *.log
+
+# Secrets — the repo is PUBLIC. Never commit real keys.
+*.pem
+*.key
+secrets.json
+.env.development
+.env.production

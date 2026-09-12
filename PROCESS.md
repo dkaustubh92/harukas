@@ -96,3 +96,27 @@ Rungs 3 and 4 are nearly invisible in 90 seconds. Reach for them early.
 - **Model in Claude Code:** Fable 5.1 for ideation/planning/creative; Opus 5 `xhigh` for coding
 - **HA never touches the repo** — works from the deployed URL (`two-lane`)
 - **Deploy early and often**, freeze at 14:00
+
+---
+
+## Post-demo: open-sourcing (17:00+)
+
+**The repo is public from day one**, so this is mostly already true. What's left is making it legally open, usable, and safe.
+
+### The one thing that can't wait
+
+**Never commit a real key.** A leaked key in a public repo is exposed the moment it's pushed — not at 17:00. Use `.env.local` (gitignored) locally and the Vercel dashboard in production. If a key ever does get committed, **rotate it**; deleting the commit is not enough, because the history is already public.
+
+### Release checklist
+
+- [ ] `git log -p | grep -iE "sk-ant|eyJ|service_role"` — confirm no key ever entered history
+- [ ] Rotate `ANTHROPIC_API_KEY` and the Supabase service-role key anyway, as a precaution
+- [ ] Fill in the `TODO` sections of `README.md` — what it does, and the impact sentence from the pitch
+- [ ] Add a screenshot or a short demo GIF to the README — this is what makes a repo worth starring
+- [ ] Confirm the HRM data attribution line is present and accurate
+- [ ] Add repo topics on GitHub: `halifax`, `civic-tech`, `open-data`, `claude`, `hackathon`
+- [ ] Link the live Vercel URL in the repo description
+
+### It's also a judging asset
+
+"This is open source — the municipality could fork it on Monday" is the strongest available answer to *"what's the adoption path?"* (`qa-drill`). Worth saying out loud in the demo or Q&A, not just doing quietly afterwards.
