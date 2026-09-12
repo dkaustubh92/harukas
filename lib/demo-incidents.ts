@@ -1,5 +1,6 @@
 import incidentInputs from "@/data/demo-incidents.json";
 import photoInputs from "@/public/demo-incidents/photos.json";
+import populationInputs from "@/public/demo-context/report-population-context.json";
 
 // Authored fixtures for the prototype. Import these once when initializing an
 // empty demo store; do not overwrite saved citizen reports or officer decisions.
@@ -34,6 +35,28 @@ export type DemoPhotoKey =
   | "street-tree"
   | "tree-roots"
   | "tree-canopy";
+
+export type PopulationDensityTier = "low" | "moderate" | "high";
+
+export type PopulationDensityContext = {
+  daUid: string;
+  population2021: number;
+  densityPerSquareKm: number;
+  tier: PopulationDensityTier;
+  censusYear: 2021;
+  source: string;
+  warning: "Resident density is area context, not live occupancy or an affected-population estimate.";
+};
+
+/**
+ * Density is a queue-order signal within a severity band. It never changes a
+ * report's urgent, priority, routine, or unassessed classification.
+ */
+export function populationDensityTier(densityPerSquareKm: number): PopulationDensityTier {
+  if (densityPerSquareKm >= 7500) return "high";
+  if (densityPerSquareKm >= 3000) return "moderate";
+  return "low";
+}
 
 export interface DemoIncidentPhoto {
   url: string;
@@ -133,6 +156,7 @@ export interface DemoIncident
   context: {
     candidateTree: null;
     nearbyRoad: null;
+    population?: PopulationDensityContext | null;
     missingReasons: string[];
   };
   suggestedPriority: {
@@ -140,6 +164,8 @@ export interface DemoIncident
     ruleId: string;
     supportingFields: string[];
     explanation: string;
+    /** Higher values sort first only among reports with the same level. */
+    withinBandRank: 0 | 1 | 2;
   };
   officerPriority: null;
 }
@@ -162,6 +188,7 @@ function seedPriority(
   details: SeedIncidentInput["citizenDetails"],
   priority: DemoPriority,
 ): DemoIncident["suggestedPriority"] {
+  const withinBandRank = 0;
   if (priority === "urgent") {
     const immediateDanger = details.immediateDanger === "yes";
     return {
@@ -173,6 +200,7 @@ function seedPriority(
       explanation: immediateDanger
         ? "The fictional citizen reports immediate danger; urgent human review is suggested."
         : "The fictional citizen reports a full road or sidewalk obstruction; urgent human review is suggested.",
+      withinBandRank,
     };
   }
   if (priority === "priority") {
@@ -191,6 +219,7 @@ function seedPriority(
         : utility
           ? "The fictional citizen reports a possible utility conflict; priority human review is suggested."
           : "The fictional citizen reports a damaged or hanging part above a target; priority human review is suggested.",
+      withinBandRank,
     };
   }
   return {
@@ -206,11 +235,47 @@ function seedPriority(
     explanation: priority === "routine"
       ? "The fictional citizen describes an issue and reports no obstruction, utility concern, or immediate danger. Routine review is suggested."
       : "The fictional report leaves key evidence unknown. Human assessment is needed before assigning a priority.",
+    withinBandRank,
+  };
+}
+
+type PopulationInput = Omit<PopulationDensityContext, "tier"> & { reportId: string; reference: string };
+const populationByReportId = new Map(
+  (populationInputs as { reports: PopulationInput[] }).reports.map((entry) => [entry.reportId, entry]),
+);
+
+function seededPopulationContext(reportId: string): PopulationDensityContext | null {
+  const entry = populationByReportId.get(reportId);
+  if (!entry) return null;
+  return {
+    daUid: entry.daUid,
+    population2021: entry.population2021,
+    densityPerSquareKm: entry.densityPerSquareKm,
+    tier: populationDensityTier(entry.densityPerSquareKm),
+    censusYear: entry.censusYear,
+    source: entry.source,
+    warning: entry.warning,
+  };
+}
+
+function seededPriority(
+  details: SeedIncidentInput["citizenDetails"],
+  expectedPriority: DemoPriority,
+  population: PopulationDensityContext | null,
+): DemoIncident["suggestedPriority"] {
+  const suggestion = seedPriority(details, expectedPriority);
+  if (!population) return suggestion;
+  return {
+    ...suggestion,
+    supportingFields: [...suggestion.supportingFields, "context.population.densityPerSquareKm"],
+    explanation: `${suggestion.explanation} 2021 census density orders reports within the same severity band; it does not change the band.`,
+    withinBandRank: population.tier === "high" ? 2 : population.tier === "moderate" ? 1 : 0,
   };
 }
 
 export const DEMO_INCIDENTS: DemoIncident[] = (incidentInputs as SeedIncidentInput[]).map((input) => {
   const { expectedPriority, photoKey, staffSummary, possibleImpact, uncertainties, ...report } = input;
+  const population = seededPopulationContext(input.id);
   // Per-report assets can arrive independently without breaking the seed batch.
   const photo = photos[input.reference] ?? photos[photoKey];
   if (
@@ -247,12 +312,13 @@ export const DEMO_INCIDENTS: DemoIncident[] = (incidentInputs as SeedIncidentInp
     context: {
       candidateTree: null,
       nearbyRoad: null,
+      population,
       missingReasons: [
         "Coordinates place a fictional scenario on real road geometry; they are not verified incident locations.",
         "No municipal tree asset or ownership has been verified. Road and tree context layers are supplied separately.",
       ],
     },
-    suggestedPriority: seedPriority(input.citizenDetails, expectedPriority),
+    suggestedPriority: seededPriority(input.citizenDetails, expectedPriority, population),
     officerPriority: null,
   };
 });

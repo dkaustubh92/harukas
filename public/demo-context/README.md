@@ -10,6 +10,8 @@ database mutation, or dispatch takes place during collection.
 | `trees.geojson` | WGS84 in-service tree inventory points within a 150 m envelope around each demo pin |
 | `location-suggestions.json` | Synthetic incident placements on named road geometry, with source road IDs |
 | `report-context.json` | Report ID to nearest candidate tree within 60 m, or explicit no-match |
+| `population-density.geojson` | Cached HRM 2021 dissemination-area polygons and resident-density fields |
+| `report-population-context.json` | Report ID to 2021 census area population and density context |
 | `manifest.json` | Collection time, source URLs, feature counts, field domains, query scope, and fixture hash |
 
 The candidate join is contextual. The incidents are fictional, so a nearby tree
@@ -17,6 +19,8 @@ cannot be identified as the subject of an actual complaint. Do not describe thes
 trees as damaged or unsafe. Preserve the raw inventory values and show `dbhLabel`
 for diameter bands. `wiresLabel` is a recorded flag, not electrical clearance.
 Road geometry does not establish traffic, live closures, or tree ownership.
+Resident density is area context only: it does not measure current occupancy or
+the number of people affected by an incident.
 
 The fictional reports and photo mapping are exported by
 [`lib/demo-incidents.ts`](../../lib/demo-incidents.ts). Those fixtures deliberately

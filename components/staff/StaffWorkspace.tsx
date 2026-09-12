@@ -166,6 +166,8 @@ export default function StaffWorkspace() {
         };
         const priorityDifference = priorityRank[a.effectivePriority] - priorityRank[b.effectivePriority];
         if (priorityDifference !== 0) return priorityDifference;
+        const densityDifference = (b.suggestedPriority.withinBandRank ?? 0) - (a.suggestedPriority.withinBandRank ?? 0);
+        if (densityDifference !== 0) return densityDifference;
         return b.createdAt.localeCompare(a.createdAt);
       });
   }, [priorityFilter, reports, search, statusFilter]);

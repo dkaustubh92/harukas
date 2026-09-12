@@ -81,6 +81,7 @@ export interface StaffReport {
     ruleId: string;
     supportingFields: string[];
     explanation: string;
+    withinBandRank?: number;
   };
   officerPriority: {
     level: StaffPriority;
@@ -110,6 +111,14 @@ export interface StaffReport {
   context: {
     candidateTree?: unknown;
     nearbyRoad?: unknown;
+    population?: {
+      daUid?: string;
+      population2021?: number;
+      densityPerSquareKm?: number;
+      source?: string;
+      censusYear?: number;
+      warning?: string;
+    };
     missingReasons: string[];
   };
   staffSummary?: string;
@@ -253,6 +262,9 @@ export function normalizeStaffReport(value: unknown, index = 0): StaffReport {
         suggested.explanation,
         "Key evidence is missing or unverified. Human assessment is needed.",
       ),
+      withinBandRank: typeof suggested.withinBandRank === "number" && suggested.withinBandRank >= 0
+        ? suggested.withinBandRank
+        : 0,
     },
     officerPriority: officer
       ? {
@@ -286,6 +298,28 @@ export function normalizeStaffReport(value: unknown, index = 0): StaffReport {
     context: {
       candidateTree: context.candidateTree,
       nearbyRoad: context.nearbyRoad,
+      population: (() => {
+        const population = asRecord(context.population);
+        const population2021 = typeof population.population2021 === "number" && Number.isFinite(population.population2021)
+          ? population.population2021
+          : undefined;
+        const densityPerSquareKm = typeof population.densityPerSquareKm === "number" && Number.isFinite(population.densityPerSquareKm)
+          ? population.densityPerSquareKm
+          : undefined;
+        const censusYear = typeof population.censusYear === "number" && Number.isFinite(population.censusYear)
+          ? population.censusYear
+          : undefined;
+        return population2021 !== undefined || densityPerSquareKm !== undefined
+          ? {
+              daUid: asOptionalString(population.daUid),
+              population2021,
+              densityPerSquareKm,
+              source: asOptionalString(population.source),
+              censusYear,
+              warning: asOptionalString(population.warning),
+            }
+          : undefined;
+      })(),
       missingReasons: asStringArray(context.missingReasons),
     },
     staffSummary: asOptionalString(raw.staffSummary),

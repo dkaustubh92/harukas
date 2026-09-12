@@ -133,6 +133,7 @@ export function StaffEvidence({
   const isResolved = report.status === "resolved";
   const canMarkReviewed = report.status === "submitted";
   const isSeeded = report.isDemo && report.source === "seed";
+  const population = report.context.population;
 
   return (
     <aside className="flex min-h-[540px] min-w-0 flex-col bg-[#fbfcfa] lg:min-h-0">
@@ -299,6 +300,31 @@ export function StaffEvidence({
               />
             </div>
           </section>
+
+          {population ? (
+            <section className="rounded-xl border border-[#d9e5dc] bg-[#f7fbf7] p-3.5">
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.13em] text-[#5c7968]">Resident area context</p>
+                <span className="rounded bg-[#e7f1e9] px-1.5 py-1 text-[9px] font-semibold text-[#52705e]">
+                  {population.censusYear ?? 2021} Census
+                </span>
+              </div>
+              <div className="mt-2 grid gap-1.5 text-[11px] text-[#526c5b]">
+                <ContextRow
+                  label="Population density"
+                  value={population.densityPerSquareKm === undefined ? "Not available" : `${Math.round(population.densityPerSquareKm).toLocaleString()} residents/km²`}
+                />
+                <ContextRow
+                  label="Area population"
+                  value={population.population2021 === undefined ? "Not available" : `${Math.round(population.population2021).toLocaleString()} residents`}
+                />
+                <ContextRow label="Dissemination area" value={population.daUid || "Not available"} />
+              </div>
+              <p className="mt-2.5 text-[10px] leading-4 text-[#718376]">
+                {population.warning || "Resident density is area context, not live occupancy or an affected-population estimate."}
+              </p>
+            </section>
+          ) : null}
 
           <section className="rounded-xl border border-[#e0e8e1] bg-white p-3.5">
             <div className="flex items-center justify-between gap-3">

@@ -20,6 +20,23 @@ def distance(point, other):
     return 12742017.6 * math.asin(min(1, math.sqrt(half_chord)))
 
 
+def ring_contains(point, ring):
+    x, y = point
+    inside = False
+    for a, b in zip(ring, ring[1:]):
+        ax, ay = a[:2]
+        bx, by = b[:2]
+        if (ay > y) != (by > y) and x < (bx - ax) * (y - ay) / (by - ay) + ax:
+            inside = not inside
+    return inside
+
+
+def contains(point, geometry):
+    polygons = [geometry['coordinates']] if geometry['type'] == 'Polygon' else geometry['coordinates']
+    return any(ring_contains(point, polygon[0]) and not any(ring_contains(point, hole) for hole in polygon[1:])
+               for polygon in polygons)
+
+
 def main():
     fixture_bytes = (ROOT / 'data/demo-incidents.json').read_bytes()
     reports = json.loads(fixture_bytes)
@@ -28,6 +45,8 @@ def main():
     trees = read('trees.geojson')['features']
     roads = read('roads.geojson')['features']
     joins = read('report-context.json')['reports']
+    population = read('population-density.geojson')['features']
+    population_joins = read('report-population-context.json')['reports']
     assert len(reports) == len(joins) == manifest['counts']['reports'] == 25
     assert len(trees) == manifest['counts']['trees']
     assert len(roads) == manifest['counts']['roadSegments']
@@ -65,6 +84,14 @@ def main():
             assert join['matchStatus'] == 'no_candidate_within_60m'
     matched = sum(j['candidateTreeObjectId'] is not None for j in joins)
     assert matched == manifest['counts']['candidateMatches']
+    assert len(population) == manifest['counts']['populationAreas']
+    assert {join['reportId'] for join in population_joins} == set(by_report)
+    assert all(join['censusYear'] == 2021 and join['densityPerSquareKm'] >= 0 for join in population_joins)
+    for join in population_joins:
+        point = [by_report[join['reportId']]['location']['longitude'], by_report[join['reportId']]['location']['latitude']]
+        feature = next((item for item in population if item['properties']['DAUID'] == join['daUid']), None)
+        assert feature and contains(point, feature['geometry'])
+    assert sum(join['daUid'] is not None for join in population_joins) == manifest['counts']['populationMatches']
     print(f'PASS: {len(reports)} reports, {len(trees)} trees, {len(roads)} road segments, {matched} candidate joins.')
     print('Checked fixture hash, unique IDs, WGS84 geometry, inventory domains, and every nearest-tree result.')
 

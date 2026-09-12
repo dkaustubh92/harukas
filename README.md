@@ -2,9 +2,11 @@
 
 > Built at the **Claude Hackathon Halifax**, 12 September 2026, at Volta.
 
+**Live demo:** [harukas.vercel.app](https://harukas.vercel.app)
+
 ## What it does
 
-HaruKas is a hackathon prototype that starts with a resident's photo and confirmed tree location, then carries the report to an officer's response decision. The citizen opens the mobile browser, reviews Luna's editable draft, and follows the shared demo status on the phone. The officer sees the same report on a laptop, reviews its evidence and uncertainty, and records a simulated response. The current repository still contains the generic Next.js chat scaffold; the tree-report and queue flows are not implemented in this snapshot.
+HaruKas is a hackathon prototype for reporting tree hazards. A resident submits a photo and confirmed location; an officer reviews the evidence, a staff-only illustrative impact note, and a proposed inspection priority before recording a simulated response. The priority keeps reported danger and access obstruction as the primary signals, then uses 2021 Census population density only to order reports within the same severity band. It is not live occupancy or an affected-population estimate.
 
 ## Requirements
 

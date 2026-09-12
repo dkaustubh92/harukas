@@ -75,6 +75,22 @@ def haversine(a,b):
     d=math.sin((lat2-lat1)/2)**2+math.cos(lat1)*math.cos(lat2)*math.sin((lon2-lon1)/2)**2
     return 2*R*math.asin(min(1,math.sqrt(d)))
 
+def ring_contains(point, ring):
+    """Ray-casting containment check for GeoJSON polygon rings."""
+    x, y = point
+    inside = False
+    for a, b in zip(ring, ring[1:]):
+        ax, ay = a[:2]
+        bx, by = b[:2]
+        if (ay > y) != (by > y) and x < (bx-ax) * (y-ay) / (by-ay) + ax:
+            inside = not inside
+    return inside
+
+def contains(point, geometry):
+    polygons = [geometry['coordinates']] if geometry['type'] == 'Polygon' else geometry['coordinates']
+    return any(ring_contains(point, polygon[0]) and not any(ring_contains(point, hole) for hole in polygon[1:])
+               for polygon in polygons)
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--locations-only',action='store_true',help='Propose road-backed fixture locations before collecting trees.')
@@ -137,6 +153,29 @@ def main():
                 trees[p['OBJECTID']]=feature
     tree_list=[trees[key] for key in sorted(trees)]
     save('trees.geojson',collection(tree_list))
+
+    # Cache the official census polygons for a local point-in-polygon lookup.
+    # A citywide average would not distinguish one report location from another.
+    population = features('Census_2021_Dissemination_Areas', {
+        'where': '1=1', 'outFields': 'DAUID,DAPOP2021,DAAREA,DAPOPDEN'
+    })
+    if not population:
+        raise RuntimeError('No 2021 dissemination areas returned')
+    save('population-density.geojson', collection(population))
+    population_joins = []
+    for report in reports:
+        point = [report['location']['longitude'], report['location']['latitude']]
+        match = next((feature for feature in population if contains(point, feature['geometry'])), None)
+        properties = match['properties'] if match else {}
+        population_joins.append({
+            'reportId': report['id'], 'reference': report['reference'],
+            'daUid': properties.get('DAUID'),
+            'population2021': properties.get('DAPOP2021'),
+            'densityPerSquareKm': properties.get('DAPOPDEN'),
+            'source': URLS['Census_2021_Dissemination_Areas'], 'censusYear': 2021,
+            'warning': 'Resident density is area context, not live occupancy or an affected-population estimate.'
+        })
+    save('report-population-context.json', {'reports': population_joins})
     joins=[]
     for report in reports:
         loc=report['location'];point=[loc['longitude'],loc['latitude']]
@@ -151,9 +190,12 @@ def main():
     save('report-context.json',{'reports':joins})
     save('manifest.json',{'collectedAt':now,'fixtureSha256':hashlib.sha256(source.read_bytes()).hexdigest(),
         'crs':'EPSG:4326','kind':'real_geographic_context_for_fictional_incidents',
-        'sources':{'trees':URLS['Public_Trees'],'roads':URLS['StreetNetwork']},
+        'sources':{'trees':URLS['Public_Trees'],'roads':URLS['StreetNetwork'],
+                   'populationDensity':URLS['Census_2021_Dissemination_Areas']},
         'counts':{'reports':len(reports),'trees':len(trees),'roadSegments':len(roads),
-                  'candidateMatches':sum(x['candidateTreeObjectId'] is not None for x in joins)},
+                  'candidateMatches':sum(x['candidateTreeObjectId'] is not None for x in joins),
+                  'populationAreas':len(population),
+                  'populationMatches':sum(x['daUid'] is not None for x in population_joins)},
         'selection':{'treeEnvelopeHalfWidthMeters':150,'candidateMaximumDistanceMeters':60,
             'treesWhere':"ASSETCODE='TRE' AND ASSETSTAT='INS'",'roadNames':sorted(names)},'domains':domains,
         'attribution':'Contains information licensed under the Halifax Regional Municipality Open Data Licence. Data © Halifax Regional Municipality.',
