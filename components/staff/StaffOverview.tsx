@@ -177,7 +177,7 @@ export function StaffOverview({
           </section>
         </div>
 
-        <section className="mt-3 rounded-lg border border-[#dce6dd] bg-white">
+        <section className="mt-3 hidden rounded-lg border border-[#dce6dd] bg-white [@media(min-height:850px)]:block">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#e6ece6] px-4 py-3">
             <div>
               <h2 className="text-lg font-semibold tracking-[-0.02em] text-[#234d3e]">Latest reports</h2>
