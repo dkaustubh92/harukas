@@ -30,9 +30,12 @@ export function PriorityReason({ report }: { report: StaffReport }) {
     </div>
     <p className="mt-1 text-xs font-medium">{humanDecision ? "Human decision" : "Suggested from citizen-reported evidence"}</p>
     <p className="mt-2 text-sm font-medium leading-5">{humanDecision ? humanDecision.reason || "A reviewer changed the priority. No reason was recorded." : report.suggestedPriority.explanation}</p>
-    {facts.length > 0 && <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 border-t border-current/15 pt-2 text-xs">
+    {facts.length > 0 && <div className="mt-3 border-t border-current/15 pt-2">
+      <p className="text-xs font-medium">Citizen-reported facts</p>
+      <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-2 text-xs">
       {facts.map(fact => <div key={fact.field}><dt className="opacity-80">{fact.label}</dt><dd className="mt-0.5 font-semibold">{fact.value}</dd></div>)}
-    </dl>}
+      </dl>
+    </div>}
     {humanDecision && <details className="mt-2 text-xs">
       <summary className="cursor-pointer py-1 font-medium">Original suggestion: {priorityLabel(report.suggestedPriority.level)}</summary>
       <p className="mt-1 leading-5">{report.suggestedPriority.explanation}</p>
