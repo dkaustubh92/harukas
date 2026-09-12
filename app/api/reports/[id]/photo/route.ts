@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export async function GET(_request: Request, context: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await context.params;
-    const bytes = reportPhoto(id);
+    const bytes = await reportPhoto(id);
     return new Response(new Uint8Array(bytes), { headers: {
       "Content-Type": "image/jpeg", "Content-Length": String(bytes.byteLength),
       "Cache-Control": "no-store", "X-Content-Type-Options": "nosniff",

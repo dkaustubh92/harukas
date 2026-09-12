@@ -1,5 +1,4 @@
-import { publicReport, readReport, reportErrorResponse, reportResponse } from "@/lib/report-store";
-import { DEMO_STORE_META } from "@/lib/report-contract";
+import { publicReport, readReport, reportErrorResponse, reportResponse, reportStoreMeta } from "@/lib/report-store";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -7,9 +6,9 @@ export const dynamic = "force-dynamic";
 export async function GET(request: Request, context: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await context.params;
-    const report = readReport(id);
+    const report = await readReport(id);
     const staff = new URL(request.url).searchParams.get("view") === "staff";
-    return reportResponse({ report: staff ? report : publicReport(report), meta: DEMO_STORE_META });
+    return reportResponse({ report: staff ? report : publicReport(report), meta: reportStoreMeta() });
   } catch (error) {
     return reportErrorResponse(error);
   }

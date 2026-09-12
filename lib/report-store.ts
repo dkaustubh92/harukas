@@ -1,16 +1,13 @@
 import "server-only";
 import { randomUUID } from "node:crypto";
 import { createDemoIncidents } from "./demo-incidents";
+import { ReportError } from "./report-errors";
+import { getReportPersistence } from "./report-supabase";
+export { ReportError } from "./report-errors";
 import {
   REPORT_PRIORITIES, REPORT_STATUSES, DEMO_STORE_META,
   type Report, type PublicReport, type ReportAction,
 } from "./report-contract";
-
-export class ReportError extends Error {
-  constructor(public status: number, public code: string, message: string) {
-    super(message);
-  }
-}
 
 type Store = {
   reports: Map<string, Report>;
@@ -18,26 +15,39 @@ type Store = {
   photos?: Map<string, Uint8Array>;
 };
 
-// The coordinator selected one running demo server. This does not claim durable
-// database storage or synchronization across serverless instances.
+function seedReports(): Report[] {
+  return createDemoIncidents().map((seed) => ({
+    ...seed,
+    effectivePriority: seed.suggestedPriority.level,
+    municipalStatus: "not_sent",
+    events: [{
+      id: `${seed.id}-seed`, actionId: `${seed.id}-seed`,
+      type: "seeded", createdAt: seed.updatedAt,
+      label: "Authored demo scenario", note: "Fictional existing report loaded for demonstration.",
+      version: seed.version, isDemo: true,
+    }],
+  }));
+}
+
+async function persistentStore() {
+  const db = getReportPersistence();
+  if (db) await db.seed(seedReports());
+  return db;
+}
+
+export function reportStoreMeta() {
+  return getReportPersistence() ? {
+    ...DEMO_STORE_META, storage: "supabase",
+    persistence: "Reports and uploaded photos are stored in the shared Supabase demo project.",
+  } : DEMO_STORE_META;
+}
+
+// Without a server key, keep the existing single-server demo store intact.
 const globalStore = globalThis as typeof globalThis & { harukasReportStoreV1?: Store };
 function store(): Store {
   if (!globalStore.harukasReportStoreV1) {
     globalStore.harukasReportStoreV1 = {
-      reports: new Map(createDemoIncidents().map((seed) => {
-        const report: Report = {
-          ...seed,
-          effectivePriority: seed.suggestedPriority.level,
-          municipalStatus: "not_sent",
-          events: [{
-            id: `${seed.id}-seed`, actionId: `${seed.id}-seed`,
-            type: "seeded", createdAt: seed.updatedAt,
-            label: "Authored demo scenario", note: "Fictional existing report loaded for demonstration.",
-            version: seed.version, isDemo: true,
-          }],
-        };
-        return [seed.id, report];
-      })),
+      reports: new Map(seedReports().map((report) => [report.id, report])),
       completedActions: new Map(),
     };
   }
@@ -71,13 +81,20 @@ export function publicReport(report: Report): PublicReport {
   };
 }
 
-export function readReport(id: string): Report {
+export async function readReport(id: string): Promise<Report> {
+  const persistent = await persistentStore();
+  if (persistent) return persistent.read(id);
   const report = store().reports.get(id);
   if (!report) throw new ReportError(404, "report_not_found", "This demo report was not found.");
   return structuredClone(report);
 }
 
-export function saveCitizenReport(report: Report, bytes: Uint8Array) {
+export async function saveCitizenReport(report: Report, bytes: Uint8Array) {
+  const persistent = await persistentStore();
+  if (persistent) {
+    const result = await persistent.create(report, bytes);
+    return { report: publicReport(result.report), duplicate: result.duplicate };
+  }
   const db = store();
   const prior = [...db.reports.values()].find((r) => r.clientSubmissionId === report.clientSubmissionId);
   if (prior) return { report: publicReport(prior), duplicate: true };
@@ -90,14 +107,17 @@ export function saveCitizenReport(report: Report, bytes: Uint8Array) {
   return { report: publicReport(report), duplicate: false };
 }
 
-export function reportPhoto(id: string): Uint8Array {
-  readReport(id);
+export async function reportPhoto(id: string): Promise<Uint8Array> {
+  const persistent = await persistentStore();
+  if (persistent) return persistent.photo(id);
+  if (!store().reports.has(id))
+    throw new ReportError(404, "report_not_found", "This demo report was not found.");
   const photo = store().photos?.get(id);
   if (!photo) throw new ReportError(404, "photo_not_found", "Use the photo URL on this demo report.");
   return photo;
 }
 
-export function listReports(params: URLSearchParams) {
+export async function listReports(params: URLSearchParams) {
   const status = params.get("status");
   const priority = params.get("priority");
   if (status && status !== "active" && !REPORT_STATUSES.includes(status as Report["status"]))
@@ -105,7 +125,8 @@ export function listReports(params: URLSearchParams) {
   if (priority && !REPORT_PRIORITIES.includes(priority as Report["effectivePriority"]))
     throw new ReportError(400, "invalid_filter", "Choose a supported priority.");
   const staff = params.get("view") === "staff";
-  const reports = [...store().reports.values()]
+  const persistent = await persistentStore();
+  const reports = (persistent ? await persistent.list() : [...store().reports.values()])
     .filter((r) => !status || (status === "active" ? r.status !== "resolved" : r.status === status))
     .filter((r) => !priority || r.effectivePriority === priority)
     .sort((a, b) => Number(a.status === "resolved") - Number(b.status === "resolved")
@@ -113,7 +134,7 @@ export function listReports(params: URLSearchParams) {
       || a.createdAt.localeCompare(b.createdAt) || a.id.localeCompare(b.id));
   return {
     reports: reports.map((r) => staff ? structuredClone(r) : publicReport(r)),
-    meta: { ...DEMO_STORE_META, total: reports.length, updatedAt: new Date().toISOString() },
+    meta: { ...reportStoreMeta(), total: reports.length, updatedAt: new Date().toISOString() },
   };
 }
 
@@ -164,8 +185,10 @@ function actionInput(value: unknown): ReportAction {
   return action;
 }
 
-export function applyReportAction(id: string, value: unknown) {
+export async function applyReportAction(id: string, value: unknown) {
   const action = actionInput(value);
+  const persistent = await persistentStore();
+  if (persistent) return persistent.action(id, action, transitionReport);
   const db = store();
   const key = `${id}:${action.actionId}`;
   const fingerprint = JSON.stringify(action);
@@ -175,7 +198,16 @@ export function applyReportAction(id: string, value: unknown) {
       throw new ReportError(409, "action_id_conflict", "This action ID was already used for another update.");
     return { report: structuredClone(prior.report), duplicate: true };
   }
-  const report = readReport(id);
+  const saved = db.reports.get(id);
+  if (!saved) throw new ReportError(404, "report_not_found", "This demo report was not found.");
+  const report = transitionReport(structuredClone(saved), action);
+  // No await between the memory version check and commit.
+  db.reports.set(id, report);
+  db.completedActions.set(key, { input: fingerprint, report: structuredClone(report) });
+  return { report: structuredClone(report), duplicate: false };
+}
+
+function transitionReport(report: Report, action: ReportAction): Report {
   if (report.version !== action.expectedVersion)
     throw new ReportError(409, "version_conflict", "This report changed. Refresh it before saving your decision.");
   if (report.status === "resolved")
@@ -218,10 +250,7 @@ export function applyReportAction(id: string, value: unknown) {
   report.updatedAt = now;
   report.events.push({ id: randomUUID(), actionId: action.actionId, type: action.type, createdAt: now,
     label, note: action.note || "Decision recorded in the demo. No external action was taken.", version: report.version, isDemo: true });
-  // Synchronous mutation commits the report and event together within this server.
-  db.reports.set(id, report);
-  db.completedActions.set(key, { input: fingerprint, report: structuredClone(report) });
-  return { report: structuredClone(report), duplicate: false };
+  return report;
 }
 
 export function reportResponse(body: unknown, status = 200): Response {
@@ -230,7 +259,7 @@ export function reportResponse(body: unknown, status = 200): Response {
 
 export function reportErrorResponse(error: unknown): Response {
   if (error instanceof ReportError)
-    return reportResponse({ error: { code: error.code, message: error.message, retryable: error.status === 409 } }, error.status);
+    return reportResponse({ error: { code: error.code, message: error.message, retryable: error.status === 409 || error.status >= 500 } }, error.status);
   if (error instanceof SyntaxError)
     return reportResponse({ error: { code: "invalid_json", message: "Provide valid JSON.", retryable: false } }, 400);
   return reportResponse({ error: { code: "report_unavailable", message: "The demo report service is unavailable. Try again.", retryable: true } }, 500);
