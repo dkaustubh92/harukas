@@ -23,9 +23,13 @@ for decisions made *on the day*.
 | 12 Sep, ~10:30 | Camera path is **out** unless core is hardened before 13:00 | Costs a 390px layout plus permission-prompt risk on the demo path |
 | 12 Sep, ~10:30 | Framing is triage order, never a safety verdict | Indefensible otherwise, and a judge will push on it |
 
+| 12 Sep, ~10:35 | Full product vision captured in `../03-requirements/vision.md` | Two user types (citizen + official), camera reporting, impact prediction, 3D map. **Captured, not scoped** — locked scope unchanged until reconciled |
+
 ## Not yet decided
 
 - Product name — HA's call
-- Whether Supabase is needed, or a seeded JSON file is enough (**lean JSON**)
+- Whether Supabase is needed, or a seeded JSON file is enough (**lean JSON**) — note the citizen reporting loop in the vision would need real storage
+- **Which slice of the vision gets built by 14:00** — the open question that matters most
+- Whether the camera path comes back in (it is currently out in `scope.md`, but it is central to the vision)
 - Whether the build uses a phone sensor path
 - Whether Supabase is actually needed, or seeded JSON is enough
