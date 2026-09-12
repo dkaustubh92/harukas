@@ -1,54 +1,39 @@
-# Status
+# Current status
 
-**Last updated: 12 Sep 2026, ~10:30 — challenge locked.** Update the timestamp when you
-touch this — a stale status file is worse than none.
+**Updated: 12 September 2026. Requirements completed before application development.**
+**Ready deadline: 14:00 ADT.** Challenge #3, Which Tree Falls First.
 
-## Right now
+## Completed
 
-**Challenge locked: #3 Which Tree Falls First.** Scope in `docs/03-requirements/scope.md`.
+- [x] Repository and existing generic chat scaffold assessed.
+- [x] Teammate workflow and eight data-source leads reviewed.
+- [x] Citizen and officer requirements clarified with the user.
+- [x] [Product requirements](../03-requirements/product-requirements.md),
+  [technical contract](../03-requirements/technical-contract.md),
+  [acceptance checklist](../03-requirements/acceptance-checklist.md), and
+  [execution plan](../03-requirements/execution-plan.md) written.
+- [x] Supabase project and GitHub repository confirmed. Local URL and remote match.
+- [x] OpenRouter Luna model ID and high-effort support verified from provider information.
+- [x] `OPENROUTER_API_KEY` detected locally without displaying its value.
+- [x] Provider dependency added during setup. No application source migration performed.
+- [x] No-real-municipal-submission requirement recorded across the specification.
+- [x] [Demo data prepared](../02-research/demo-data.md): 25 fictional reports,
+  5 representative photos, corrected road locations, and cached HRM tree and road context.
 
-**Next two actions, in order:**
-1. **Put HaruKas on the board against #3** — four teams per problem, first-come
-2. **Create the Vercel project** — the only step that can't be done from this repo
+## Not yet verified or implemented
 
-## Prep — done before the event
+- [ ] Supabase server credential available. Local service-role value is absent.
+- [ ] Existing database schema, storage bucket, and access policies inspected.
+- [ ] Actual report and photo persistence tested across separate devices.
+- [ ] Actual text and image calls through OpenRouter tested in the app.
+- [ ] Citizen reporting and map implemented.
+- [ ] Officer queue, analysis, map, review, and simulated response implemented.
+- [ ] Reviewed public obstruction and staff-only impact overlay implemented.
+- [ ] Municipal preview and simulated receipt implemented.
+- [ ] Deployable HTTPS URL and hosting environment configuration verified.
+- [ ] Current application build and acceptance scenarios passed.
+- [ ] Demo rehearsed on the phone and laptop before 14:00.
 
-- [x] 17 skills in `.claude/skills/`
-- [x] Runbook, rubric, and challenges captured in `docs/01-hackathon/`
-- [x] Next.js scaffold builds clean (`npm run build`) — `/` and `/api/chat`
-- [x] `ANTHROPIC_API_KEY` set in `.env.local`
-- [x] GitHub remote: `dkaustubh92/harukas`
-- [x] QR share overlay (press `Q`) reads the live URL from `window.location`
-
-## Today
-
-### Pick (10:00–10:45)
-- [x] Research block — trees PURSUE, reporting PASS (`docs/02-research/`)
-- [x] Data gate passed — join proven, 29/30 within 60 m, median 18.9 m
-- [x] Kill gate — Monday person and 3 WoWs named in `docs/03-requirements/scope.md`
-- [ ] **Claim #3 on the board** — four teams each, first-come
-- [ ] Demo script written → `docs/03-requirements/demo-script.md`
-
-### Build (10:45–14:00)
-- [ ] **Vercel project created — live URL exists.** Manual step at vercel.com/new; the only
-      thing that can't be done from this repo. Do it first
-- [ ] Env vars set in Vercel (separate from `.env.local`)
-- [ ] Core path works end-to-end, unstyled — **due 11:45**
-- [ ] Art direction applied
-- [ ] WoW factors in
-- [ ] Demo path hardened and seeded (`demo-safe`)
-
-### Freeze (14:00)
-- [ ] Rehearsed on the actual demo device, on the actual venue wifi
-- [ ] Fallback ready if the live path fails
-- [ ] Q&A prep done
-
-## Known risks
-
-| Risk | State |
-|---|---|
-| **Not deployed.** No live URL; QR overlay points at `localhost` | **Open — highest priority once we pick** |
-| Conference wifi | Untested. Seed the demo path, don't query live (`demo-safe`) |
-| `demo-script-90` is written for 90 sec, budget is 3 min | Known; adjust when writing the script |
-| `DBH` is a size class 1–11, not centimetres | Render as relative size only. Never print "4 cm" |
-| Rural requests have no asset match (1 in 30) | Explicit empty state — a non-match is itself a signal |
+Development begins after the completed requirements are reviewed. Follow the
+execution plan for the first shared photo/report round trip. Historical build
+deadlines and optional-photo assumptions no longer govern the work.

@@ -2,6 +2,10 @@
 
 **Verified live against HRM open data, 12 Sep 2026 ~10:15. Verdict: PURSUE.**
 
+**Follow-up, ~11:31 ADT:** The [source review](03-trees-data-sources.md) verifies
+diameter-band labels and corrects the earlier confidence claim about asset matching.
+The distances below demonstrate nearby coverage, not confirmed tree identity.
+
 ## The trap that kills the obvious build
 
 `DESCRIPTION` on Cityworks Service Requests is **a 101-value pick list, not free text.**
@@ -34,17 +38,18 @@ exists and is effectively unused.
 
 ## The insight (not on the slide)
 
-The slide says *every one needs a site visit before anyone knows which is dangerous.*
-That is only true if you ignore what the city already owns.
+The slide identifies site visits as the bottleneck. Inventory records can supply
+context for deciding which request to inspect first. They do not replace an on-site
+assessment.
 
 `Public_Trees` carries, per tree: **scientific + common species, DBH (diameter at breast
 height), `WIRES` (wires present), year planted, general location, maintained-by, condition
 expiry date.** 80,051 of them.
 
-**Nobody joins the complaint to the asset record.** A request at a lat/lon can be matched to
-the specific tree, which means you already know it's a 90cm maple with wires present that
-was planted in 1948 — before anyone drives anywhere. The bottleneck isn't the decision, it's
-that the decision is made blind when it doesn't have to be.
+The proposed enrichment matches request coordinates to nearby inventory candidates.
+That supplies recorded species, diameter band, and wires context before a visit.
+The request coordinates may be approximate, so the nearest asset is not necessarily
+the reported tree. Show that uncertainty with the recommendation.
 
 ## Endpoints
 
@@ -61,7 +66,7 @@ identically, one of them 432 days old, no way to know which to drive to first. W
 the same list, ordered, with the reason for each position. Nothing to adopt, nothing to
 integrate — it is their existing queue, sorted.
 
-## The join is proven (tested on 30 oldest open requests)
+## Nearby inventory coverage (tested on 30 oldest open requests)
 
 | | |
 |---|---|
@@ -70,23 +75,24 @@ integrate — it is their existing queue, sorted.
 | Within 30 m | 26 / 30 |
 | Within 15 m | 9 / 30 |
 
-The one miss was Hammonds Plains — rural, outside the inventory's right-of-way coverage.
-**Degrade gracefully there**: no asset match is itself information (likely not a city tree).
+The one miss was in Hammonds Plains. No nearby inventory record was found within
+the search radius. Show **No asset match**. This does not establish tree ownership.
 
 **Two gotchas found while proving it — both would have cost an hour mid-build:**
 
 1. **Geometry comes back projected, not lat/lon.** Pass `outSR=4326` on the spatial query or
    your distances come out in the millions. The server-side `distance=60&units=esriSRUnit_Meter`
    filter is correct regardless; it's only the returned geometry that misleads
-2. **`DBH` is a size class 1–11, not centimetres**, despite `SIZE2UNIT` reading `CM`.
-   Distribution is 29% class 1 decaying to a single class 11 across 79,475 populated rows —
-   binned, not measured. Use it as a **relative size ordinal**. Never render "a 4 cm tree"
+2. **`DBH` is a coded diameter band, not a direct measurement**, despite `SIZE2UNIT`
+   reading `CM`. The follow-up schema check found labels for codes 1 through 9:
+   code 4 means 31 to 45.9 cm. A grouped query found one unlabeled code 11 and 576
+   nulls. Use published bands, preserve unknown codes, and never render "a 4 cm tree"
 
 ## Risks
 
 | Risk | Mitigation |
 |---|---|
 | **Do not claim safety diagnosis.** "This tree is safe" from a photo or a record is indefensible and a judge will push on it | Frame strictly as **triage order** — which to look at first — never a safety verdict. This is also the honest Q&A answer |
-| ~~Nearest-tree join may mismatch~~ | **Resolved** — 29/30 at median 18.9 m. Show the match distance in the UI so the judge sees the confidence |
-| `DBH` is a class code, not a measurement | Render as relative size ("size class 4 of 11"), never as centimetres |
+| Nearest-tree join may mismatch | **Open**. Nearby coverage was 29/30 at median 18.9 m. Show distance and require confirmation before treating a candidate as the reported tree |
+| `DBH` is a class code, not a measurement | Render its published diameter band. Null or unmapped codes remain unknown. Do not display raw codes as centimetres or a scale of 11 classes |
 | Risk score must be defensible, not vibes | Build it from DBH + wires present + species + age + days waiting, and **show the inputs** next to the score |

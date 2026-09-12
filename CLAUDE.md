@@ -8,11 +8,12 @@ Hackathon prototype — Claude Hackathon Halifax, 12 Sept 2026. Read `docs/01-ha
 
 ## Context that changes how you work here
 
-This is a **4-hour hackathon build judged by a live demo**, not a product. The build window is **10:00–14:00**, and ideation happens inside it. Optimize for demo impact, not maintainability. Speed and visible polish beat correctness at the margins.
+This is a **4-hour hackathon build judged by a live demo**, not a product. The build window is **10:00–14:00**, and ideation happens inside it. The working webapp path is due by minute 75 of the implementation block. Use the remaining time for polish and rehearsal, and treat the hard 14:00 ready deadline as the final gate. Optimize for demo impact, not maintainability. Speed and visible polish beat correctness at the margins.
 
-- **If it isn't in the 90-second demo, don't build it.** See `scope-60`
+- **If it does not support the working path or the final demo, do not build it.** Follow the canonical acceptance checklist and execution plan.
 - **Deploy early and continuously.** Not at the end. See `ship-it`
-- **No auth, no settings, no responsive work** unless the demo shows it — the exception is a phone-sensor demo path, which forces 390px-wide layout. See "Phone as an input device" in `docs/01-hackathon/runbook.md`
+- **Keep auth, settings, a native mobile app, and native camera capture out.** Browser photo selection and consented current-location access are P0; support the chosen demo viewport. See "Phone as an input device" in `docs/01-hackathon/runbook.md`
+- **Keep all external effects simulated.** The prototype never creates a real municipal request, sends a report to Halifax or Nova Scotia Power, dispatches a crew, or notifies a person.
 - Ugly-but-working beats elegant-but-unfinished
 
 ## Commands
@@ -25,9 +26,20 @@ npm run lint     # eslint
 npx tsc --noEmit # typecheck alone, faster than a full build
 ```
 
-No test suite, and for a 4-hour build there should not be one. `npm run build` is the gate — it typechecks and catches most real breakage.
+No extensive test suite is required for this four-hour build. Before calling the app ready, run `npm run build` and exercise the actual acceptance path in `docs/03-requirements/acceptance-checklist.md`, including the citizen photo and location flow, shared report, officer response, and simulated municipal receipt. A successful build alone is not the acceptance gate.
 
-**First-time setup:** `.env.local` already exists (gitignored) with the Supabase URL and anon key filled in from project `mgelmrwklixmhdhfxypk`. Only `ANTHROPIC_API_KEY` needs adding. Vercel env vars are separate — `.env.local` is local only.
+**First-time setup:** Put the required values in `.env.local` for local work and in the deployment environment for a deployed app. The Supabase project is `mgelmrwklixmhdhfxypk`, and the local `NEXT_PUBLIC_SUPABASE_URL` matches that project. The GitHub repository is `dkaustubh92/harukas`. `OPENROUTER_API_KEY` is detected by `@next/env`; keep it server-only and never commit it. `SUPABASE_SERVICE_ROLE_KEY` is absent, so treat it as a setup dependency before adding backend writes. No backend write has been tested. Vercel environment variables are separate from `.env.local`.
+
+## Requirements gate
+
+Complete and review the canonical requirements before changing source code:
+
+- [Product requirements](docs/03-requirements/product-requirements.md)
+- [Technical contract](docs/03-requirements/technical-contract.md)
+- [Acceptance checklist](docs/03-requirements/acceptance-checklist.md)
+- [Execution plan](docs/03-requirements/execution-plan.md)
+
+These documents define the current product. Older `scope.md` provides historical context. `demo-script.md` is a rehearsal aid subordinate to the canonical requirements.
 
 ## Architecture
 
@@ -35,13 +47,13 @@ Next.js 16 App Router, React 19, Tailwind v4, TypeScript. No `src/`; `@/*` maps 
 
 | Path | Role |
 |---|---|
-| `app/page.tsx` | Client component; `useChat` from `@ai-sdk/react` drives the UI |
-| `app/api/chat/route.ts` | **The only place the Anthropic key is used.** `streamText` → `toUIMessageStreamResponse()` |
+| `app/page.tsx` | Client entry point; the current snapshot is still a generic chat scaffold and the tree-report flows are unbuilt |
+| `app/api/chat/route.ts` | Current generic scaffold model boundary still uses Anthropic; replace it with the server-only OpenRouter route during development |
 | `lib/supabase.ts` | Browser client, anon key only |
 | `components/ShareOverlay.tsx` | Demo QR screen (press `Q`). Live URL read from `window.location`, so it is right wherever deployed |
 | `.claude/skills/` | 17 hackathon skills |
 
-Flow: client `useChat` → `POST /api/chat` → `streamText` against Claude → streamed back. Keep it that way; the key must never reach the browser.
+The current scaffold flow is client → `POST /api/chat` → Anthropic. The target app flow is client → server route → OpenRouter model `openai/gpt-5.6-luna` → response. Route all target app LLM requests through the server, send text and image input there, use high reasoning effort, and keep `OPENROUTER_API_KEY` on the server.
 
 **Not yet deployed.** The Vercel import at vercel.com/new is a manual browser step. Until it's done there is no live URL, and the QR overlay will point at `localhost`. See `ship-it`.
 
@@ -58,17 +70,17 @@ Next.js 16 likewise has breaking changes from training data. `AGENTS.md` is rege
 
 ## Stack (settled — do not re-litigate)
 
-Next.js (App Router) · TypeScript · Vercel AI SDK · Supabase · deployed on Vercel via GitHub.
+Next.js (App Router) · TypeScript · Vercel AI SDK · OpenRouter · Supabase · deployed on Vercel via GitHub.
 
 ## Model routing
 
 | Context | Model |
 |---|---|
-| **In the app** | `claude-opus-5` |
-| Claude Code — ideation, planning, creative | `claude-fable-5-1` |
-| Claude Code — coding | `claude-opus-5` at `xhigh` effort |
+| **Current scaffold** | Anthropic in `app/api/chat/route.ts`; tree flows are not implemented |
+| **Target app** | OpenRouter `openai/gpt-5.6-luna`, high reasoning effort; text and image input |
+| Agent model selection | Separate from app routing; follow the model and reasoning settings for the current task |
 
-**Never put `claude-fable-5-1` in the app's request path** — forced tool use returns 400 (breaks generative UI), turns can run minutes, and it costs 2× Opus 5. Details in `claude-api-demo`.
+When development begins, all app LLM processing uses the OpenRouter route above. Keep provider and model selection in the server boundary so the browser never receives a provider key.
 
 ## Team
 
@@ -86,13 +98,9 @@ Next.js (App Router) · TypeScript · Vercel AI SDK · Supabase · deployed on V
 | Demo | `demo-safe`, `pitch`, `qa-drill` |
 | Coordination | `two-lane` |
 
-## Skills, not subagents
+## Skills and bounded delegation
 
-Use the persona **skills** above — not the Agent tool. A skill loads expertise into *this* session with full context; a subagent starts cold, costs latency, and can't see the conversation. On a 4-hour clock the bottleneck is KD's build throughput, and agents don't make code land faster.
-
-**One exception:** parallel research during the 9:10–9:25 block, when several challenges need evaluating under a hard 15-minute cap. Fan out there; nowhere else.
-
-HA's separate session is already the team's parallelism, and it's better than a subagent because a human steers it.
+Use the persona skills above for in-session guidance. Delegate only bounded, reviewable subtasks when delegation reduces latency. Give each task one clear output, require evidence for its result, and keep final integration in the current task. Respect file ownership: one agent owns each assigned file set, and other agents leave those files unchanged. Agent model and reasoning settings are separate from app routing; follow the current task settings, including an explicitly authorized Luna high or max run.
 
 ## Data
 
@@ -108,6 +116,6 @@ python3 .claude/skills/halifax-data/scripts/find.py winter sidewalk
 
 ## Secrets
 
-`ANTHROPIC_API_KEY` and `SUPABASE_SERVICE_ROLE_KEY` are **server-only** — never `NEXT_PUBLIC_`. Claude calls go through a server route.
+`OPENROUTER_API_KEY` and `SUPABASE_SERVICE_ROLE_KEY` are **server-only** — never use the `NEXT_PUBLIC_` prefix. All app LLM calls go through a server route. The service-role key is absent in the current setup, and no backend write has been tested.
 
 **The repo is public**, so a committed key is exposed the moment it's pushed, not at release. Deleting the commit does not undo it — rotate the key instead. The project will be open-sourced after the event; the release checklist is at the end of `docs/01-hackathon/runbook.md`.

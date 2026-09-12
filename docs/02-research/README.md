@@ -18,3 +18,8 @@ for eliminating options, not for becoming an expert.
 
 Kill fast. Four teams per problem and the board fills first-come — time spent here is time
 not spent claiming.
+
+## Research after selection
+
+[Tree data sources and implementation limits](03-trees-data-sources.md) reviews the
+teammate's eight source leads, census joins, diameter codes, and remaining data gaps.

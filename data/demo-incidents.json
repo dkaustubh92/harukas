@@ -1,0 +1,1368 @@
+[
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000001",
+    "reference": "DEMO-001",
+    "createdAt": "2026-09-05T10:14:00Z",
+    "updatedAt": "2026-09-05T10:14:00Z",
+    "location": {
+      "latitude": 44.638625,
+      "longitude": -63.569868,
+      "label": "Barrington St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-05T10:08:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 11758,
+        "roadName": "BARRINGTON ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Leaning trunk beside lane",
+      "category": "tree_damage",
+      "observations": "A thick trunk is down beside the lane and part of it leans toward the travel lane. I am worried about immediate danger.",
+      "targets": [
+        "road"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "partial",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "yes",
+      "reviewedAt": "2026-09-05T10:11:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "urgent",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "fallen-tree",
+    "staffSummary": "Citizen reports a fallen trunk leaning toward the roadway and an immediate danger concern. Staff evidence review is still pending.",
+    "possibleImpact": "A lane edge could be affected if the trunk shifts; the extent is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000002",
+    "reference": "DEMO-002",
+    "createdAt": "2026-09-05T14:42:00Z",
+    "updatedAt": "2026-09-05T14:42:00Z",
+    "location": {
+      "latitude": 44.66917,
+      "longitude": -63.557754,
+      "label": "Portland St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-05T14:35:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 15784,
+        "roadName": "PORTLAND ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Tree across the road",
+      "category": "access_obstruction",
+      "observations": "A fallen tree appears to lie across the road; I cannot see a clear path around it.",
+      "targets": [
+        "road"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "full",
+      "cause": "storm",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-05T14:39:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "urgent",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "fallen-tree",
+    "staffSummary": "Citizen reports a full road obstruction after a storm. The report has not received staff confirmation.",
+    "possibleImpact": "Road access may be blocked at the pinned location; the current extent is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000003",
+    "reference": "DEMO-003",
+    "createdAt": "2026-09-05T18:26:00Z",
+    "updatedAt": "2026-09-05T18:26:00Z",
+    "location": {
+      "latitude": 44.646447,
+      "longitude": -63.59354,
+      "label": "Quinpool Rd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-05T18:20:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 12193,
+        "roadName": "QUINPOOL RD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Broken limb across sidewalk",
+      "category": "access_obstruction",
+      "observations": "A broken limb is across part of the sidewalk, leaving some space to pass.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "partial",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-05T18:23:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "broken-branch",
+    "staffSummary": "Citizen reports a partial sidewalk obstruction from a broken limb. Staff should confirm the remaining passable space.",
+    "possibleImpact": "Sidewalk access could be narrowed until the limb is moved; the width is unmeasured.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000004",
+    "reference": "DEMO-004",
+    "createdAt": "2026-09-06T09:12:00Z",
+    "updatedAt": "2026-09-06T09:12:00Z",
+    "location": {
+      "latitude": 44.641671,
+      "longitude": -63.571243,
+      "label": "Barrington St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-06T09:06:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 11877,
+        "roadName": "BARRINGTON ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Branches near overhead wires",
+      "category": "utility_conflict",
+      "observations": "Branches are close to overhead wires; I do not know whether they are touching.",
+      "targets": [
+        "road"
+      ],
+      "damageAboveTarget": "unknown",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "yes",
+      "immediateDanger": "unknown",
+      "reviewedAt": "2026-09-06T09:09:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "street-tree",
+    "staffSummary": "Citizen reports a possible utility conflict without a reported access obstruction. Wire contact and urgency need confirmation.",
+    "possibleImpact": "Roadside access could be affected if branches fall; the relationship to wires is unverified.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The reported wires are not confirmed as contacted or energized."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000005",
+    "reference": "DEMO-005",
+    "createdAt": "2026-09-06T12:47:00Z",
+    "updatedAt": "2026-09-06T12:47:00Z",
+    "location": {
+      "latitude": 44.64237,
+      "longitude": -63.575489,
+      "label": "Queen St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-06T12:41:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 11968,
+        "roadName": "QUEEN ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Small branches beside path",
+      "category": "tree_damage",
+      "observations": "Several small broken branches are on the grass beside the path; the tree canopy still looks intact.",
+      "targets": [
+        "other"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-06T12:44:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "routine",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "broken-branch",
+    "staffSummary": "Citizen describes a limited branch issue with no reported access blockage, utility concern, or immediate danger.",
+    "possibleImpact": "No access impact is reported; the extent of any tree damage is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000006",
+    "reference": "DEMO-006",
+    "createdAt": "2026-09-06T16:03:00Z",
+    "updatedAt": "2026-09-06T16:03:00Z",
+    "location": {
+      "latitude": 44.683727,
+      "longitude": -63.559939,
+      "label": "Micmac Blvd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-06T15:57:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 5476,
+        "roadName": "MICMAC BLVD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Exposed roots by park path",
+      "category": "tree_damage",
+      "observations": "I noticed exposed roots at the edge of the park path. I do not see a blocked path.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "none",
+      "cause": "other",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-06T16:00:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "routine",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "tree-roots",
+    "staffSummary": "Citizen reports exposed roots beside a clear path, with no reported utility concern or immediate danger.",
+    "possibleImpact": "The path is reported clear; any future access concern is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000007",
+    "reference": "DEMO-007",
+    "createdAt": "2026-09-06T19:28:00Z",
+    "updatedAt": "2026-09-06T19:28:00Z",
+    "location": {
+      "latitude": 44.585464,
+      "longitude": -63.589124,
+      "label": "Herring Cove Rd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-06T19:20:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 11099,
+        "roadName": "HERRING COVE RD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Unclear canopy damage",
+      "category": "other_unsure",
+      "observations": "Something looks damaged high in the canopy, but I cannot tell what it is from where I stood.",
+      "targets": [
+        "unknown"
+      ],
+      "damageAboveTarget": "unknown",
+      "obstruction": "unknown",
+      "cause": "unknown",
+      "utilityConcern": "unknown",
+      "immediateDanger": "unknown",
+      "reviewedAt": "2026-09-06T19:24:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "unassessed",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "tree-canopy",
+    "staffSummary": "Citizen noticed possible canopy damage but supplied no reliable target, obstruction, utility, or danger classification.",
+    "possibleImpact": "Impact cannot be assessed from the available report.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The visible feature and its cause are unclear."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000008",
+    "reference": "DEMO-008",
+    "createdAt": "2026-09-07T08:16:00Z",
+    "updatedAt": "2026-09-07T08:16:00Z",
+    "location": {
+      "latitude": 44.655165,
+      "longitude": -63.610837,
+      "label": "Oxford St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-07T08:10:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 12748,
+        "roadName": "OXFORD ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Hanging branch over sidewalk",
+      "category": "tree_damage",
+      "observations": "A cracked branch hangs above the sidewalk and could drop; nothing is blocking the walkway right now.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "yes",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-07T08:13:00Z"
+    },
+    "status": "submitted",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "No staff review yet.",
+      "reviewedAt": null
+    },
+    "response": null,
+    "photoKey": "broken-branch",
+    "staffSummary": "Citizen reports a damaged branch above a sidewalk target while access remains open. Staff should verify the branch position.",
+    "possibleImpact": "The sidewalk could be affected if the branch falls; no current blockage is reported.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "Branch stability and fall path are unknown."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000009",
+    "reference": "DEMO-009",
+    "createdAt": "2026-09-07T11:37:00Z",
+    "updatedAt": "2026-09-07T12:08:00Z",
+    "location": {
+      "latitude": 44.667453,
+      "longitude": -63.574647,
+      "label": "Wyse Rd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-07T11:30:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 16257,
+        "roadName": "WYSE RD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Split trunk by sidewalk and wires",
+      "category": "utility_conflict",
+      "observations": "A split trunk has fallen against the sidewalk near wires. I am concerned about immediate danger and cannot tell if wires are involved.",
+      "targets": [
+        "sidewalk",
+        "other"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "full",
+      "cause": "storm",
+      "utilityConcern": "yes",
+      "immediateDanger": "yes",
+      "reviewedAt": "2026-09-07T11:34:00Z"
+    },
+    "status": "reviewed",
+    "expectedPriority": "urgent",
+    "reviewedObstruction": {
+      "level": "full",
+      "target": "sidewalk",
+      "note": "Staff marked the sidewalk as fully obstructed for this demo review.",
+      "reviewedAt": "2026-09-07T12:04:00Z"
+    },
+    "response": null,
+    "photoKey": "fallen-tree",
+    "staffSummary": "Staff reviewed the citizen's immediate danger and possible wire concern and recorded a full sidewalk obstruction for demo triage.",
+    "possibleImpact": "Sidewalk access may be blocked and utility involvement is possible; both require field confirmation.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "Wire contact and the condition of the trunk are not independently verified."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000010",
+    "reference": "DEMO-010",
+    "createdAt": "2026-09-07T15:22:00Z",
+    "updatedAt": "2026-09-07T16:07:00Z",
+    "location": {
+      "latitude": 44.656367,
+      "longitude": -63.592453,
+      "label": "North St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-07T15:16:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 12829,
+        "roadName": "NORTH ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Large branch narrowing sidewalk",
+      "category": "access_obstruction",
+      "observations": "A large branch covers part of the sidewalk; I can still get around it.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "partial",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-07T15:19:00Z"
+    },
+    "status": "reviewed",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "partial",
+      "target": "sidewalk",
+      "note": "Staff marked a partial sidewalk obstruction for this demo review.",
+      "reviewedAt": "2026-09-07T16:03:00Z"
+    },
+    "response": null,
+    "photoKey": "broken-branch",
+    "staffSummary": "Staff confirmed the citizen's partial sidewalk access concern and kept the report at priority review.",
+    "possibleImpact": "The sidewalk may remain passable with reduced width until the branch is addressed.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The remaining clear width is not measured."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000011",
+    "reference": "DEMO-011",
+    "createdAt": "2026-09-07T19:41:00Z",
+    "updatedAt": "2026-09-07T20:19:00Z",
+    "location": {
+      "latitude": 44.698083,
+      "longitude": -63.691743,
+      "label": "Larry Uteck Blvd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-07T19:33:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 3089,
+        "roadName": "LARRY UTECK BLVD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Leaning tree close to utility lines",
+      "category": "utility_conflict",
+      "observations": "A leaning tree has branches close to utility lines. I cannot tell if they are contacting anything.",
+      "targets": [
+        "other"
+      ],
+      "damageAboveTarget": "unknown",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "yes",
+      "immediateDanger": "unknown",
+      "reviewedAt": "2026-09-07T19:37:00Z"
+    },
+    "status": "reviewed",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no reported road or sidewalk obstruction.",
+      "reviewedAt": "2026-09-07T20:15:00Z"
+    },
+    "response": null,
+    "photoKey": "street-tree",
+    "staffSummary": "Staff reviewed a possible utility conflict without a reported access obstruction; specialist confirmation may be needed.",
+    "possibleImpact": "A utility or roadside impact is possible if the branches shift; the connection is unverified.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The utility relationship and immediate danger remain unknown."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000012",
+    "reference": "DEMO-012",
+    "createdAt": "2026-09-08T07:55:00Z",
+    "updatedAt": "2026-09-08T08:35:00Z",
+    "location": {
+      "latitude": 44.652194,
+      "longitude": -63.605575,
+      "label": "Almon St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-08T07:48:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 12550,
+        "roadName": "ALMON ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Fresh split in branch",
+      "category": "tree_damage",
+      "observations": "There is a fresh split in one branch, but the path and street look clear.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-08T07:52:00Z"
+    },
+    "status": "reviewed",
+    "expectedPriority": "routine",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no reported road or sidewalk obstruction.",
+      "reviewedAt": "2026-09-08T08:31:00Z"
+    },
+    "response": null,
+    "photoKey": "broken-branch",
+    "staffSummary": "Staff reviewed a described branch issue with no access, utility, or immediate danger trigger.",
+    "possibleImpact": "No access impact is reported; the extent of the branch damage is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000013",
+    "reference": "DEMO-013",
+    "createdAt": "2026-09-08T13:18:00Z",
+    "updatedAt": "2026-09-08T14:06:00Z",
+    "location": {
+      "latitude": 44.733001,
+      "longitude": -63.667951,
+      "label": "Basinview Dr area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-08T13:11:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 6598,
+        "roadName": "BASINVIEW DR",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Unclear canopy patch",
+      "category": "other_unsure",
+      "observations": "I see a dark patch in the canopy and a few leaves down, but I cannot assess whether the tree is damaged.",
+      "targets": [
+        "unknown"
+      ],
+      "damageAboveTarget": "unknown",
+      "obstruction": "unknown",
+      "cause": "unknown",
+      "utilityConcern": "unknown",
+      "immediateDanger": "unknown",
+      "reviewedAt": "2026-09-08T13:15:00Z"
+    },
+    "status": "reviewed",
+    "expectedPriority": "unassessed",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no confirmed road or sidewalk obstruction; evidence remains insufficient.",
+      "reviewedAt": "2026-09-08T14:02:00Z"
+    },
+    "response": null,
+    "photoKey": "tree-canopy",
+    "staffSummary": "Staff reviewed the report but could not classify the canopy feature or establish a target, obstruction, or danger trigger.",
+    "possibleImpact": "Impact cannot be assessed from the available report.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The visible feature may not indicate a tree incident."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000014",
+    "reference": "DEMO-014",
+    "createdAt": "2026-09-08T17:46:00Z",
+    "updatedAt": "2026-09-08T18:38:00Z",
+    "location": {
+      "latitude": 44.641666,
+      "longitude": -63.57945,
+      "label": "South Park St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-08T17:38:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 11895,
+        "roadName": "SOUTH PARK ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Limb across sidewalk",
+      "category": "access_obstruction",
+      "observations": "A large limb is down across the sidewalk; I had to step back and could not use the path.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "full",
+      "cause": "storm",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-08T17:43:00Z"
+    },
+    "status": "inspection_requested",
+    "expectedPriority": "urgent",
+    "reviewedObstruction": {
+      "level": "full",
+      "target": "sidewalk",
+      "note": "Staff marked a full sidewalk obstruction and requested a demo inspection.",
+      "reviewedAt": "2026-09-08T18:21:00Z"
+    },
+    "response": {
+      "type": "inspection",
+      "note": "Inspection requested within the demo; no municipal crew or dispatch was contacted.",
+      "requestedAt": "2026-09-08T18:38:00Z"
+    },
+    "photoKey": "fallen-tree",
+    "staffSummary": "Staff confirmed a full sidewalk obstruction from a storm-reported limb and requested a demo inspection.",
+    "possibleImpact": "The sidewalk may be unavailable at the pinned spot until the limb is assessed; no measured detour is provided.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The obstruction condition may change before an inspection."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000015",
+    "reference": "DEMO-015",
+    "createdAt": "2026-09-09T06:27:00Z",
+    "updatedAt": "2026-09-09T07:21:00Z",
+    "location": {
+      "latitude": 44.669124,
+      "longitude": -63.558373,
+      "label": "Portland St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-09T06:20:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 15785,
+        "roadName": "PORTLAND ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Branch extends into road edge",
+      "category": "access_obstruction",
+      "observations": "A fallen branch extends into part of the road beside the curb; cars could pass but the edge is narrowed.",
+      "targets": [
+        "road"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "partial",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-09T06:24:00Z"
+    },
+    "status": "inspection_requested",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "partial",
+      "target": "road",
+      "note": "Staff marked a partial road obstruction and requested a demo inspection.",
+      "reviewedAt": "2026-09-09T07:03:00Z"
+    },
+    "response": {
+      "type": "inspection",
+      "note": "Inspection requested within the demo; no municipal crew or dispatch was contacted.",
+      "requestedAt": "2026-09-09T07:21:00Z"
+    },
+    "photoKey": "broken-branch",
+    "staffSummary": "Staff confirmed a partial road access concern and requested a demo inspection for the fallen branch.",
+    "possibleImpact": "The road edge may be narrowed while the branch remains; the passable width is unmeasured.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The reported road clearance can change before inspection."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000016",
+    "reference": "DEMO-016",
+    "createdAt": "2026-09-09T10:49:00Z",
+    "updatedAt": "2026-09-09T11:39:00Z",
+    "location": {
+      "latitude": 44.665366,
+      "longitude": -63.570005,
+      "label": "Alderney Dr area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-09T10:42:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 15940,
+        "roadName": "ALDERNEY DR",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Broken limb above bus stop",
+      "category": "tree_damage",
+      "observations": "A broken limb hangs above the bus stop shelter area; I do not see debris on the sidewalk.",
+      "targets": [
+        "bus_stop"
+      ],
+      "damageAboveTarget": "yes",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-09T10:46:00Z"
+    },
+    "status": "inspection_requested",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no reported road or sidewalk obstruction and requested a demo inspection.",
+      "reviewedAt": "2026-09-09T11:24:00Z"
+    },
+    "response": {
+      "type": "inspection",
+      "note": "Inspection requested within the demo; no municipal crew or dispatch was contacted.",
+      "requestedAt": "2026-09-09T11:39:00Z"
+    },
+    "photoKey": "broken-branch",
+    "staffSummary": "Staff reviewed a damaged limb above a reported bus stop target and requested inspection even though no access blockage was reported.",
+    "possibleImpact": "The bus stop area could be affected if the limb drops; the fall path is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The branch position above the target is citizen-reported and unverified."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000017",
+    "reference": "DEMO-017",
+    "createdAt": "2026-09-09T14:58:00Z",
+    "updatedAt": "2026-09-09T15:49:00Z",
+    "location": {
+      "latitude": 44.710645,
+      "longitude": -63.673919,
+      "label": "Southgate Dr area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-09T14:51:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 6721,
+        "roadName": "SOUTHGATE DR",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Small branches in verge",
+      "category": "tree_damage",
+      "observations": "A few small branches are down in the verge, and the sidewalk remains clear.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "none",
+      "cause": "storm",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-09T14:55:00Z"
+    },
+    "status": "inspection_requested",
+    "expectedPriority": "routine",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no reported road or sidewalk obstruction and requested a demo inspection.",
+      "reviewedAt": "2026-09-09T15:32:00Z"
+    },
+    "response": {
+      "type": "inspection",
+      "note": "Inspection requested within the demo; no municipal crew or dispatch was contacted.",
+      "requestedAt": "2026-09-09T15:49:00Z"
+    },
+    "photoKey": "broken-branch",
+    "staffSummary": "Staff reviewed a limited branch issue with a clear sidewalk and no reported utility or immediate danger trigger.",
+    "possibleImpact": "No current access impact is reported; any additional damage is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000018",
+    "reference": "DEMO-018",
+    "createdAt": "2026-09-09T20:14:00Z",
+    "updatedAt": "2026-09-09T21:06:00Z",
+    "location": {
+      "latitude": 44.642011,
+      "longitude": -63.62021,
+      "label": "Chebucto Rd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-09T20:06:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 11934,
+        "roadName": "CHEBUCTO RD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Possible tilted trunk",
+      "category": "other_unsure",
+      "observations": "The trunk looks tilted from a distance, but I cannot tell if it is a recent problem or if anything is blocked.",
+      "targets": [
+        "unknown"
+      ],
+      "damageAboveTarget": "unknown",
+      "obstruction": "unknown",
+      "cause": "unknown",
+      "utilityConcern": "unknown",
+      "immediateDanger": "unknown",
+      "reviewedAt": "2026-09-09T20:11:00Z"
+    },
+    "status": "inspection_requested",
+    "expectedPriority": "unassessed",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no confirmed road or sidewalk obstruction; inspection was requested to clarify the report.",
+      "reviewedAt": "2026-09-09T20:51:00Z"
+    },
+    "response": {
+      "type": "inspection",
+      "note": "Inspection requested within the demo; no municipal crew or dispatch was contacted.",
+      "requestedAt": "2026-09-09T21:06:00Z"
+    },
+    "photoKey": "street-tree",
+    "staffSummary": "Staff could not establish whether the reported tilt is recent, hazardous, or associated with an access target.",
+    "possibleImpact": "Impact cannot be assessed from the available report.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The apparent tilt and its cause are unconfirmed."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000019",
+    "reference": "DEMO-019",
+    "createdAt": "2026-09-10T08:38:00Z",
+    "updatedAt": "2026-09-10T09:32:00Z",
+    "location": {
+      "latitude": 44.651646,
+      "longitude": -63.58802,
+      "label": "Agricola St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-10T08:31:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 5010,
+        "roadName": "AGRICOLA ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Heavy branch over roadway",
+      "category": "tree_damage",
+      "observations": "A heavy branch is hanging over the roadway and has a fresh break. Nothing is blocking the lane yet, but I am concerned someone could be hurt.",
+      "targets": [
+        "road"
+      ],
+      "damageAboveTarget": "yes",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "unknown",
+      "immediateDanger": "yes",
+      "reviewedAt": "2026-09-10T08:35:00Z"
+    },
+    "status": "response_assigned",
+    "expectedPriority": "urgent",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff reviewed the hanging-branch concern and assigned a demo inspection. No current road obstruction was confirmed.",
+      "reviewedAt": "2026-09-10T09:12:00Z"
+    },
+    "response": {
+      "type": "inspection",
+      "note": "Demo inspection assigned; no municipal crew or dispatch was contacted.",
+      "requestedAt": "2026-09-10T09:29:00Z"
+    },
+    "photoKey": "broken-branch",
+    "staffSummary": "Staff assigned a demo inspection for a broken branch over the roadway after the citizen reported immediate danger.",
+    "possibleImpact": "The roadway could be affected if the branch shifts; the exact access effect is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "The reported immediate danger and wire status are not independently verified."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000020",
+    "reference": "DEMO-020",
+    "createdAt": "2026-09-10T12:06:00Z",
+    "updatedAt": "2026-09-10T12:58:00Z",
+    "location": {
+      "latitude": 44.651715,
+      "longitude": -63.592922,
+      "label": "Robie St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-10T12:00:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 12527,
+        "roadName": "ROBIE ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Branches close to wires",
+      "category": "utility_conflict",
+      "observations": "Branches are brushing near overhead wires; I do not know whether the lines are energized or contacted.",
+      "targets": [
+        "other"
+      ],
+      "damageAboveTarget": "unknown",
+      "obstruction": "none",
+      "cause": "wind",
+      "utilityConcern": "yes",
+      "immediateDanger": "unknown",
+      "reviewedAt": "2026-09-10T12:03:00Z"
+    },
+    "status": "response_assigned",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no reported road or sidewalk obstruction; specialist review was assigned.",
+      "reviewedAt": "2026-09-10T12:41:00Z"
+    },
+    "response": {
+      "type": "specialist_review",
+      "note": "Demo specialist review assigned for the possible utility conflict; no utility was contacted.",
+      "requestedAt": "2026-09-10T12:55:00Z"
+    },
+    "photoKey": "street-tree",
+    "staffSummary": "Staff assigned a demo specialist review for a possible wire conflict without a reported access obstruction.",
+    "possibleImpact": "A utility or roadside impact is possible if branches shift; the connection is unverified.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "Wire contact and immediate danger remain unknown."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000021",
+    "reference": "DEMO-021",
+    "createdAt": "2026-09-10T16:45:00Z",
+    "updatedAt": "2026-09-10T17:35:00Z",
+    "location": {
+      "latitude": 44.681633,
+      "longitude": -63.542072,
+      "label": "Main St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-10T16:38:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 15657,
+        "roadName": "MAIN ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Small limb in verge",
+      "category": "tree_damage",
+      "observations": "A small limb broke in the yard-side verge, but I do not see an access problem.",
+      "targets": [
+        "other"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "none",
+      "cause": "other",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-10T16:42:00Z"
+    },
+    "status": "response_assigned",
+    "expectedPriority": "routine",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no reported road or sidewalk obstruction; an inspection response was assigned for demo continuity.",
+      "reviewedAt": "2026-09-10T17:20:00Z"
+    },
+    "response": {
+      "type": "inspection",
+      "note": "Demo inspection assigned; no municipal crew or dispatch was contacted.",
+      "requestedAt": "2026-09-10T17:32:00Z"
+    },
+    "photoKey": "broken-branch",
+    "staffSummary": "Staff assigned a demo inspection for a limited branch issue with no reported access, utility, or immediate danger trigger.",
+    "possibleImpact": "No access impact is reported; the remaining tree condition is unknown.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000022",
+    "reference": "DEMO-022",
+    "createdAt": "2026-09-11T09:24:00Z",
+    "updatedAt": "2026-09-11T10:19:00Z",
+    "location": {
+      "latitude": 44.72718,
+      "longitude": -63.707575,
+      "label": "Bluewater Rd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-11T09:18:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 17325,
+        "roadName": "BLUEWATER RD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Loose bark on trunk",
+      "category": "other_unsure",
+      "observations": "The bark looks loose on one side and I cannot tell whether the trunk is stable or whether anything is blocked.",
+      "targets": [
+        "unknown"
+      ],
+      "damageAboveTarget": "unknown",
+      "obstruction": "unknown",
+      "cause": "unknown",
+      "utilityConcern": "unknown",
+      "immediateDanger": "unknown",
+      "reviewedAt": "2026-09-11T09:21:00Z"
+    },
+    "status": "response_assigned",
+    "expectedPriority": "unassessed",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no confirmed road or sidewalk obstruction; specialist review was assigned to clarify the evidence.",
+      "reviewedAt": "2026-09-11T10:02:00Z"
+    },
+    "response": {
+      "type": "specialist_review",
+      "note": "Demo specialist review assigned for uncertain trunk evidence; no field service was contacted.",
+      "requestedAt": "2026-09-11T10:16:00Z"
+    },
+    "photoKey": "street-tree",
+    "staffSummary": "Staff assigned demo specialist review because the report lacks a confirmed target, obstruction, cause, or danger classification.",
+    "possibleImpact": "Impact cannot be assessed from the available report.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "Trunk stability and the reported bark condition are unconfirmed."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000023",
+    "reference": "DEMO-023",
+    "createdAt": "2026-09-11T13:57:00Z",
+    "updatedAt": "2026-09-11T15:29:00Z",
+    "location": {
+      "latitude": 44.640963,
+      "longitude": -63.568017,
+      "label": "Lower Water St area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-11T13:50:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 5057,
+        "roadName": "LOWER WATER ST",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Tree reported across roadway",
+      "category": "access_obstruction",
+      "observations": "A tree had been across the road near the curb when I submitted this report; the route was fully blocked.",
+      "targets": [
+        "road"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "full",
+      "cause": "storm",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-11T13:54:00Z"
+    },
+    "status": "resolved",
+    "expectedPriority": "urgent",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "The demo obstruction was cleared; no current officer obstruction flag remains.",
+      "reviewedAt": "2026-09-11T14:28:00Z"
+    },
+    "response": {
+      "type": "clearance",
+      "note": "Simulated clearance recorded for rehearsal; no municipal crew or work order was created.",
+      "requestedAt": "2026-09-11T14:41:00Z"
+    },
+    "photoKey": "fallen-tree",
+    "staffSummary": "Seeded demo record resolved after a simulated clearance of the citizen-reported road obstruction.",
+    "possibleImpact": "Road access was reported blocked at submission; the current site condition is unknown outside the demo response.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "Resolution is simulated for rehearsal and does not verify a real clearance."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000024",
+    "reference": "DEMO-024",
+    "createdAt": "2026-09-11T18:33:00Z",
+    "updatedAt": "2026-09-11T20:21:00Z",
+    "location": {
+      "latitude": 44.686428,
+      "longitude": -63.562405,
+      "label": "Micmac Blvd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-11T18:27:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 5477,
+        "roadName": "MICMAC BLVD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Branch partly covering sidewalk",
+      "category": "access_obstruction",
+      "observations": "A branch covered part of the sidewalk by the path, but people could move around it.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "partial",
+      "cause": "wind",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-11T18:30:00Z"
+    },
+    "status": "resolved",
+    "expectedPriority": "priority",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "The demo obstruction was cleared; no current officer obstruction flag remains.",
+      "reviewedAt": "2026-09-11T19:06:00Z"
+    },
+    "response": {
+      "type": "clearance",
+      "note": "Simulated clearance recorded for rehearsal; no municipal crew or work order was created.",
+      "requestedAt": "2026-09-11T19:20:00Z"
+    },
+    "photoKey": "broken-branch",
+    "staffSummary": "Seeded demo record resolved after a simulated clearance of the citizen-reported partial sidewalk obstruction.",
+    "possibleImpact": "Sidewalk access was reported narrowed at submission; the current site condition is unknown outside the demo response.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "Resolution is simulated for rehearsal and does not verify a real clearance."
+    ]
+  },
+  {
+    "id": "8f6e2a10-4c1d-4b7e-9a31-000000000025",
+    "reference": "DEMO-025",
+    "createdAt": "2026-09-12T09:08:00Z",
+    "updatedAt": "2026-09-12T10:55:00Z",
+    "location": {
+      "latitude": 44.635821,
+      "longitude": -63.647418,
+      "label": "St Margarets Bay Rd area, HRM",
+      "method": "pin",
+      "confirmedAt": "2026-09-12T09:02:00Z",
+      "provenance": {
+        "kind": "synthetic_road_placement",
+        "source": "HRM StreetNetwork",
+        "sourceUrl": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0",
+        "sourceRetrievedAt": "2026-09-12T15:39:38.768553+00:00",
+        "roadObjectId": 4707,
+        "roadName": "ST MARGARETS BAY RD",
+        "note": "Approximate fictional incident placement on real road geometry. Not a verified incident or tree asset."
+      }
+    },
+    "citizenDetails": {
+      "title": "Split branch beside clear sidewalk",
+      "category": "tree_damage",
+      "observations": "A tree has several bare twigs and a split branch, but nothing blocks the sidewalk.",
+      "targets": [
+        "sidewalk"
+      ],
+      "damageAboveTarget": "no",
+      "obstruction": "none",
+      "cause": "other",
+      "utilityConcern": "no",
+      "immediateDanger": "no",
+      "reviewedAt": "2026-09-12T09:05:00Z"
+    },
+    "status": "resolved",
+    "expectedPriority": "routine",
+    "reviewedObstruction": {
+      "level": "none",
+      "target": null,
+      "note": "Staff review found no reported road or sidewalk obstruction and closed the demo report.",
+      "reviewedAt": "2026-09-12T09:44:00Z"
+    },
+    "response": {
+      "type": "clearance",
+      "note": "Simulated response recorded for rehearsal; no municipal crew or work order was created.",
+      "requestedAt": "2026-09-12T09:57:00Z"
+    },
+    "photoKey": "broken-branch",
+    "staffSummary": "Seeded demo record resolved after review of a limited branch issue with no reported access, utility, or immediate danger trigger.",
+    "possibleImpact": "No access impact was reported; current tree condition is unknown outside the demo response.",
+    "uncertainties": [
+      "Synthetic scenario at an approximate pin; no field verification or verified tree inventory.",
+      "Photo key is a cached representative image, not evidence from this location.",
+      "Resolution is simulated for rehearsal and does not verify a real clearance."
+    ]
+  }
+]

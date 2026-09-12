@@ -18,7 +18,10 @@ export function ShareOverlay() {
   const [liveUrl, setLiveUrl] = useState(GITHUB_URL);
 
   useEffect(() => {
-    setLiveUrl(window.location.origin);
+    const syncLiveUrl = window.setTimeout(
+      () => setLiveUrl(window.location.origin),
+      0,
+    );
     const onKey = (e: KeyboardEvent) => {
       const typing = ["INPUT", "TEXTAREA"].includes(
         (e.target as HTMLElement)?.tagName,
@@ -27,7 +30,10 @@ export function ShareOverlay() {
       if (e.key.toLowerCase() === "q" && !typing) setOpen((v) => !v);
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    return () => {
+      window.clearTimeout(syncLiveUrl);
+      window.removeEventListener("keydown", onKey);
+    };
   }, []);
 
   if (!open) {
