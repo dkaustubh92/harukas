@@ -348,8 +348,8 @@ export default function StaffWorkspace() {
                 onClick={() => setDetailOpen(false)}
                 className="fixed inset-0 z-30 cursor-default bg-[#183e32]/20 backdrop-blur-[1px]"
               />
-              <div className="fixed inset-x-0 bottom-0 z-40 max-h-[92dvh] overflow-hidden rounded-t-2xl border border-[#d8e3da] bg-[#fbfcfa] shadow-[0_-12px_36px_rgba(24,62,50,0.18)] lg:inset-y-0 lg:left-auto lg:right-0 lg:top-0 lg:w-[440px] lg:rounded-none lg:border-y-0 lg:border-r-0 lg:border-l lg:shadow-[-12px_0_36px_rgba(24,62,50,0.12)]">
-                <div className="flex items-center justify-between border-b border-[#e2e8e2] px-4 py-3 lg:hidden">
+              <div role="dialog" aria-label="Report details" className="fixed inset-x-0 bottom-0 z-40 max-h-[92dvh] overflow-y-auto rounded-t-2xl border border-[#d8e3da] bg-[#fbfcfa] shadow-[0_-12px_36px_rgba(24,62,50,0.18)] lg:inset-y-0 lg:left-auto lg:right-0 lg:top-0 lg:w-[440px] lg:rounded-none lg:border-y-0 lg:border-r-0 lg:border-l lg:shadow-[-12px_0_36px_rgba(24,62,50,0.12)]">
+                <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#e2e8e2] bg-white px-4 py-3">
                   <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#71867a]">Report details</span>
                   <button type="button" onClick={() => setDetailOpen(false)} className="min-h-10 rounded-lg border border-[#d3dfd5] px-3 text-[11px] font-semibold text-[#426453]">Close</button>
                 </div>
