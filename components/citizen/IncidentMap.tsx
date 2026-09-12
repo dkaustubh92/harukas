@@ -4,7 +4,7 @@ import type { CitizenReport } from "./types";
 interface IncidentMapProps { reports: CitizenReport[]; selectedId: string | null; onSelect: (report: CitizenReport) => void; }
 export function IncidentMap({ reports, selectedId, onSelect }: IncidentMapProps) {
   return <section className="overflow-hidden rounded-lg border border-[#cdd5cf] bg-white" aria-label="Halifax incident map">
-    <GeographicMap className="h-[max(340px,calc(100dvh-280px))] max-h-[700px]" points={reports.map(report => ({
+    <GeographicMap className="h-[max(260px,calc(100dvh-310px))] max-h-[700px]" points={reports.map(report => ({
       id: report.id, latitude: report.location.latitude, longitude: report.location.longitude,
       title: `${report.reference} · ${report.citizenDetails.title}`,
       priority: report.officerPriority?.level ?? report.suggestedPriority.level,

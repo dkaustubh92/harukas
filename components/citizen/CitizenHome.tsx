@@ -346,7 +346,7 @@ export default function CitizenHome() {
 
       {receipt && <ReceiptCard receipt={receipt} />}
 
-      <section id="reports" className="mx-auto max-w-7xl scroll-mt-4 px-5 pb-14 sm:px-8 lg:px-10 lg:pb-20">
+      <section id="reports" className="mx-auto max-w-7xl scroll-mt-4 px-5 pb-2 sm:px-8 lg:px-10">
         <div className="mb-3 flex flex-col justify-between gap-2 sm:flex-row sm:items-end">
           <h2 className="sr-only">Community reports</h2>
           <div className="flex items-center gap-3 text-sm text-[#718474]"><span>{activeReports.length} active demo reports</span><button type="button" className="inline-flex min-h-10 items-center gap-1.5 rounded-lg px-2 text-sm font-semibold text-[#486b5c] hover:bg-[#eef5ef]" onClick={() => void loadReports(true)}><Icon name="refresh" size={14} /> Refresh</button></div>
