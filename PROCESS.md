@@ -14,12 +14,12 @@ Goal: win. Optimize for demo impact and judge-facing polish, not maintainability
 
 | | |
 |---|---|
-| **30%** | Presentation — the largest rubric bucket. HA's lane is not optional |
+| **×2** | Day-one impact — *could they use it Monday?* Double-weighted, the largest bucket by far. Full rubric in `CHALLENGES.md` |
 | **60 min** | The core demo path must work end-to-end by **11:45** — 60 min after ideation ends |
-| **3 min** | The demo (**not 90 sec** — confirmed at the briefing). The **judge types**; the agent responds |
+| **3 min** | The demo (**not 90 sec**). Judged on one thing: *are the problem and outcome obvious?* |
 | **14:00** | Freeze. Whatever is live then is what you demo |
 
-Full rubric in `rubric`. Scope rule in `scope-60`. Demo shape in `demo-script-90` — **written for 90 sec, real budget is 3 min**.
+Rubric is in `CHALLENGES.md` and **overrides the `rubric` skill's assumed weights**. Scope rule in `scope-60`. Demo shape in `demo-script-90` — **written for 90 sec, real budget is 3 min**.
 
 The five challenges and the judges' three stated questions are in `CHALLENGES.md`. Read it before ideation.
 

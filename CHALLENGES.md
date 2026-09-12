@@ -62,19 +62,34 @@ with idle sites, and the housing behind them waits too.
 
 ---
 
-# What the judges actually said
+# How you'll be judged
 
-Three questions, stated from the front. These are the rubric now — weight them over
-anything inferred:
+From the rubric slide, verbatim. **This supersedes the `rubric` skill's assumed weights.**
 
-| Question | What it means for the build |
-|---|---|
-| **Is this product usable?** | Not a demo-shaped toy. A real person could use it unaided |
-| **Does this have first-day impact?** | Value on day one, not after adoption, integration, or a pilot |
-| **Is the idea coming from real insight?** | Something true about the problem that isn't on the slide |
+| W | Criterion | As stated |
+|---|---|---|
+| **×2** | **Day-one impact** | *Could they use it Monday?* |
+| ×1 | Product | *Is it usable?* |
+| ×1 | Idea | *Is it a real insight?* |
+| ×1 | The demo | *Are the problem and outcome obvious?* |
 
-The third is the one that kills obvious builds. The slide states the problem; restating it
-back is not insight.
+> *A focused thing that works beats an ambitious thing that crashes.*
+
+**Day-one impact is worth double everything else.** Not "could a city adopt this" —
+*could the specific person on the slide use it Monday morning.* Name that person and what
+their Monday looks like before building. Every one of the five challenges has one: the
+parking officer, the arborist, the person scheduling street closures.
+
+Presentation is **not** the biggest bucket — the runbook's old "30%" figure was our
+assumption, not theirs. The demo criterion is narrow and testable: *are the problem and
+the outcome obvious?* Not "is it slick." If a judge can't state what was broken and what
+changed, that criterion is lost no matter how good the delivery.
+
+"Is it a real insight?" is the one that kills obvious builds. The slide states the
+problem; restating it back is not insight.
+
+The closing line is a scoping instruction with a rubric behind it: three of four criteria
+reward a small thing that works, and none reward ambition. Cut early (`scope-60`).
 
 ## The demo is 3 minutes, not 90 seconds
 
