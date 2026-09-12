@@ -23,6 +23,7 @@ This is an **architecture constraint**, not a presentation choice. It means: saf
 | **Turn** | 0:15–0:25 | "So we built X." One sentence. What it is, not how |
 | **Live demo** | 0:25–1:15 | **The judge types.** Show the WoW factors here — not described, performed |
 | **Impact** | 1:15–1:30 | Who this helps, how many, what changes. Real number from real data |
+| **Scan** | on close | Press `Q` — full-screen QR codes for the live app and the repo. Leave it up through Q&A |
 
 50 of the 90 seconds are live product. If your draft has more talking than showing, cut talking.
 
@@ -40,6 +41,7 @@ This is an **architecture constraint**, not a presentation choice. It means: saf
 - **Pick the judge's input in advance.** Have 3 suggested prompts visible on screen — it removes the terrifying blank box and keeps you on the happy path without looking scripted
 - **Budget for latency.** If a step takes 8 seconds, that's 9% of your demo. Say something during it, or make it faster (`claude-api-demo`)
 - **Rehearse to 80 seconds.** Every demo runs long live
+- **End on the QR screen.** Press `Q` and leave it up. The room can open the live app on their phones while they vote (People's Choice), and judges can see the repo is real and open source. It costs no demo time — it replaces a blank final slide
 
 ## Failure modes
 

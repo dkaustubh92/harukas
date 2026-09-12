@@ -97,6 +97,7 @@ Rungs 3 and 4 are nearly invisible in 90 seconds. Reach for them early.
 - **HA never touches the repo** — works from the deployed URL (`two-lane`)
 - **Skills, not subagents.** Personas are skills so they run in-session with full context. The only place to fan out to agents is the 9:10–9:25 research block
 - **Deploy early and often**, freeze at 14:00
+- **End the demo on the QR screen** (press `Q`) — live app + GitHub, side by side. Leave it up through Q&A and voting. Built into the app, so it always shows the real deployed URL
 
 ---
 
