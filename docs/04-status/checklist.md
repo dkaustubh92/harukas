@@ -1,11 +1,15 @@
 # Status
 
-**Last updated: 12 Sep 2026, before the research block.** Update the timestamp when you
+**Last updated: 12 Sep 2026, ~10:30 — challenge locked.** Update the timestamp when you
 touch this — a stale status file is worse than none.
 
 ## Right now
 
-**Blocked on nothing. Next action: the 15-minute research block, then claim a problem.**
+**Challenge locked: #3 Which Tree Falls First.** Scope in `docs/03-requirements/scope.md`.
+
+**Next two actions, in order:**
+1. **Put HaruKas on the board against #3** — four teams per problem, first-come
+2. **Create the Vercel project** — the only step that can't be done from this repo
 
 ## Prep — done before the event
 
@@ -19,9 +23,10 @@ touch this — a stale status file is worse than none.
 ## Today
 
 ### Pick (10:00–10:45)
-- [ ] Research block — 15 min hard cap, notes in `docs/02-research/`
-- [ ] **Claim a problem on the board** — four teams each, first-come
-- [ ] Kill gate — score against the real rubric, name the Monday person, name the 3 WoWs
+- [x] Research block — trees PURSUE, reporting PASS (`docs/02-research/`)
+- [x] Data gate passed — join proven, 29/30 within 60 m, median 18.9 m
+- [x] Kill gate — Monday person and 3 WoWs named in `docs/03-requirements/scope.md`
+- [ ] **Claim #3 on the board** — four teams each, first-come
 - [ ] Demo script written → `docs/03-requirements/demo-script.md`
 
 ### Build (10:45–14:00)
@@ -45,3 +50,5 @@ touch this — a stale status file is worse than none.
 | **Not deployed.** No live URL; QR overlay points at `localhost` | **Open — highest priority once we pick** |
 | Conference wifi | Untested. Seed the demo path, don't query live (`demo-safe`) |
 | `demo-script-90` is written for 90 sec, budget is 3 min | Known; adjust when writing the script |
+| `DBH` is a size class 1–11, not centimetres | Render as relative size only. Never print "4 cm" |
+| Rural requests have no asset match (1 in 30) | Explicit empty state — a non-match is itself a signal |
