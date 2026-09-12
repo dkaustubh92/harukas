@@ -1,0 +1,1460 @@
+{
+ "public": [
+  {
+   "name": "2028_Election_Planning___2024_Election_Data_WFL1",
+   "count": 74
+  },
+  {
+   "name": "2031_Commuting_Mode_Share_Targets",
+   "count": 9
+  },
+  {
+   "name": "ADM_Polling_District",
+   "count": 16
+  },
+  {
+   "name": "ADM_Polling_District2024",
+   "count": 16
+  },
+  {
+   "name": "All_Modes_AGOL_July25",
+   "count": 4011
+  },
+  {
+   "name": "Amalgamated_All_Modes_AGOL",
+   "count": 780
+  },
+  {
+   "name": "As_Passenger_AGOL",
+   "count": 868
+  },
+  {
+   "name": "Asset_Measurements_WFL1",
+   "count": 60
+  },
+  {
+   "name": "Auto_AGOL",
+   "count": 3654
+  },
+  {
+   "name": "AVL_DATA_FORMATTED",
+   "count": 3960
+  },
+  {
+   "name": "Benefits_Estimate_Calculator",
+   "count": 117449
+  },
+  {
+   "name": "BIDs_Mode_Share",
+   "count": 9
+  },
+  {
+   "name": "Bike_Related__Features",
+   "count": 38
+  },
+  {
+   "name": "bikePoints",
+   "count": 3
+  },
+  {
+   "name": "Biker_AGOL",
+   "count": 151
+  },
+  {
+   "name": "Building_Symbols_All",
+   "count": 1364
+  },
+  {
+   "name": "Building_Symbols_HRM_Police_Facilities",
+   "count": 29
+  },
+  {
+   "name": "Building_Symbols_Recreation_Facilities",
+   "count": 82
+  },
+  {
+   "name": "Building_Symbols_Schools",
+   "count": 169
+  },
+  {
+   "name": "Canadian_Index_of_Multiple_Deprivation_2016",
+   "count": 594
+  },
+  {
+   "name": "Canadian_Index_of_Multiple_Deprivation_2021",
+   "count": 605
+  },
+  {
+   "name": "Capital_Projects",
+   "count": 2650
+  },
+  {
+   "name": "Capital_Projects_2017",
+   "count": 408
+  },
+  {
+   "name": "Capital_Projects_2018",
+   "count": 623
+  },
+  {
+   "name": "Capital_Projects_2019",
+   "count": 283
+  },
+  {
+   "name": "Census_2016_Census_Divisions",
+   "count": 1
+  },
+  {
+   "name": "Census_2016_Census_Metropolitan_Areas",
+   "count": 1
+  },
+  {
+   "name": "Census_2016_Census_Subdivisions",
+   "count": 6
+  },
+  {
+   "name": "Census_2016_Census_Tracts",
+   "count": 98
+  },
+  {
+   "name": "Census_2016_Dissemination_Areas",
+   "count": 601
+  },
+  {
+   "name": "Census_2016_Dissemination_Blocks",
+   "count": 3523
+  },
+  {
+   "name": "Census_2016_Population_Age_Range",
+   "count": 601
+  },
+  {
+   "name": "Census_2016_Population_Ages",
+   "count": 601
+  },
+  {
+   "name": "Census_2016_Population_Marital_Status_Ages",
+   "count": 601
+  },
+  {
+   "name": "Census_2016_Population_Marital_Status_Gender",
+   "count": 601
+  },
+  {
+   "name": "Census_2021_Census_Divisions",
+   "count": 1
+  },
+  {
+   "name": "Census_2021_Census_Metropolitan_Areas",
+   "count": 1
+  },
+  {
+   "name": "Census_2021_Census_Subdivisions",
+   "count": 5
+  },
+  {
+   "name": "Census_2021_Census_Tracts",
+   "count": 104
+  },
+  {
+   "name": "Census_2021_Dissemination_Areas",
+   "count": 610
+  },
+  {
+   "name": "Census_2021_Dissemination_Blocks",
+   "count": 3504
+  },
+  {
+   "name": "Census_2021_Population_Ages",
+   "count": 610
+  },
+  {
+   "name": "Census_2021_Population_Marital_Status_Ages",
+   "count": 610
+  },
+  {
+   "name": "Census_2021_Population_Marital_Status_Gender",
+   "count": 610
+  },
+  {
+   "name": "CensusTract_AGOL",
+   "count": 98
+  },
+  {
+   "name": "Centroids_for_HRM_Mode_Share_Sept_9",
+   "count": 97
+  },
+  {
+   "name": "Com_N_Corp_GHGEmissions",
+   "count": 9
+  },
+  {
+   "name": "Community_Emissions_bySector",
+   "count": 8
+  },
+  {
+   "name": "Community_Plan_Generalized_Future_Land_Use_2019",
+   "count": 495
+  },
+  {
+   "name": "CommunityCouncilBoundaries",
+   "count": 4
+  },
+  {
+   "name": "Commuting_Mode_Share_by_Census_Tract",
+   "count": 354040
+  },
+  {
+   "name": "Commuting_Mode_Share_by_Region",
+   "count": 672
+  },
+  {
+   "name": "ControlledAccessStreets",
+   "count": 193
+  },
+  {
+   "name": "csa_field_capture",
+   "count": 858
+  },
+  {
+   "name": "csa_field_emotion",
+   "count": 238
+  },
+  {
+   "name": "Draft_HAF_RC_FAR_view",
+   "count": 181
+  },
+  {
+   "name": "Draft_HAF_RC_Heights_2_view",
+   "count": 1931
+  },
+  {
+   "name": "Draft_HAF_RC_Heights_view",
+   "count": 1931
+  },
+  {
+   "name": "Draft_HAF_RC_Zoning",
+   "count": 2242
+  },
+  {
+   "name": "Draft_HAF_RC_Zoning_view",
+   "count": 2242
+  },
+  {
+   "name": "Drivetime_Pop",
+   "count": 1
+  },
+  {
+   "name": "Ferry_Routes",
+   "count": 2
+  },
+  {
+   "name": "FinalHeritage",
+   "count": 51
+  },
+  {
+   "name": "FireStations",
+   "count": 52
+  },
+  {
+   "name": "Flood_Current_GFLUM",
+   "count": 31
+  },
+  {
+   "name": "Floodplain_Overlay_Zones_and_Modified_Floodproofing",
+   "count": 1011
+  },
+  {
+   "name": "FortNeedhamCommemorativeElements",
+   "count": 20
+  },
+  {
+   "name": "GHGTableAGOL",
+   "count": 8
+  },
+  {
+   "name": "Gottingen_Buildings_3D_Multipatch",
+   "count": 513
+  },
+  {
+   "name": "Growth_Control_Areas",
+   "count": 2
+  },
+  {
+   "name": "HAF_Opportunty_Sites_30April2024_view",
+   "count": 0
+  },
+  {
+   "name": "HAF_Pkg_B_sites_view",
+   "count": 33
+  },
+  {
+   "name": "HAFb_RCsites_view",
+   "count": 6
+  },
+  {
+   "name": "HalifACT_Actions",
+   "count": 57
+  },
+  {
+   "name": "Halifax_Retail_Partners_October_22",
+   "count": 48
+  },
+  {
+   "name": "HCD_proposed_2_view",
+   "count": 9
+  },
+  {
+   "name": "Historical_Aerial_Photographs_Index",
+   "count": 340
+  },
+  {
+   "name": "HistoricSites___Dev",
+   "count": 52
+  },
+  {
+   "name": "HRCE_Early_French_Immersion_Elementary",
+   "count": 27
+  },
+  {
+   "name": "HRCE_Early_French_Immersion_High",
+   "count": 14
+  },
+  {
+   "name": "HRCE_Early_French_Immersion_Junior_High",
+   "count": 18
+  },
+  {
+   "name": "HRCE_English_Program_Elementary",
+   "count": 102
+  },
+  {
+   "name": "HRCE_English_Program_High",
+   "count": 23
+  },
+  {
+   "name": "HRCE_English_Program_Junior_High",
+   "count": 44
+  },
+  {
+   "name": "HRCE_Late_French_Immersion_High",
+   "count": 18
+  },
+  {
+   "name": "HRCE_Late_French_Immersion_Junior_High",
+   "count": 26
+  },
+  {
+   "name": "HRM_Tax_Bill_Info",
+   "count": 1252942
+  },
+  {
+   "name": "LakeWatchers",
+   "count": 72
+  },
+  {
+   "name": "LakeWatchers_Lake_Volunteer_Status",
+   "count": 77
+  },
+  {
+   "name": "LakeWatchers_OD_View",
+   "count": 156
+  },
+  {
+   "name": "LW_Lab_Results",
+   "count": 8343
+  },
+  {
+   "name": "LW_Monitoring_Lake_Sites",
+   "count": 77
+  },
+  {
+   "name": "LW_Monitoring_Site_Editor_View",
+   "count": 156
+  },
+  {
+   "name": "Map1",
+   "count": 1
+  },
+  {
+   "name": "Modeled_Acutal_Emissions",
+   "count": 35
+  },
+  {
+   "name": "ModeShare_AGOL_March11",
+   "count": 33
+  },
+  {
+   "name": "Natural_Inventory",
+   "count": 54357
+  },
+  {
+   "name": "noDogsAfter10_PointPleasant",
+   "count": 1
+  },
+  {
+   "name": "NSDPW_Capital_Projects_Work_Plan_2025_2030",
+   "count": 11
+  },
+  {
+   "name": "NSPW_HRM_Service_Exchange_Boundary_1996",
+   "count": 1
+  },
+  {
+   "name": "NSPW_HRM_Service_Exchange_Boundary_2006_",
+   "count": 1
+  },
+  {
+   "name": "NSPW_HRM_Service_Exchange_Boundary_2022",
+   "count": 1
+  },
+  {
+   "name": "Park_and_Ride_Points",
+   "count": 15
+  },
+  {
+   "name": "Park_Ride",
+   "count": 15
+  },
+  {
+   "name": "Parks_and_Rec_Zones",
+   "count": 16
+  },
+  {
+   "name": "Passenger_RFP",
+   "count": 23702
+  },
+  {
+   "name": "phonesPointPleasant",
+   "count": 5
+  },
+  {
+   "name": "Pla_Area_Walk_AGOL",
+   "count": 101
+  },
+  {
+   "name": "Plan_Area_As_Passenger_AGOL",
+   "count": 291
+  },
+  {
+   "name": "Plan_Area_Bike_AGOL",
+   "count": 61
+  },
+  {
+   "name": "Plan_Area_Centres",
+   "count": 33
+  },
+  {
+   "name": "Plan_Area_Poly",
+   "count": 33
+  },
+  {
+   "name": "Plan_Area_Public_Transit_AGOL",
+   "count": 343
+  },
+  {
+   "name": "Polling_Districts_2016",
+   "count": 16
+  },
+  {
+   "name": "Polling_Districts_2020",
+   "count": 16
+  },
+  {
+   "name": "Polling_Divisions_2016",
+   "count": 108
+  },
+  {
+   "name": "Polling_Divisions_2020",
+   "count": 109
+  },
+  {
+   "name": "PollingDistrict",
+   "count": 16
+  },
+  {
+   "name": "PollingDistricts2012",
+   "count": 16
+  },
+  {
+   "name": "PollingDivision2012",
+   "count": 108
+  },
+  {
+   "name": "PollingDivisions",
+   "count": 116
+  },
+  {
+   "name": "PreAmalgamation",
+   "count": 1782
+  },
+  {
+   "name": "Proposed_Bus_Rapid_Transit_and_Ferry_Stops",
+   "count": 68
+  },
+  {
+   "name": "Proposed_Rapid_Transit_Network",
+   "count": 153
+  },
+  {
+   "name": "Proposed_Rapid_Transit_Walksheds",
+   "count": 164
+  },
+  {
+   "name": "Public_Gardens_Features",
+   "count": 222
+  },
+  {
+   "name": "PublicTransit_AGOL",
+   "count": 1071
+  },
+  {
+   "name": "Quinpool3D_WSL1",
+   "count": 1234
+  },
+  {
+   "name": "Quinpool3D_WSL2",
+   "count": 686
+  },
+  {
+   "name": "RC_Downtown_Dartmouth_Precincts",
+   "count": 39
+  },
+  {
+   "name": "RC_Site_Plan_Approval_Areas",
+   "count": 371
+  },
+  {
+   "name": "RC_Transition_Lines",
+   "count": 707
+  },
+  {
+   "name": "RC_View_Corridors",
+   "count": 45
+  },
+  {
+   "name": "Residential_Proposed_4_Units",
+   "count": 2212
+  },
+  {
+   "name": "Residential_Standards_Violations",
+   "count": 291
+  },
+  {
+   "name": "Rural_Area_for_Short_Term_Rentals",
+   "count": 1
+  },
+  {
+   "name": "Rural_Recreation_Strategy_Areas",
+   "count": 4
+  },
+  {
+   "name": "Sackville_Rivers_Floodplain_2017_Study",
+   "count": 4
+  },
+  {
+   "name": "Sackville_Rivers_Floodplain_2024_Study_Update",
+   "count": 4
+  },
+  {
+   "name": "Shubenacadie_Lakes_Floodplain_Study",
+   "count": 2
+  },
+  {
+   "name": "SpecialElection2019District15PollingDivisions",
+   "count": 11
+  },
+  {
+   "name": "SpecialElection2019District15PollingDivisionsResults",
+   "count": 11
+  },
+  {
+   "name": "SpotHeight1K",
+   "count": 56686
+  },
+  {
+   "name": "SpringWeightRestrictions_2022",
+   "count": 39
+  },
+  {
+   "name": "strategic_performance_snapshot",
+   "count": 1716
+  },
+  {
+   "name": "survey123_6b7ded0d88874bfba691d7532e2771a4",
+   "count": 23
+  },
+  {
+   "name": "survey123_6b7ded0d88874bfba691d7532e2771a4_form",
+   "count": 23
+  },
+  {
+   "name": "survey123_e1874a707f5f491c93cfd821503f6e69",
+   "count": 831
+  },
+  {
+   "name": "survey123_e1874a707f5f491c93cfd821503f6e69_form",
+   "count": 0
+  },
+  {
+   "name": "survey123_e8082c86bfc64a6788f747cb9bd3f121",
+   "count": 12
+  },
+  {
+   "name": "survey123_e8082c86bfc64a6788f747cb9bd3f121_results",
+   "count": 12
+  },
+  {
+   "name": "Tax_Rates",
+   "count": 657
+  },
+  {
+   "name": "Tax_Rates_2021",
+   "count": 411
+  },
+  {
+   "name": "TaxDesignation",
+   "count": 5
+  },
+  {
+   "name": "Traffic_Zone_Auto_AGOL",
+   "count": 760
+  },
+  {
+   "name": "Transportation_Analysis_Zones",
+   "count": 671
+  },
+  {
+   "name": "TransportationAreaRates",
+   "count": 1
+  },
+  {
+   "name": "Tree_Equity_Score_by_DA",
+   "count": 609
+  },
+  {
+   "name": "TRN_parking_lot_point_WGS84",
+   "count": 219
+  },
+  {
+   "name": "UrbanTransitServiceBoundary",
+   "count": 1
+  },
+  {
+   "name": "View_Planes",
+   "count": 15
+  },
+  {
+   "name": "Walker_AGOL",
+   "count": 361
+  },
+  {
+   "name": "Who_Is_My_Councillor_WFL1",
+   "count": 16
+  },
+  {
+   "name": "Wildfire_AVL_Data",
+   "count": 13350
+  },
+  {
+   "name": "Wildfire_Perimeter_Layer",
+   "count": 2
+  },
+  {
+   "name": "Windsor_Street_Exchange_PubMap_WFL1",
+   "count": 1
+  },
+  {
+   "name": "Winter_Parking_Ban",
+   "count": 1
+  },
+  {
+   "name": "Gottingen_Buildings_3D_Multipatch",
+   "count": 513
+  },
+  {
+   "name": "Quinpool3D_WSL1",
+   "count": 1234
+  },
+  {
+   "name": "Quinpool3D_WSL2",
+   "count": 686
+  },
+  {
+   "name": "Youth_Advocate_Program",
+   "count": 8
+  },
+  {
+   "name": "Traffic_Collisions",
+   "count": 47145
+  },
+  {
+   "name": "Traffic_Collisions_Involved_Pedestrian",
+   "count": 68878
+  },
+  {
+   "name": "Traffic_Collisions_Involved_Vehicle",
+   "count": 128216
+  },
+  {
+   "name": "HRM_Parcel_Polygon_with_Accounts",
+   "count": 187236
+  },
+  {
+   "name": "HRM_Building_View",
+   "count": 189238
+  },
+  {
+   "name": "HRM_Building_Permit",
+   "count": 8
+  },
+  {
+   "name": "Government_Owned_Properties",
+   "count": 7438
+  },
+  {
+   "name": "HRM_Owned_Land",
+   "count": 10181
+  },
+  {
+   "name": "Halifax_Water_Owned_Land",
+   "count": 386
+  },
+  {
+   "name": "311_Call_Volumes",
+   "count": 147983
+  },
+  {
+   "name": "Municipal_Cemeteries_Interred",
+   "count": 21268
+  },
+  {
+   "name": "HRM_Building_Energy_Usage",
+   "count": 30730
+  },
+  {
+   "name": "Cityworks_Service_Requests",
+   "count": 477343
+  },
+  {
+   "name": "Cityworks_Service_Requests_Custom_Fields",
+   "count": 1153448
+  },
+  {
+   "name": "Road_Safety_Countermeasures_Tracking",
+   "count": 54
+  },
+  {
+   "name": "OpenData_Catalogue",
+   "count": 288
+  },
+  {
+   "name": "BuildingDetails",
+   "count": 151646
+  },
+  {
+   "name": "repealed_legislation",
+   "count": 73
+  },
+  {
+   "name": "Open_Data_Analytics",
+   "count": 488967
+  },
+  {
+   "name": "Ice_Routes",
+   "count": 18766
+  },
+  {
+   "name": "OutdoorRecreationEquipment",
+   "count": 2255
+  },
+  {
+   "name": "GSA",
+   "count": 200
+  },
+  {
+   "name": "DryHydrant",
+   "count": 123
+  },
+  {
+   "name": "BuildingPermits",
+   "count": 101888
+  },
+  {
+   "name": "HRM_Parks_2",
+   "count": 927
+  },
+  {
+   "name": "BylawAreas",
+   "count": 69
+  },
+  {
+   "name": "SolidWasteCollectionAreas",
+   "count": 54
+  },
+  {
+   "name": "Bike_Infrastructure_and_Suggested_Routes",
+   "count": 964
+  },
+  {
+   "name": "Integrated_Mobility_Plan_2022_Regional_Centre_Bikeway_Network_Map",
+   "count": 113
+  },
+  {
+   "name": "Active_Travelways",
+   "count": 49812
+  },
+  {
+   "name": "Service_Requirements",
+   "count": 39
+  },
+  {
+   "name": "Truck_Routes",
+   "count": 314
+  },
+  {
+   "name": "Street_Name_Routes",
+   "count": 6883
+  },
+  {
+   "name": "Planning_Advisory_Committee_Boundaries",
+   "count": 2
+  },
+  {
+   "name": "Street_Junctions",
+   "count": 14653
+  },
+  {
+   "name": "Airport_Runways",
+   "count": 2
+  },
+  {
+   "name": "Boat_Facilities",
+   "count": 67
+  },
+  {
+   "name": "Community_Plan_Areas",
+   "count": 22
+  },
+  {
+   "name": "ZoningBoundaries",
+   "count": 11076
+  },
+  {
+   "name": "BidAreaRates",
+   "count": 9
+  },
+  {
+   "name": "Community_Facilities_and_Services_Area_Rates",
+   "count": 20
+  },
+  {
+   "name": "FireProtectionAreaRates",
+   "count": 1
+  },
+  {
+   "name": "Private_Road_Area_Rates",
+   "count": 24
+  },
+  {
+   "name": "TransitAreaRates",
+   "count": 6
+  },
+  {
+   "name": "Community_Plan_Generalized_Future_Land_Use",
+   "count": 7187
+  },
+  {
+   "name": "Detailed_Plan_Areas",
+   "count": 17
+  },
+  {
+   "name": "Detailed_Plan_Sub_Areas",
+   "count": 23
+  },
+  {
+   "name": "Height_Precincts",
+   "count": 62
+  },
+  {
+   "name": "Height_Precincts_Interpretation",
+   "count": 48
+  },
+  {
+   "name": "Land_Use_Schedules",
+   "count": 6
+  },
+  {
+   "name": "Post_Bonus_Building_Height",
+   "count": 18
+  },
+  {
+   "name": "Pre_Bonus_Building_Height",
+   "count": 16
+  },
+  {
+   "name": "Municipal_Cemeteries_Mapping",
+   "count": 111
+  },
+  {
+   "name": "Fire_Response_Zones",
+   "count": 280
+  },
+  {
+   "name": "Accessible_Parking_Spots",
+   "count": 306
+  },
+  {
+   "name": "Active_and_Proposed_Heritage_Conservation_Districts",
+   "count": 20
+  },
+  {
+   "name": "RC_Citadel_Ramparts",
+   "count": 45
+  },
+  {
+   "name": "RC_Maximum_Floor_Area_Ratio",
+   "count": 173
+  },
+  {
+   "name": "RC_Maximum_Front_and_Flanking_Yards",
+   "count": 90
+  },
+  {
+   "name": "RC_Minimum_Front_and_Flanking_Yards",
+   "count": 2116
+  },
+  {
+   "name": "RC_Pedestrian_Oriented_Commercial_Streets",
+   "count": 93
+  },
+  {
+   "name": "RC_Shadow_Impact_Assessment_Areas",
+   "count": 46
+  },
+  {
+   "name": "RC_Special_Area_Boundary",
+   "count": 276
+  },
+  {
+   "name": "RC_View_Lines",
+   "count": 311
+  },
+  {
+   "name": "RC_View_Terminus_Sites",
+   "count": 310
+  },
+  {
+   "name": "RC_Accessory_Parking_Prohibited_Areas",
+   "count": 2
+  },
+  {
+   "name": "RC_Bonus_Zoning_Rate_Districts",
+   "count": 491
+  },
+  {
+   "name": "RC_Landmark_Building_Sites",
+   "count": 33
+  },
+  {
+   "name": "RC_Maximum_Streetwall_Heights",
+   "count": 124
+  },
+  {
+   "name": "RC_LUB_View_Corridors",
+   "count": 19
+  },
+  {
+   "name": "RC_SMPS_Precincts",
+   "count": 328
+  },
+  {
+   "name": "RC_SMPS_View_Corridors",
+   "count": 20
+  },
+  {
+   "name": "RC_Transportation_Reserves",
+   "count": 19
+  },
+  {
+   "name": "Transit_Bus_Routes",
+   "count": 79
+  },
+  {
+   "name": "HRM_Public_Washrooms",
+   "count": 47
+  },
+  {
+   "name": "Heritage_Properties",
+   "count": 530
+  },
+  {
+   "name": "Public_Trees",
+   "count": 80051
+  },
+  {
+   "name": "Bridges",
+   "count": 357
+  },
+  {
+   "name": "Parking_Pay_Zones",
+   "count": 10
+  },
+  {
+   "name": "Permit_Parking_Zones",
+   "count": 16
+  },
+  {
+   "name": "Steps",
+   "count": 311
+  },
+  {
+   "name": "Bus_Stops_2",
+   "count": 2349
+  },
+  {
+   "name": "Naturalization_Initiatives",
+   "count": 27
+  },
+  {
+   "name": "Outdoor_Recreation_Polygons",
+   "count": 1573
+  },
+  {
+   "name": "Outdoor_Recreation_Polygon_Uses",
+   "count": 1986
+  },
+  {
+   "name": "Parking_Pay_Stations",
+   "count": 175
+  },
+  {
+   "name": "Street_Lights",
+   "count": 46490
+  },
+  {
+   "name": "HRM_Traffic_Studies",
+   "count": 11083
+  },
+  {
+   "name": "Mobility_Counters",
+   "count": 10
+  },
+  {
+   "name": "Transit_Priority_Corridors",
+   "count": 56
+  },
+  {
+   "name": "Transit_Priority_Measures_Operational",
+   "count": 96
+  },
+  {
+   "name": "Transit_Signal_Priority_Operational",
+   "count": 14
+  },
+  {
+   "name": "Speed_Display_Signs",
+   "count": 73
+  },
+  {
+   "name": "Traffic_Control_Locations",
+   "count": 707
+  },
+  {
+   "name": "Bike_Amenities",
+   "count": 393
+  },
+  {
+   "name": "EMO_Sectors",
+   "count": 182
+  },
+  {
+   "name": "Horticultural_Beds",
+   "count": 1184
+  },
+  {
+   "name": "Litter_Bins",
+   "count": 2562
+  },
+  {
+   "name": "Spring_Weight_Restrictions",
+   "count": 7167
+  },
+  {
+   "name": "Buildings",
+   "count": 172425
+  },
+  {
+   "name": "Grass_Inventory",
+   "count": 14536
+  },
+  {
+   "name": "Sidewalk_Winter_Maintenance_Areas",
+   "count": 23
+  },
+  {
+   "name": "Street_Winter_Maintenance_Areas",
+   "count": 32
+  },
+  {
+   "name": "Volunteer_Recruitment_Areas",
+   "count": 44
+  },
+  {
+   "name": "Transit_Shelters",
+   "count": 521
+  },
+  {
+   "name": "Food_and_Artisan_Vendors",
+   "count": 70
+  },
+  {
+   "name": "Commuter_Permit_Parking_Streets",
+   "count": 325
+  },
+  {
+   "name": "Cityworks_Work_Orders",
+   "count": 118912
+  },
+  {
+   "name": "Cityworks_Work_Orders_Custom_Fields",
+   "count": 457229
+  },
+  {
+   "name": "PPLC_Residential_Standards_Violations",
+   "count": 220
+  },
+  {
+   "name": "Commercial_General_Rates",
+   "count": 5
+  },
+  {
+   "name": "Right_of_Way_Charge_Boundary",
+   "count": 1
+  },
+  {
+   "name": "Transit_Bus_Snow_Routes",
+   "count": 61
+  },
+  {
+   "name": "Bonus_Zoning_Rate_Districts",
+   "count": 48
+  },
+  {
+   "name": "Demographic_Scenarios",
+   "count": 52
+  },
+  {
+   "name": "Maximum_Building_Heights",
+   "count": 1822
+  },
+  {
+   "name": "Minimum_Front_and_Flanking_Yards",
+   "count": 59
+  },
+  {
+   "name": "African_Nova_Scotian_Communities",
+   "count": 8
+  },
+  {
+   "name": "Residential_Rental_Registry",
+   "count": 12329
+  },
+  {
+   "name": "Commuter_Travel_Time_Estimates",
+   "count": 9396
+  },
+  {
+   "name": "Regional_Plan_Generalized_Future_Land_Use",
+   "count": 992
+  },
+  {
+   "name": "EV_Charging_Station",
+   "count": 33
+  },
+  {
+   "name": "Social_Value_Catering_Registry",
+   "count": 105
+  },
+  {
+   "name": "Active_Transportation_Area_Rates",
+   "count": 1
+  },
+  {
+   "name": "Civic_Address_Changes",
+   "count": 49952
+  },
+  {
+   "name": "Municipal_Facilities_Snow_Contract_Areas",
+   "count": 349
+  },
+  {
+   "name": "Regional_Centre_and_Suburban_Plan_Study_Area",
+   "count": 2
+  },
+  {
+   "name": "Special_Planning_Areas",
+   "count": 16
+  },
+  {
+   "name": "311_Call_Details",
+   "count": 4961240
+  },
+  {
+   "name": "BuildingSymbol",
+   "count": 1364
+  },
+  {
+   "name": "School_Crossing_Guards",
+   "count": 168
+  },
+  {
+   "name": "Street_Intersections",
+   "count": 10380
+  },
+  {
+   "name": "IMP_Key_Performance_Indictors",
+   "count": 204
+  },
+  {
+   "name": "Street_Closures_Mobility_Response",
+   "count": 27
+  },
+  {
+   "name": "PPLC_Issued_Building_Permits",
+   "count": 18904
+  },
+  {
+   "name": "PPLC_Issued_Construction_Permits",
+   "count": 14080
+  },
+  {
+   "name": "PPLC_Issued_Engineering_Permits",
+   "count": 10500
+  },
+  {
+   "name": "PPLC_Issued_Halifax_Water_Permits",
+   "count": 6546
+  },
+  {
+   "name": "PPLC_Issued_Land_Use_Approval_Permits",
+   "count": 4167
+  },
+  {
+   "name": "PPLC_Issued_Public_Works_ROW_Permits",
+   "count": 16344
+  },
+  {
+   "name": "PPLC_Permit_Processing_Times",
+   "count": 155394
+  },
+  {
+   "name": "PPLC_Permits_Geolocated",
+   "count": 16455
+  },
+  {
+   "name": "PPLC_Inspections",
+   "count": 202239
+  },
+  {
+   "name": "PPLC_Planning_Applications_Geolocated",
+   "count": 590
+  },
+  {
+   "name": "PPLC_Planning_Applications",
+   "count": 609
+  },
+  {
+   "name": "PPLC_Subdivision_Applications_Geolocated",
+   "count": 1510
+  },
+  {
+   "name": "PPLC_Subdivision_Applications",
+   "count": 1853
+  },
+  {
+   "name": "StreetNetwork",
+   "count": 18640
+  },
+  {
+   "name": "Street_Closures",
+   "count": 2692
+  },
+  {
+   "name": "Street_Closures_Upcoming",
+   "count": 16
+  },
+  {
+   "name": "Street_Closures_Active",
+   "count": 24
+  },
+  {
+   "name": "Development_Street_Closures",
+   "count": 223
+  },
+  {
+   "name": "Development_Street_Closures_Upcoming",
+   "count": 1
+  },
+  {
+   "name": "Development_Street_Closures_Active",
+   "count": 70
+  },
+  {
+   "name": "Crime",
+   "count": 105
+  },
+  {
+   "name": "CivicAddresses",
+   "count": 158765
+  },
+  {
+   "name": "HRM_Park_Recreation_Features_2",
+   "count": 1186
+  },
+  {
+   "name": "Designated_Smoking_Areas",
+   "count": 89
+  },
+  {
+   "name": "Transit_Automated_Passenger_Counts",
+   "count": 728590
+  },
+  {
+   "name": "HRFE_Incident_Initial_Response",
+   "count": 109623
+  },
+  {
+   "name": "HRFE_Fire_Cause_and_Origin",
+   "count": 4562
+  },
+  {
+   "name": "Traffic_Calming_Assessments",
+   "count": 1731
+  },
+  {
+   "name": "Traffic_Calming_Infrastructure",
+   "count": 1461
+  },
+  {
+   "name": "Neighbourhood_Speed_Limit",
+   "count": 13846
+  },
+  {
+   "name": "Bicycle_Counts",
+   "count": 883348
+  },
+  {
+   "name": "Parks_and_Recreation_Arena_Bookings",
+   "count": 50212
+  },
+  {
+   "name": "Transit_Ferry_Passenger_Counts",
+   "count": 525430
+  },
+  {
+   "name": "Transit_Passenger_Overload_Incidents",
+   "count": 6617
+  }
+ ],
+ "auth": [
+  "Coastal_Flood_Extent_1_in_100_year_2100",
+  "Coastal_Flood_Extent_1_in_20_year_2100",
+  "Pluvial_Fluvial_Flood_Extent_1_in_100_year_2100",
+  "Pluvial_Fluvial_Flood_Extent_1_in_20_year_2100"
+ ],
+ "other": [
+  [
+   "ADM_polling_district_Project",
+   "ERR400"
+  ],
+  [
+   "AllSnowPlansColinEdit",
+   "ERR400"
+  ],
+  [
+   "Average_Street_Slope_3",
+   "ERR400"
+  ],
+  [
+   "Beach_Water_Quality",
+   "ERR400"
+  ],
+  [
+   "Census_2021_Population_Age_Range",
+   "ERR400"
+  ],
+  [
+   "Community_Plan_Generalized_Future_Land_Use_2021",
+   "ERR400"
+  ],
+  [
+   "HAF_Opportunty_Sites_08May2024_view",
+   "ERR400"
+  ],
+  [
+   "Hub Events (public)",
+   "FAIL"
+  ],
+  [
+   "Lights_in_Parks",
+   "ERR400"
+  ],
+  [
+   "Parks_with_Lights",
+   "ERR400"
+  ],
+  [
+   "SiteSpecific_09Feb20_Project",
+   "ERR400"
+  ],
+  [
+   "survey123_35079639b5b6428ab15a4085d52dd694_form",
+   "ERR400"
+  ],
+  [
+   "survey123_9c99bbdf8707493abd8ec636622312de_fieldworker",
+   "ERR400"
+  ],
+  [
+   "survey123_d9e6adf549bb4eea9fce2f09d0566b93_form",
+   "ERR400"
+  ],
+  [
+   "survey123_e8082c86bfc64a6788f747cb9bd3f121_form",
+   "ERR400"
+  ],
+  [
+   "WSE_Streetnames",
+   "ERR400"
+  ],
+  [
+   "Zone1_Central",
+   "ERR400"
+  ],
+  [
+   "Zone2_NonCentralArea",
+   "ERR400"
+  ],
+  [
+   "Zoning_Boundaries_2019",
+   "ERR400"
+  ],
+  [
+   "Zoning_Boundaries_2021",
+   "ERR400"
+  ],
+  [
+   "WSE_Short\u2011term_traffic_impacts_LEGEND",
+   "FAIL"
+  ],
+  [
+   "WSE_Short\u2011term_traffic_impacts",
+   "FAIL"
+  ],
+  [
+   "WSE_Long\u2011term_road_network_change",
+   "FAIL"
+  ]
+ ]
+}

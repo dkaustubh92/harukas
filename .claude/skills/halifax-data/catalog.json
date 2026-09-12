@@ -1,0 +1,4741 @@
+{
+"org": "11XBiaBYA9Ep0yNJ",
+"base": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services",
+"verified": "2026-09-11",
+"public": [
+{
+"service": "311_Call_Details",
+"title": "311 Call Details",
+"rows": 4961240,
+"desc": "The dataset was created to show individual 311 incoming calls and the general reason for the call as identified by the municipal department or program the call was directed to. MetadataNote: There is currently an issue with the timestamp for this datasets wher",
+"keywords": [
+"311",
+"Call",
+"Wrap Code",
+"Talk Time",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/311_Call_Details/FeatureServer/0"
+},
+{
+"service": "HRM_Tax_Bill_Info",
+"title": "HRM Tax Bill Info",
+"rows": 1252942,
+"desc": "Table of tax rates and dollar amounts for tax bills in Halifax Regional Municipality by assessment account number (AAN).&nbsp;This dataset only contains data for 2024. Due to file size, the historic data is available in individual csv files by year within a zi",
+"keywords": [
+"HRM",
+"Halifax",
+"Tax",
+"Bill",
+"Assessment",
+"Area Rate",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Tax_Bill_Info/FeatureServer/0"
+},
+{
+"service": "Cityworks_Service_Requests_Custom_Fields",
+"title": "Cityworks Service Requests Custom Fields",
+"rows": 1153448,
+"desc": "A table of service request custom fields from Cityworks, the municipality's work order management system. The standardized fields and pick lists are based on the service request type (DESCRIPTION).The data is a compilation of custom fields related to service r",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Infrastructure Asset Management",
+"Service Requests",
+"Maintenance",
+"Facilities",
+"Parks",
+"ROW",
+"Compliance"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Cityworks_Service_Requests_Custom_Fields/FeatureServer/0"
+},
+{
+"service": "Bicycle_Counts",
+"title": "Bicycle Counts",
+"rows": 883348,
+"desc": "This dataset includes bicycle counts at a number of locations in the region where we have permanent bike counters. This dataset can be used in conjunction with the Mobility Counters dataset.The purpose of this dataset is to monitor bike ridership across the re",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Mobility",
+"Counts",
+"Bicycle",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Bicycle_Counts/FeatureServer/0"
+},
+{
+"service": "Transit_Automated_Passenger_Counts",
+"title": "Transit Automated Passenger Counts",
+"rows": 728590,
+"desc": "The data is gathered to measure Halifax Transit's ridership.Some data errors have identified involving counters giving incorrect boardings, when these errors have been detected, the values have been removed from the data to avoid misleading data. MetadataThe p",
+"keywords": [
+"Halifax",
+"Transit",
+"Passenger",
+"Counts",
+"Bus",
+"Routes",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Automated_Passenger_Counts/FeatureServer/0"
+},
+{
+"service": "Transit_Ferry_Passenger_Counts",
+"title": "Transit Ferry Passenger Counts",
+"rows": 525430,
+"desc": "The data is gathered to measure Halifax Transit's ridership.This dataset is updated manually based on resource availability so there may be a delay of 2-4 weeks in the new data being added data.Metadata",
+"keywords": [
+"Halifax",
+"Transit",
+"Passenger",
+"Counts",
+"Ferry",
+"Routes",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Ferry_Passenger_Counts/FeatureServer/0"
+},
+{
+"service": "Open_Data_Analytics",
+"title": "Open Data Analytics",
+"rows": 488967,
+"desc": "Table of usage statistics (number of views) for datasets within the Halifax Open Data Catalogue.The data was collected to show the usage of data within the Open Data Catalogue. Metadata",
+"keywords": [
+"Halifax",
+"Halifax Open Data",
+"Finance City Government",
+"Analytics",
+"Usage"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Open_Data_Analytics/FeatureServer/0"
+},
+{
+"service": "Cityworks_Service_Requests",
+"title": "Cityworks Service Requests",
+"rows": 477343,
+"desc": "A table of service requests from Cityworks, the municipality's work order management system.This data includes attributes of service requests recorded in the Cityworks system, including the types of requests, when they were received and closed, where they occu",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Infrastructure Asset Management",
+"Service Requests",
+"Maintenance",
+"Facilities",
+"Parks",
+"ROW",
+"Compliance"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Cityworks_Service_Requests/FeatureServer/0"
+},
+{
+"service": "Cityworks_Work_Orders_Custom_Fields",
+"title": "Cityworks Work Orders Custom Fields",
+"rows": 457229,
+"desc": "The data is a compilation of custom fields related to work orders recorded in the Cityworks system. The custom fields serve to categorize specific elements of the request.This dataset must be used in conjunction with the Cityworks Work Orders dataset, WORKORDE",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Infrastructure Asset Management",
+"Work Order",
+"Maintenance",
+"Facilities",
+"Parks",
+"ROW",
+"Compliance"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Cityworks_Work_Orders_Custom_Fields/FeatureServer/0"
+},
+{
+"service": "Commuting_Mode_Share_by_Census_Tract",
+"title": "Commuting Mode Share by Census Tract",
+"rows": 354040,
+"desc": "Table of data from Statistics Canada from the Census (2006, 2011, 2016) Journey to Work for the Halifax Regional Municipality. The data is at the Census Tract (CT) or Census Metropolitan Area (CMA) level with information by mode of transportation.The data was",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Statistics",
+"Population",
+"Census",
+"Tract",
+"Travel",
+"Work",
+"Culture Society",
+"Census Journey to Work"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Commuting_Mode_Share_by_Census_Tract/FeatureServer/0"
+},
+{
+"service": "PPLC_Inspections",
+"title": "PPL&C Inspections",
+"rows": 202239,
+"desc": "This dataset contains all permit inspections for Building, Construction, Engineering, and Halifax Water permits. Metadata",
+"keywords": [
+"Halifax",
+"HRM",
+"Building",
+"Construction",
+"Engineering",
+"Halifax Water",
+"Permit",
+"Inspection",
+"Development",
+"Halifax Open Data",
+"Planning Development",
+"Inspect"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Inspections/FeatureServer/0"
+},
+{
+"service": "HRM_Building_View",
+"title": "HRM Building View",
+"rows": 189238,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Building_View/FeatureServer/0"
+},
+{
+"service": "HRM_Parcel_Polygon_with_Accounts",
+"title": "HRM Parcel Polygon with Accounts",
+"rows": 187236,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Parcel_Polygon_with_Accounts/FeatureServer/0"
+},
+{
+"service": "Buildings",
+"title": "Buildings",
+"rows": 172425,
+"desc": "Building Polygons - Polygons representing the shape of buildings compiled from various scales and sources. The polygons can represent footprints, rooflines, pedways or podiums. MetadataBuildings - A table of general information about buildings in the Halifax R",
+"keywords": [
+"Halifax Open Data",
+"Planning Development",
+"Halifax",
+"Building",
+"Building Use",
+"Sprinkler",
+"Occupancy",
+"Footprints"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Buildings/FeatureServer/0"
+},
+{
+"service": "CivicAddresses",
+"title": "Civic Addresses",
+"rows": 158765,
+"desc": "This dataset is the source of civic address information for internal and external service providers such as NSPI, E-911, Property Online and NSCAF.\u00a0Metadata",
+"keywords": [
+"Civic Number",
+"House Number",
+"Street",
+"Street Number",
+"Civic Address",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/CivicAddresses/FeatureServer/0"
+},
+{
+"service": "PPLC_Permit_Processing_Times",
+"title": "PPL&C Permit Processing Times",
+"rows": 155394,
+"desc": "This dataset was created to give the public more transparency on the time spent on processing permit applications by staff versus the customer.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Planning Development",
+"Planning",
+"Development",
+"Permit",
+"Process",
+"Processing",
+"Wait",
+"Wait Time",
+"Time",
+"Duration"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Permit_Processing_Times/FeatureServer/0"
+},
+{
+"service": "BuildingDetails",
+"title": "Building Details",
+"rows": 151646,
+"desc": "A list of building uses and other related information within buildings in Halifax Regional Municipality.\u00a0The data was created through various means of collecting building use information including civic addressing, building permit, fire inspection and asset ma",
+"keywords": [
+"Open Data",
+"Halifax",
+"Halifax Regional Municipality",
+"Building Use",
+"Dwelling Units",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/BuildingDetails/FeatureServer/0"
+},
+{
+"service": "311_Call_Volumes",
+"title": "311 Call Volumes",
+"rows": 147983,
+"desc": "Table of 311 call volumes per 30 minute increments, includes\ninformation regarding the number of calls offered, handled, abandoned and talk\ntime.\u00a0Metadata",
+"keywords": [
+"311",
+"Call Volume",
+"Offered",
+"Handled",
+"Abandoned",
+"Talk Time",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/311_Call_Volumes/FeatureServer/0"
+},
+{
+"service": "Traffic_Collisions_Involved_Vehicle",
+"title": "Traffic Collisions - Involved Vehicle",
+"rows": 128216,
+"desc": "This dataset was created to support the Road Safety Framework Project led by Public Works Traffic Management.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Traffic",
+"Collision",
+"Transportation",
+"Vehicle",
+"Road",
+"Safety",
+"Accident"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Traffic_Collisions_Involved_Vehicle/FeatureServer/0"
+},
+{
+"service": "Cityworks_Work_Orders",
+"title": "Cityworks Work Orders",
+"rows": 118912,
+"desc": "This data includes attributes of work orders recorded in the Cityworks system, including the type of work order, when they were received and closed, where they occurred, and how they were resolved.This dataset must be used in conjunction with Cityworks Work Or",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Infrastructure Asset Management",
+"Work Order",
+"Maintenance",
+"Facilities",
+"Parks",
+"ROW",
+"Compliance"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Cityworks_Work_Orders/FeatureServer/0"
+},
+{
+"service": "Benefits_Estimate_Calculator",
+"title": "Benefits Estimate Calculator",
+"rows": 117449,
+"desc": "This dataset contains all the different possible\ncombinations for employee benefits offered at HRM. The benefits account for all\nposition and employee group combinations. These benefit options include health,\ndental, and income replacement coverage.\n\nThis\ndata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Benefits Calculator",
+"Human Resources",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Benefits_Estimate_Calculator/FeatureServer/0"
+},
+{
+"service": "HRFE_Incident_Initial_Response",
+"title": "HRFE Incident Initial Response",
+"rows": 109623,
+"desc": "There has been an interest from the public to release this information. Halifax Regional Fire and Emergency would like to have transparency on the number, type and frequency of incidents in Halifax Regional Municipality.The location is generalized to the stree",
+"keywords": [
+"Halifax Open Data",
+"Community Protection",
+"Halifax",
+"HRFE",
+"Fire",
+"Incident",
+"Response"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRFE_Incident_Initial_Response/FeatureServer/0"
+},
+{
+"service": "BuildingPermits",
+"title": "BuildingPermits",
+"rows": 101888,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/BuildingPermits/FeatureServer/0"
+},
+{
+"service": "Public_Trees",
+"title": "Public Trees",
+"rows": 80051,
+"desc": "Point representation of tree assets located primarily in the right of way for the Halifax Regional Municipality.An inventory of tree assets applicable for asset management and work order management.\u00a0Metadata",
+"keywords": [
+"Halifax",
+"Asset",
+"Tree",
+"Right of Way",
+"Halifax Open Data",
+"Infrastructure Asset Management"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Public_Trees/FeatureServer/0"
+},
+{
+"service": "Traffic_Collisions_Involved_Pedestrian",
+"title": "Traffic Collisions - Involved Pedestrian",
+"rows": 68878,
+"desc": "This dataset was created to support the Road Safety Framework Project led by Public Works Traffic Management.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Traffic",
+"Collision",
+"Transportation",
+"Pedestrian",
+"Road",
+"Safety",
+"Accident"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Traffic_Collisions_Involved_Pedestrian/FeatureServer/0"
+},
+{
+"service": "SpotHeight1K",
+"title": "SpotHeight1K",
+"rows": 56686,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/SpotHeight1K/FeatureServer/0"
+},
+{
+"service": "Natural_Inventory",
+"title": "Natural Inventory",
+"rows": 54357,
+"desc": "To help with the of the decision making process and metrics on green space for asset management and land use planning.HRM Natural Inventory data is created by external party, Green Analytics. This data set does not include all development areas, meaning new de",
+"keywords": [
+"Environment",
+"Natural Inventory",
+"HRM",
+"Halifax",
+"Halifax Open Data"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Natural_Inventory/FeatureServer/0"
+},
+{
+"service": "Parks_and_Recreation_Arena_Bookings",
+"title": "Parks and Recreation Arena Bookings",
+"rows": 50212,
+"desc": "To provide transparent, self\u2011serve access to arena scheduling for planning, reporting, and public insight, while giving partners and vendors consistent, automated data and reducing reliance on manual report requests.Not all HRM arenas are yet included. Data re",
+"keywords": [
+"Arena",
+"Bookings",
+"Schedule",
+"Ice",
+"Dry Floor",
+"Pad",
+"Facility",
+"Rental",
+"Recreation",
+"Programs",
+"Parks & Recreation",
+"Halifax",
+"HRM",
+"Xplor",
+"Open Ice"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Parks_and_Recreation_Arena_Bookings/FeatureServer/0"
+},
+{
+"service": "Civic_Address_Changes",
+"title": "Civic Address Changes",
+"rows": 49952,
+"desc": "This dataset was created to provide the public access to recent and historic changes in civic addresses for reference. For more information on recent address changes, contact civicadd@halifax.ca, or HRM\u2019s Archives website to view historic address changes.Data",
+"keywords": [
+"Halifax Open Data",
+"Planning Development",
+"Civic",
+"Address",
+"Street",
+"Change",
+"Former",
+"Community"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Civic_Address_Changes/FeatureServer/0"
+},
+{
+"service": "Active_Travelways",
+"title": "Active Travelways",
+"rows": 49812,
+"desc": "Linear representation of assets that includes trails, sidewalks, walkways, pathways and Multi-Use Pathways.\u00a0An inventory of active travelways applicable for asset management and work order management.\u00a0This dataset is still a work in progress and there is ongoi",
+"keywords": [
+"HRM",
+"Sidewalk",
+"Walkway",
+"Pathway",
+"Multi-Use Pathway",
+"Active",
+"Transportation",
+"Pedestrian",
+"Bicycle",
+"Asset",
+"Trail",
+"Halifax Open Data",
+"Transportation Transit",
+"Parks Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Active_Travelways/FeatureServer/0"
+},
+{
+"service": "Traffic_Collisions",
+"title": "Traffic Collisions",
+"rows": 47145,
+"desc": "Point representation of traffic collisions which have occurred within the road right\u2010of\u2010way. Collisions are mapped according to the Motor Vehicle Collision Report. In some cases, insufficient information may result in spatial accuracy errors.The dataset was cr",
+"keywords": [
+"Halifax",
+"Traffic",
+"Collision",
+"Pedestrian",
+"Vehicle",
+"Bicycle",
+"Road",
+"Safety",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Traffic_Collisions/FeatureServer/0"
+},
+{
+"service": "Street_Lights",
+"title": "Street Lights",
+"rows": 46490,
+"desc": "Point representation of HRM owned street lights and walkway lights located in the public right-of-way.The purpose of the data set is to maintain an inventory of street lights for asset and work order management.\u00a0Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Light",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Lights/FeatureServer/0"
+},
+{
+"service": "HRM_Building_Energy_Usage",
+"title": "HRM Building Energy Usage",
+"rows": 30730,
+"desc": "Table of HRM corporate building energy cost and use by fuel type. Limited to buildings which have been populated in the Portfolio Manager online tool.The purpose of this dataset is to allow third party stakeholders to understand the fuel composition and usage",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Environment",
+"Energy",
+"Fuel",
+"Electricity",
+"Natural Gas",
+"Fuel Oil",
+"Propane",
+"Fuel Cost"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Building_Energy_Usage/FeatureServer/0"
+},
+{
+"service": "Passenger_RFP",
+"title": "Passenger RFP",
+"rows": 23702,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Passenger_RFP/FeatureServer/0"
+},
+{
+"service": "Municipal_Cemeteries_Interred",
+"title": "Municipal Cemeteries Interred",
+"rows": 21268,
+"desc": "Names and locations of the interred within the municipal cemeteries. Dataset should be used in conjunction with the\u00a0Municipal Cemeteries Mapping\u00a0dataset.\u00a0The data was created to aid in access to municipal cemetery data for genealogy and directional purposes.At",
+"keywords": [
+"HRM",
+"Halifax",
+"Cemetery",
+"Interred",
+"Deceased",
+"Halifax Open Data",
+"Parks Recreation",
+"Genealogy"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Municipal_Cemeteries_Interred/FeatureServer/0"
+},
+{
+"service": "PPLC_Issued_Building_Permits",
+"title": "PPLC Issued Building Permits",
+"rows": 18904,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Issued_Building_Permits/FeatureServer/0"
+},
+{
+"service": "Ice_Routes",
+"title": "Ice Routes",
+"rows": 18766,
+"desc": "A single line representation of the snow and ice clearance routes provided by HRM Transportation and Public Works. The route also indicate what material is used for street treatment such as salt or sand, and priority.The purpose of this dataset is to aid in th",
+"keywords": [
+"Street",
+"Winter",
+"Maintenance",
+"Halifax",
+"Priority",
+"Snow",
+"Ice",
+"Open Data"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Ice_Routes/FeatureServer/0"
+},
+{
+"service": "StreetNetwork",
+"title": "StreetNetwork",
+"rows": 18640,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/StreetNetwork/FeatureServer/0"
+},
+{
+"service": "PPLC_Permits_Geolocated",
+"title": "PPL&C Permits Geolocated",
+"rows": 16455,
+"desc": "This dataset collection provides spatial representations of permits based on civic addresses or parcels, along with their relevant information.PPL&amp;C Building Permits Geolocated\u00a0-\u00a0Point dataset of building permits by Halifax Regional Municipality Planning a",
+"keywords": [
+"Halifax",
+"HRM",
+"Permit",
+"Development",
+"Planning",
+"Halifax Open Data",
+"Occupancy",
+"PPL&C",
+"Planning Development",
+"HRWC",
+"TPW",
+"Building",
+"Construction",
+"ROW",
+"Service Connection",
+"Streets & Services",
+"Development Only",
+"Land Use",
+"Home Occupation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Permits_Geolocated/FeatureServer/0"
+},
+{
+"service": "PPLC_Issued_Public_Works_ROW_Permits",
+"title": "PPL&C Issued Public Works ROW Permits",
+"rows": 16344,
+"desc": "Table of Public Works ROW permits issued by HRM Public Works Traffic Management from the new Permitting, Planning, Licensing &amp; Compliance (PPL&amp;C) solution.This dataset contains all permits issued under the permit type of Right of Way Permits not relate",
+"keywords": [
+"Halifax",
+"HRM",
+"Permit",
+"ROW",
+"Traffic",
+"Public Works",
+"TPW",
+"Right of Way",
+"PPL&C",
+"Utility",
+"Streets",
+"Street Closure",
+"Streets & Services",
+"Driveway",
+"Driveway Access",
+"Sidewalks",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Issued_Public_Works_ROW_Permits/FeatureServer/0"
+},
+{
+"service": "Street_Junctions",
+"title": "Street Junctions",
+"rows": 14653,
+"desc": "This dataset was created to carry out geo-spatial network analysis.\u00a0MetadataNote: this dataset experienced schema changes on August 18, 2021, see the Traffic Control Locations dataset for data that was removed from Street Junctions.",
+"keywords": [
+"Halifax",
+"Dead End",
+"Street",
+"Open Data",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Junctions/FeatureServer/0"
+},
+{
+"service": "Grass_Inventory",
+"title": "Grass Inventory",
+"rows": 14536,
+"desc": "Polygon representation of grass areas that are mowed for the municipality.The data was compiled as an inventory of grass areas that are mowed for work order management.\u00a0Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Parks and Recreation",
+"Grass",
+"Mowing"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Grass_Inventory/FeatureServer/0"
+},
+{
+"service": "PPLC_Issued_Construction_Permits",
+"title": "PPLC Issued Construction Permits",
+"rows": 14080,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Issued_Construction_Permits/FeatureServer/0"
+},
+{
+"service": "Neighbourhood_Speed_Limit",
+"title": "Neighbourhood Speed Limit",
+"rows": 13846,
+"desc": "Display the status of local streets which are under review for speed limit reduction.Metadata",
+"keywords": [
+"Halifax",
+"Halifax Open Data",
+"Speed",
+"Limit",
+"Neighbourhood",
+"Reduction",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Neighbourhood_Speed_Limit/FeatureServer/0"
+},
+{
+"service": "Wildfire_AVL_Data",
+"title": "Wildfire AVL Data",
+"rows": 13350,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Wildfire_AVL_Data/FeatureServer/0"
+},
+{
+"service": "Residential_Rental_Registry",
+"title": "Residential Rental Registry",
+"rows": 12329,
+"desc": "The purpose of this data is to provide more transparency to the public on properties where registered residential rentals are located.See By-Law R-400 for more information (https://www.halifax.ca/business/doing-business-halifax/residential-rental-registry)Note",
+"keywords": [
+"Halifax",
+"HRM",
+"By-Law",
+"Residential",
+"Rental",
+"Registry",
+"R400",
+"Planning Development",
+"Halifax Open Data",
+"R-400"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Residential_Rental_Registry/FeatureServer/0"
+},
+{
+"service": "HRM_Traffic_Studies",
+"title": "HRM Traffic Studies",
+"rows": 11083,
+"desc": "The purpose of this data is to record the location, and details for Traffic Studies / Counts that have been conducted by HRM Traffic Management Group. This information is used by Traffic Management staff in various analyses.This dataset identifies the location",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation",
+"Traffic",
+"Study",
+"Speed",
+"Counts",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Traffic_Studies/FeatureServer/0"
+},
+{
+"service": "ZoningBoundaries",
+"title": "Zoning Boundaries",
+"rows": 11076,
+"desc": "Land use zone applied to a particular area of land within a land use by-law (LUB) area. \u00a0The zone value of each polygon corresponds with a zone in the associated land use by-law, which lists permitted or prohibited uses for each zone. Land use zones differ bet",
+"keywords": [
+"Open Data",
+"Halifax",
+"HRM",
+"bylaw",
+"land use",
+"development",
+"plan",
+"planning",
+"zoning",
+"zone",
+"Halifax Open Data",
+"Planning Development",
+"Boundaries Topo",
+"ArcGIS",
+"Service Definition",
+".sd"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/ZoningBoundaries/FeatureServer/0"
+},
+{
+"service": "PPLC_Issued_Engineering_Permits",
+"title": "PPLC Issued Engineering Permits",
+"rows": 10500,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Issued_Engineering_Permits/FeatureServer/0"
+},
+{
+"service": "Street_Intersections",
+"title": "Street Intersections",
+"rows": 10380,
+"desc": "This dataset was created to support mapping and transportation analysis.Metadata",
+"keywords": [
+"Halifax",
+"Intersection",
+"Traffic",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Intersections/FeatureServer/0"
+},
+{
+"service": "HRM_Owned_Land",
+"title": "HRM Owned Land",
+"rows": 10181,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Owned_Land/FeatureServer/0"
+},
+{
+"service": "Commuter_Travel_Time_Estimates",
+"title": "Commuter Travel Time Estimates",
+"rows": 9396,
+"desc": "This dataset supports commuter guidebook by providing estimated travel times between selected TAZs. Data is modeled or calculated and reflects average conditions, not real-world travel. Intended for visualization and informational use.Travel times are estimate",
+"keywords": [
+"Travel Time",
+"Commuting",
+"Transportation Analysis Zones",
+"TAZ",
+"Active Transportation",
+"Walking",
+"Cycling",
+"Accessibility",
+"StoryMap",
+"Planning",
+"Mobility",
+"Halifax",
+"Travel Estimates",
+"Modeled Data",
+"Commuter Guide",
+"Halifax Open  Data",
+"Transportation Transit",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Commuter_Travel_Time_Estimates/FeatureServer/0"
+},
+{
+"service": "LW_Lab_Results",
+"title": "LW Lab Results",
+"rows": 8343,
+"desc": "The data was created to share the lab results collected through the LakeWatchers Program with the public.This dataset can be used in conjunction with LakeWatchers Monitoring Sites which identifies the location of the lab results.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Environment",
+"LakeWatchers",
+"Water",
+"Monitoring",
+"Lab",
+"Characteristics",
+"PH"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/LW_Lab_Results/FeatureServer/0"
+},
+{
+"service": "Government_Owned_Properties",
+"title": "Government Owned Properties",
+"rows": 7438,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Government_Owned_Properties/FeatureServer/0"
+},
+{
+"service": "Community_Plan_Generalized_Future_Land_Use",
+"title": "Community Plan Generalized Future Land Use",
+"rows": 7187,
+"desc": "Polygon representation of generalized future land use designations as defined in various community municipal planning\u00a0strategies within HRM.The data was created by HRM Planning and Development for the purpose of delineating municipal planning strategy\u00a0generali",
+"keywords": [
+"HRM",
+"Halifax",
+"Municipal",
+"Planning",
+"Strategy",
+"Designation",
+"Land Use Policy",
+"Generalized Future Land Use",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Community_Plan_Generalized_Future_Land_Use/FeatureServer/0"
+},
+{
+"service": "Spring_Weight_Restrictions",
+"title": "Spring Weight Restrictions",
+"rows": 7167,
+"desc": "Identification of HRM owned streets which are exempt from the annual Spring Weight Restrictions.The dataset was created to communicate which municipal maintained roads are exempt from weight restrictions due to saturated roadbed conditions attributed to spring",
+"keywords": [
+"Halifax Open Data",
+"Transportation Transit",
+"Halifax",
+"Streets",
+"Spring",
+"Weight",
+"Restriction",
+"Exemption",
+"Vehicle"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Spring_Weight_Restrictions/FeatureServer/0"
+},
+{
+"service": "Street_Name_Routes",
+"title": "Street Name Routes",
+"rows": 6883,
+"desc": "Single line representation of street name routes within the Halifax Regional Municipality, derived from the Street Centrelines dataset and segmented by community boundaries and full street names. The dataset is primarily used for street name labelling in mappi",
+"keywords": [
+"HRM",
+"Halifax",
+"Halifax Open Data",
+"Transportation Transit",
+"Boundaries Topo",
+"Street",
+"Name",
+"Route",
+"Community"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Name_Routes/FeatureServer/0"
+},
+{
+"service": "Transit_Passenger_Overload_Incidents",
+"title": "Transit Passenger Overload Incidents",
+"rows": 6617,
+"desc": "This dataset supports monitoring and analysis of passenger overload conditions across the Halifax Transit network.Passenger overload counts are estimated values and are subject to reporting limitations and data variability.Metadata",
+"keywords": [
+"Halifax",
+"Transit",
+"Passenger",
+"Overload",
+"Bus",
+"Ferry",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Passenger_Overload_Incidents/FeatureServer/0"
+},
+{
+"service": "PPLC_Issued_Halifax_Water_Permits",
+"title": "PPLC Issued Halifax Water Permits",
+"rows": 6546,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Issued_Halifax_Water_Permits/FeatureServer/0"
+},
+{
+"service": "HRFE_Fire_Cause_and_Origin",
+"title": "HRFE Fire Cause and Origin",
+"rows": 4562,
+"desc": "The purpose of the dataset is for public education and safety. The goal is to also provide transparency of this information to the public.Data includes all investigation records, however may not include cause and origin data due to various factors including in",
+"keywords": [
+"Halifax",
+"HRM",
+"Fire",
+"Origin",
+"Cause",
+"Investigation",
+"HRFE",
+"Public Safety",
+"Education",
+"Community Protection"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRFE_Fire_Cause_and_Origin/FeatureServer/0"
+},
+{
+"service": "PPLC_Issued_Land_Use_Approval_Permits",
+"title": "PPLC Issued Land Use Approval Permits",
+"rows": 4167,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Issued_Land_Use_Approval_Permits/FeatureServer/0"
+},
+{
+"service": "All_Modes_AGOL_July25",
+"title": "All Modes AGOL July25",
+"rows": 4011,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/All_Modes_AGOL_July25/FeatureServer/0"
+},
+{
+"service": "AVL_DATA_FORMATTED",
+"title": "AVL DATA FORMATTED",
+"rows": 3960,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/AVL_DATA_FORMATTED/FeatureServer/0"
+},
+{
+"service": "Auto_AGOL",
+"title": "Auto AGOL",
+"rows": 3654,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Auto_AGOL/FeatureServer/0"
+},
+{
+"service": "Census_2016_Dissemination_Blocks",
+"title": "Census 2016 Dissemination Blocks",
+"rows": 3523,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Block with associated population data from the 2016 Census.\u00a0\u00a0This dataset was created for statistical purposes and to perform population calculations.\u00a0\u00a0 According to Statistics Canada, a Dissemin",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Block",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Dissemination_Blocks/FeatureServer/0"
+},
+{
+"service": "Census_2021_Dissemination_Blocks",
+"title": "Census 2021 Dissemination Blocks",
+"rows": 3504,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Block with associated population data from the 2021 Census.This dataset was created for statistical purposes and to perform population calculations.According to Statistics Canada, a Dissemination",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Block"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Dissemination_Blocks/FeatureServer/0"
+},
+{
+"service": "Street_Closures",
+"title": "Street Closures",
+"rows": 2692,
+"desc": "Line representation of planned street closures for Halifax Regional Municipality. Types of street closures include: Special Event, Block Party, Construction, Utility and Development.This dataset was compiled for the purpose of publishing street closures to the",
+"keywords": [
+"HRM",
+"Halifax",
+"Street",
+"Disruption",
+"Closure",
+"Halifax Open Data",
+"Right of Way",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Closures/FeatureServer/0"
+},
+{
+"service": "Capital_Projects",
+"title": "Capital Projects",
+"rows": 2650,
+"desc": "The purpose of the dataset is to\u00a0allow staff and the public to spatially view the location of Capital Projects for each fiscal year.All information contained in this feature class has been created by the Asset Management Office, as part of the Council Approved",
+"keywords": [
+"HRM",
+"Halifax",
+"Capital Budget",
+"Capital Projects",
+"Nova Scotia",
+"Dartmouth",
+"Bedford",
+"Sackville",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Capital_Projects/FeatureServer/0"
+},
+{
+"service": "Litter_Bins",
+"title": "Litter Bins",
+"rows": 2562,
+"desc": "Point representation of litter bins in Halifax Regional Municipality.An inventory of litter bin assets applicable for asset management and work order management.\u00a0Metadata",
+"keywords": [
+"Litter",
+"Bin",
+"Garbage",
+"Infrastructure Asset Management",
+"Halifax Open Data"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Litter_Bins/FeatureServer/0"
+},
+{
+"service": "Bus_Stops_2",
+"title": "Bus Stops 2",
+"rows": 2349,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Bus_Stops_2/FeatureServer/0"
+},
+{
+"service": "OutdoorRecreationEquipment",
+"title": "Outdoor Recreation Equipment",
+"rows": 2255,
+"desc": "Points representation of HRM owned or maintained outdoor recreation equipment such as playground equipment, outdoor gym equipment, basketball hoops and modular ramps. \u00a0The data was compiled as an inventory of features applicable for asset management and work o",
+"keywords": [
+"Open Data",
+"Halifax",
+"Halifax Regional Municipality",
+"Recreation",
+"Asset",
+"Playstructure",
+"Swing",
+"Slide",
+"Basketball Hoop",
+"Halifax Open Data",
+"Parks Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/OutdoorRecreationEquipment/FeatureServer/0"
+},
+{
+"service": "Draft_HAF_RC_Zoning",
+"title": "Draft HAF RC Zoning",
+"rows": 2242,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Draft_HAF_RC_Zoning/FeatureServer/0"
+},
+{
+"service": "Draft_HAF_RC_Zoning_view",
+"title": "Draft HAF RC Zoning view",
+"rows": 2242,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Draft_HAF_RC_Zoning_view/FeatureServer/0"
+},
+{
+"service": "Residential_Proposed_4_Units",
+"title": "Residential Proposed 4 Units",
+"rows": 2212,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Residential_Proposed_4_Units/FeatureServer/0"
+},
+{
+"service": "RC_Minimum_Front_and_Flanking_Yards",
+"title": "RC Minimum Front and Flanking Yards",
+"rows": 2116,
+"desc": "Linear representation of minimum front and flanking yard setbacks as defined in the Regional Centre Land Use By-law.To identify where minimum front and flanking yard setbacks apply, as defined in Schedule 9 of the Regional Centre Land Use By-law.Reference to t",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 9",
+"Minimum Front and Flanking Yards",
+"Setbacks"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Minimum_Front_and_Flanking_Yards/FeatureServer/0"
+},
+{
+"service": "Outdoor_Recreation_Polygon_Uses",
+"title": "Outdoor Recreation Polygon Uses",
+"rows": 1986,
+"desc": "A table containing information about the uses of outdoor recreation surfaces and areas, such as ball diamonds, sport fields, sport courts etc.To identify uses of defined outdoor recreation areas such as sport fields. Compiled for asset management and recreatio",
+"keywords": [
+"HRM",
+"Park",
+"Recreation",
+"Outdoor",
+"Sport Field",
+"Sport Court",
+"Playground",
+"Active Use Area",
+"Water-related",
+"Halifax Open Data",
+"Infrastructure Asset Management",
+"Park Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Outdoor_Recreation_Polygon_Uses/FeatureServer/0"
+},
+{
+"service": "Draft_HAF_RC_Heights_2_view",
+"title": "Draft HAF RC Heights 2 view",
+"rows": 1931,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Draft_HAF_RC_Heights_2_view/FeatureServer/0"
+},
+{
+"service": "Draft_HAF_RC_Heights_view",
+"title": "Draft HAF RC Heights view",
+"rows": 1931,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Draft_HAF_RC_Heights_view/FeatureServer/0"
+},
+{
+"service": "PPLC_Subdivision_Applications",
+"title": "PPL&C Subdivision Applications",
+"rows": 1853,
+"desc": "Dataset aims for transparency of decision-making in subdivision requests &amp; planning. It provides detailed info on subdivision applications.Metadata",
+"keywords": [
+"Planning",
+"Application",
+"Land",
+"Use",
+"Halifax Open Data",
+"Planning Development",
+"Subdivision",
+"Migration"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Subdivision_Applications/FeatureServer/0"
+},
+{
+"service": "Maximum_Building_Heights",
+"title": "Maximum Building Heights",
+"rows": 1822,
+"desc": "This dataset identifies areas where maximum building heights apply across various bylaw areas, including the Regional Centre and Suburban Housing Accelerator area.Metadata",
+"keywords": [
+"Halifax Regional Municipality",
+"Planning & Development",
+"Regional Centre",
+"Land Use By-law",
+"LUB",
+"municipal planning strategy",
+"MPS",
+"Maximum Building Height",
+"Bylaw Areas",
+"Building Regulations"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Maximum_Building_Heights/FeatureServer/0"
+},
+{
+"service": "PreAmalgamation",
+"title": "PreAmalgamation",
+"rows": 1782,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PreAmalgamation/FeatureServer/0"
+},
+{
+"service": "Traffic_Calming_Assessments",
+"title": "Traffic Calming Assessments",
+"rows": 1731,
+"desc": "The data was created to provide a visual, to the public and councillors, of traffic calming requests and their status through out the traffic calming assessment.The Road Safety team uses an evidence-based review to evaluate speeding concerns raised by resident",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Traffic",
+"Calming",
+"Assessments",
+"Speed",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Traffic_Calming_Assessments/FeatureServer/0"
+},
+{
+"service": "strategic_performance_snapshot",
+"title": "Strategic Performance Snapshot",
+"rows": 1716,
+"desc": "A table of performance indicators which measure progress towards the achievement of HRM\u2019s strategic priority outcomes.The data was created to present HRM\u2019s\nperformance on the Strategic Priorities through various key performance\nmeasures. The intent is to incre",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Finance City Government",
+"KPI",
+"Strategic",
+"Peformance",
+"Indicator",
+"Priorities",
+"Council",
+"Administrative",
+"Measures",
+"Accountability"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/strategic_performance_snapshot/FeatureServer/0"
+},
+{
+"service": "Outdoor_Recreation_Polygons",
+"title": "Outdoor Recreation Polygons",
+"rows": 1573,
+"desc": "Polygon representations of HRM owned or maintained outdoor recreation areas such as active use areas, sport fields, sport courts, ball diamonds, and water related areas.The data was compiled as an inventory of features applicable for asset management and work",
+"keywords": [
+"HRM",
+"Recreation",
+"Asset",
+"Active Use Areas",
+"Playground Surface",
+"Sport field",
+"Sport Court",
+"Spray Park",
+"Lawn Bowling",
+"Beach",
+"Horseshoe",
+"Running Track",
+"Halifax Open Data",
+"Parks Recreation",
+"Infrastructure Asset Management"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Outdoor_Recreation_Polygons/FeatureServer/0"
+},
+{
+"service": "PPLC_Subdivision_Applications_Geolocated",
+"title": "PPL&C Subdivision Applications Geolocated",
+"rows": 1510,
+"desc": "Dataset aims for transparency of decision-making in subdivision requests &amp; planning. It provides detailed info on subdivision applications.The polygons were geolocated based on the parcel PID number(s).Metadata",
+"keywords": [
+"Planning",
+"Application",
+"Land",
+"Use",
+"Halifax Open Data",
+"Planning Development",
+"Subdivision",
+"Migration"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Subdivision_Applications_Geolocated/FeatureServer/0"
+},
+{
+"service": "Traffic_Calming_Infrastructure",
+"title": "Traffic Calming Infrastructure",
+"rows": 1461,
+"desc": "The data was compiled as an inventory of features applicable for asset management and traffic calming planning.&nbsp;&nbsp;Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation",
+"Traffic",
+"Calming",
+"Infrastructure",
+"Safety",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Traffic_Calming_Infrastructure/FeatureServer/0"
+},
+{
+"service": "Building_Symbols_All",
+"title": "Building Symbols All",
+"rows": 1364,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Building_Symbols_All/FeatureServer/0"
+},
+{
+"service": "BuildingSymbol",
+"title": "BuildingSymbol",
+"rows": 1364,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/BuildingSymbol/FeatureServer/0"
+},
+{
+"service": "Quinpool3D_WSL1",
+"title": "Quinpool3D WSL1",
+"rows": 1234,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Quinpool3D_WSL1/FeatureServer/0"
+},
+{
+"service": "Quinpool3D_WSL1",
+"title": "Quinpool3D WSL1",
+"rows": 1234,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Quinpool3D_WSL1/FeatureServer/0"
+},
+{
+"service": "HRM_Park_Recreation_Features_2",
+"title": "HRM Park Recreation Features 2",
+"rows": 1186,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Park_Recreation_Features_2/FeatureServer/0"
+},
+{
+"service": "Horticultural_Beds",
+"title": "Horticultural Beds",
+"rows": 1184,
+"desc": "Polygon representation of horticultural beds such as flower beds, as well as community gardens.The data was compiled as an inventory of features applicable for asset management and work order management.\u00a0Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Gardens",
+"Horticulture",
+"Horticultural Bed",
+"Garden Bed",
+"Parks Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Horticultural_Beds/FeatureServer/0"
+},
+{
+"service": "PublicTransit_AGOL",
+"title": "PublicTransit AGOL",
+"rows": 1071,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PublicTransit_AGOL/FeatureServer/0"
+},
+{
+"service": "Floodplain_Overlay_Zones_and_Modified_Floodproofing",
+"title": "Floodplain Overlay Zones and Modified Floodproofing",
+"rows": 1011,
+"desc": "Data to be used with existing zoning to implement floodplain\nregulations within each plan area based on a 2024 floodplain study. Within this\ndataset are the Floodway Overlay and Modified floodproofing areas around\nSackville and Little Sackville River.\n\nThis da",
+"keywords": [
+"Floodplain Overlay Zones",
+"Sackville River",
+"Little Sackville River",
+"Floodway Fringe",
+"Modified Floodproofing",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Floodplain_Overlay_Zones_and_Modified_Floodproofing/FeatureServer/0"
+},
+{
+"service": "Regional_Plan_Generalized_Future_Land_Use",
+"title": "Regional Plan Generalized Future Land Use",
+"rows": 992,
+"desc": "The land use designations are categorized into Primary and Sub-Designations to represent planned development and policy direction. It is a reference for land use planning, regulatory enforcement, and public engagement regarding land use changes.This dataset is",
+"keywords": [
+"Halifax",
+"Urban",
+"Settlement",
+"Rural",
+"Commuter",
+"Agriculture",
+"Resource",
+"Open Space",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Regional_Plan_Generalized_Future_Land_Use/FeatureServer/0"
+},
+{
+"service": "Bike_Infrastructure_and_Suggested_Routes",
+"title": "Bike Infrastructure and Suggested Routes",
+"rows": 964,
+"desc": "Line representation of existing and suggested bike routes and infrastructure within the Halifax Regional Municipality.\u00a0An inventory of bike routes to support HRM initiatives (AT Plan, Integrated Mobility Plan), and a resource to help citizensplan bike travel.S",
+"keywords": [
+"HRM",
+"Halifax",
+"Transportation",
+"Active",
+"Bicycle",
+"Cycle",
+"Route",
+"Integrated Mobility Plan",
+"Bike Lane",
+"Transportation Transit",
+"Infrastructure Asset Management",
+"Halifax Open Data"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Bike_Infrastructure_and_Suggested_Routes/FeatureServer/0"
+},
+{
+"service": "HRM_Parks_2",
+"title": "HRM Parks 2",
+"rows": 927,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Parks_2/FeatureServer/0"
+},
+{
+"service": "As_Passenger_AGOL",
+"title": "As Passenger AGOL",
+"rows": 868,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/As_Passenger_AGOL/FeatureServer/0"
+},
+{
+"service": "csa_field_capture",
+"title": "csa field capture",
+"rows": 858,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/csa_field_capture/FeatureServer/0"
+},
+{
+"service": "survey123_e1874a707f5f491c93cfd821503f6e69",
+"title": "survey123 e1874a707f5f491c93cfd821503f6e69",
+"rows": 831,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/survey123_e1874a707f5f491c93cfd821503f6e69/FeatureServer/0"
+},
+{
+"service": "Amalgamated_All_Modes_AGOL",
+"title": "Amalgamated All Modes AGOL",
+"rows": 780,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Amalgamated_All_Modes_AGOL/FeatureServer/0"
+},
+{
+"service": "Traffic_Zone_Auto_AGOL",
+"title": "Traffic Zone Auto AGOL",
+"rows": 760,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Traffic_Zone_Auto_AGOL/FeatureServer/0"
+},
+{
+"service": "RC_Transition_Lines",
+"title": "RC Transition Lines",
+"rows": 707,
+"desc": "Linear representation of transition lines as defined in the Regional Centre Land Use By-law.To identify transition lines as represented in Schedule 26 of the Regional Centre Land Use By-law.Reference to the complete package is required to determine permitted l",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 26",
+"Transition Lines"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Transition_Lines/FeatureServer/0"
+},
+{
+"service": "Traffic_Control_Locations",
+"title": "Traffic Control Locations",
+"rows": 707,
+"desc": "Point representation of traffic control locations such as signalized intersections, RA-5 crosswalks, and roundabouts.This dataset was assembled to track the inventory of traffic control locations within the HRM. Traffic control locations which are the responsi",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation Transit",
+"Traffic",
+"Control",
+"Signals",
+"Crosswalks",
+"Roundabouts",
+"RA-5"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Traffic_Control_Locations/FeatureServer/0"
+},
+{
+"service": "Quinpool3D_WSL2",
+"title": "Quinpool3D WSL2",
+"rows": 686,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Quinpool3D_WSL2/FeatureServer/0"
+},
+{
+"service": "Quinpool3D_WSL2",
+"title": "Quinpool3D WSL2",
+"rows": 686,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Quinpool3D_WSL2/FeatureServer/0"
+},
+{
+"service": "Commuting_Mode_Share_by_Region",
+"title": "Commuting Mode Share by Region",
+"rows": 672,
+"desc": "A table of the representing the 2006-2016 commuting mode share by different region, sex, age and income levels.The Regional Plan and the Integrated Mobility Plan (IMP) set mode share targets for the municipality. This data helps measure the progress in achievi",
+"keywords": [
+"Halifax",
+"HRM",
+"IMP",
+"KPI",
+"Performance",
+"Indicators",
+"Mobility",
+"Transportation Transit",
+"Halifax Open Data",
+"Bicycle",
+"Bikeway",
+"Cycling",
+"Pedestrians",
+"Walking",
+"Rolling",
+"Mode Share",
+"Integrated",
+"Active Transportation",
+"Regional Plan",
+"Targets"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Commuting_Mode_Share_by_Region/FeatureServer/0"
+},
+{
+"service": "Transportation_Analysis_Zones",
+"title": "Transportation Analysis Zones",
+"rows": 671,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transportation_Analysis_Zones/FeatureServer/0"
+},
+{
+"service": "Tax_Rates",
+"title": "Tax Rates",
+"rows": 657,
+"desc": "The data was created for taxation purposes.For more information on individual tax rate, please refer to https://www.halifax.ca/home-property/property-taxes/tax-ratesMetadata",
+"keywords": [
+"Halifax Open Data",
+"Finance City Government",
+"Tax Rate",
+"Commercial",
+"Residential",
+"Resource",
+"Area Rate"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Tax_Rates/FeatureServer/0"
+},
+{
+"service": "Capital_Projects_2018",
+"title": "Capital Projects 2018",
+"rows": 623,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Capital_Projects_2018/FeatureServer/0"
+},
+{
+"service": "Census_2021_Dissemination_Areas",
+"title": "Census 2021 Dissemination Areas",
+"rows": 610,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2021Census.This dataset was created for statistical purposes and to perform population calculations.\u00a0According to Statistics Canada, a dissemination",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Dissemination_Areas/FeatureServer/0"
+},
+{
+"service": "Census_2021_Population_Ages",
+"title": "Census 2021 Population Ages",
+"rows": 610,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2021 Census. Population is rounded to the nearest 5. There were several DA where the data was suppressed therefore the values are NULL.Statistics Ca",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Age",
+"Sex"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Population_Ages/FeatureServer/0"
+},
+{
+"service": "Census_2021_Population_Marital_Status_Ages",
+"title": "Census 2021 Population Marital Status Ages",
+"rows": 610,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2021 Census. Population is rounded to the nearest 5. There were several DA where the data was suppressed therefore the values are NULL.Statistics Ca",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Marital Status",
+"Age"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Population_Marital_Status_Ages/FeatureServer/0"
+},
+{
+"service": "Census_2021_Population_Marital_Status_Gender",
+"title": "Census 2021 Population Marital Status Gender",
+"rows": 610,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2021 Census. Population is rounded to the nearest 5. There were several DA where the data was suppressed therefore the values are NULL.Statistics Ca",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Marital Status",
+"Age",
+"Gender"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Population_Marital_Status_Gender/FeatureServer/0"
+},
+{
+"service": "Tree_Equity_Score_by_DA",
+"title": "Tree Equity Score by DA",
+"rows": 609,
+"desc": "To help prioritize where tree planting action is needed for community resiliency based on American Forests\u2019 - Tree Equity Score Methodology. Metadata",
+"keywords": [
+"Halifax",
+"Tree",
+"Canopy",
+"Tree Crown",
+"Halifax Open Data",
+"Infrastructure Asset Management"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Tree_Equity_Score_by_DA/FeatureServer/0"
+},
+{
+"service": "PPLC_Planning_Applications",
+"title": "PPL&C Planning Applications",
+"rows": 609,
+"desc": "Dataset aims for transparency of decision-making in land use planning. It provides detailed info on planning applications.Not all planning applications are listed. Applications not included in this dataset are Municipal Planning Strategy Amendments.Metadata",
+"keywords": [
+"Planning",
+"Application",
+"Land",
+"Use",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Planning_Applications/FeatureServer/0"
+},
+{
+"service": "Canadian_Index_of_Multiple_Deprivation_2021",
+"title": "Canadian Index of Multiple Deprivation 2021",
+"rows": 605,
+"desc": "The CIMD was created to show areas of deprivation and marginalization; the four dimensions of deprivation are: residential instability, economic dependency, ethno-cultural composition, and situational vulnerability.Metadata",
+"keywords": [
+"Halifax Open Data",
+"HRM",
+"Halifax",
+"CIMD",
+"Index",
+"Deprivation",
+"Residential Instability",
+"Economic Dependency",
+"Ethno-cultural Composition",
+"Situational Vulnerability."
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Canadian_Index_of_Multiple_Deprivation_2021/FeatureServer/0"
+},
+{
+"service": "Census_2016_Dissemination_Areas",
+"title": "Census 2016 Dissemination Areas",
+"rows": 601,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2016 Census.\u00a0\u00a0This dataset was created for statistical purposes and to perform population calculations.\u00a0 According to Statistics Canada, a dissemina",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Dissemination_Areas/FeatureServer/0"
+},
+{
+"service": "Census_2016_Population_Age_Range",
+"title": "Census 2016 Population Age Range",
+"rows": 601,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2016 Census. Population is rounded to the nearest 5. There were several DA where the data was suppressed therefore the values are NULL.Statistics Ca",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Age",
+"Sex",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Population_Age_Range/FeatureServer/0"
+},
+{
+"service": "Census_2016_Population_Ages",
+"title": "Census 2016 Population Ages",
+"rows": 601,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2016 Census. Population is rounded to the nearest 5. There were several DA where the data was suppressed therefore the values are NULL.\u00a0Statistics C",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Age",
+"Sex",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Population_Ages/FeatureServer/0"
+},
+{
+"service": "Census_2016_Population_Marital_Status_Ages",
+"title": "Census 2016 Population Marital Status Ages",
+"rows": 601,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2016 Census. Population is rounded to the nearest 5. There were several DA where the data was suppressed therefore the values are NULL.Statistics Ca",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Marital Status",
+"Age",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Population_Marital_Status_Ages/FeatureServer/0"
+},
+{
+"service": "Census_2016_Population_Marital_Status_Gender",
+"title": "Census 2016 Population Marital Status Gender",
+"rows": 601,
+"desc": "This dataset is a compilation of Statistics Canada Dissemination Areas with associated population data from the 2016 Census. Population is rounded to the nearest 5. There were several DA where the data was suppressed therefore the values are NULL.Statistics Ca",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Dissemination Area",
+"Marital Status",
+"Age",
+"Gender",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Population_Marital_Status_Gender/FeatureServer/0"
+},
+{
+"service": "Canadian_Index_of_Multiple_Deprivation_2016",
+"title": "Canadian Index of Multiple Deprivation 2016",
+"rows": 594,
+"desc": "The CIMD was created to show areas of deprivation and marginalization; the four dimensions of deprivation are: residential instability, economic dependency, ethno-cultural composition, and situational vulnerability.Metadata",
+"keywords": [
+"Halifax Open Data",
+"HRM",
+"Halifax",
+"CIMD",
+"Index",
+"Deprivation",
+"Residential Instability",
+"Economic Dependency",
+"Ethno-cultural Composition",
+"Situational Vulnerability.",
+"Culture Society"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Canadian_Index_of_Multiple_Deprivation_2016/FeatureServer/0"
+},
+{
+"service": "PPLC_Planning_Applications_Geolocated",
+"title": "PPL&C Planning Applications Geolocated",
+"rows": 590,
+"desc": "Dataset aims for transparency of decision-making in land use planning. It provides detailed info on planning applications.Not all planning applications are listed. Applications not included in this dataset are Municipal Planning Strategy Amendments.Metadata",
+"keywords": [
+"Planning",
+"Application",
+"Land",
+"Use",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Planning_Applications_Geolocated/FeatureServer/0"
+},
+{
+"service": "Heritage_Properties",
+"title": "Heritage Properties",
+"rows": 530,
+"desc": "Polygon representation of registered heritage property that are important to Halifax Regional Municipality.The dataset was created to identify registered heritage buildings, sites and streetscapes along with associated informationlike heritage name and year.\u00a0M",
+"keywords": [
+"Halifax",
+"Heritage",
+"Property",
+"Registered Heritage Property",
+"Planning",
+"Development",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Heritage_Properties/FeatureServer/0"
+},
+{
+"service": "Transit_Shelters",
+"title": "Transit Shelters",
+"rows": 521,
+"desc": "Point representation of transit bus shelters, located at various bus stop locations across the municipality. A relationship to the bus stop location is maintained through the BUSSTOPID attribute.An inventory of transit bus shelters applicable for asset managem",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transit",
+"Shelter",
+"Bus",
+"Transportation",
+"Assets",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Shelters/FeatureServer/0"
+},
+{
+"service": "Gottingen_Buildings_3D_Multipatch",
+"title": "Gottingen Buildings 3D Multipatch",
+"rows": 513,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Gottingen_Buildings_3D_Multipatch/FeatureServer/0"
+},
+{
+"service": "Gottingen_Buildings_3D_Multipatch",
+"title": "Gottingen Buildings 3D Multipatch",
+"rows": 513,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Gottingen_Buildings_3D_Multipatch/FeatureServer/0"
+},
+{
+"service": "Community_Plan_Generalized_Future_Land_Use_2019",
+"title": "Community Plan Generalized Future Land Use 2019",
+"rows": 495,
+"desc": "(ARCHIVED DATASET) Polygon representation of generalized future land use designations as defined in various community municipal planning strategies within HRM. This data has been archived as new more current data is now available.The data was created by HRM Pl",
+"keywords": [
+"Halifax",
+"Municipal",
+"Planning",
+"Strategy",
+"Designation",
+"Land Use Policy",
+"Generalized Future Land Use",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Community_Plan_Generalized_Future_Land_Use_2019/FeatureServer/0"
+},
+{
+"service": "RC_Bonus_Zoning_Rate_Districts",
+"title": "RC Bonus Zoning Rate Districts",
+"rows": 491,
+"desc": "Polygon representation of incentive or bonus zoning rate districts as defined by the Regional Centre Land Use By-law.To identify districts/areas where different incentive bonus zoning rates apply as defined by Schedule 50 of the Regional Centre Land Use By\u2010law",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010law",
+"Centre Plan",
+"Schedule 50",
+"Bonus Zoning Rate Districts",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Bonus_Zoning_Rate_Districts/FeatureServer/0"
+},
+{
+"service": "Tax_Rates_2021",
+"title": "Tax Rates 2021",
+"rows": 411,
+"desc": "The data was created for taxation purposes.Due to a change in the tax application, new data is now available in a different format therefore this dataset has been archived. See Tax Rates dataset for more current data.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Finance City Government",
+"Tax Rate",
+"Commercial",
+"Residential",
+"Resource",
+"Area Rate"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Tax_Rates_2021/FeatureServer/0"
+},
+{
+"service": "Capital_Projects_2017",
+"title": "Capital Projects 2017",
+"rows": 408,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Capital_Projects_2017/FeatureServer/0"
+},
+{
+"service": "Bike_Amenities",
+"title": "Bike Amenities",
+"rows": 393,
+"desc": "The data was compiled as an inventory of features applicable for asset management and work order management.Metadata",
+"keywords": [
+"Halifax",
+"Asset",
+"Transportation Transit",
+"Infrastructure Asset Management",
+"Transportation",
+"Bicycle",
+"Cycle",
+"Bike Repair Station",
+"Active",
+"Fixit",
+"Halifax Open Data",
+"Rack"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Bike_Amenities/FeatureServer/0"
+},
+{
+"service": "Halifax_Water_Owned_Land",
+"title": "Halifax Water Owned Land",
+"rows": 386,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Halifax_Water_Owned_Land/FeatureServer/0"
+},
+{
+"service": "RC_Site_Plan_Approval_Areas",
+"title": "RC Site Plan Approval Areas",
+"rows": 371,
+"desc": "Polygon representation of areas subject to site plan approval as defined in the Regional Centre Land Use By-law.To identify areas subject to site plan approval as defined in Schedule 2 of the Regional Centre Land Use By-law.Reference to the complete package is",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 2",
+"Site Plan Approval"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Site_Plan_Approval_Areas/FeatureServer/0"
+},
+{
+"service": "Walker_AGOL",
+"title": "Walker AGOL",
+"rows": 361,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Walker_AGOL/FeatureServer/0"
+},
+{
+"service": "Bridges",
+"title": "Bridges",
+"rows": 357,
+"desc": "Point representation of vehicular and pedestrian bridges, and bridge culverts in HRM. Located within street right of way, parks, and other locations.\u00a0An inventory of vehicular and pedestrian bridges, and culverts used for asset management and work order purpos",
+"keywords": [
+"Halifax",
+"Bridge",
+"Vehicular",
+"Pedestrian",
+"Culvert",
+"Street",
+"Park",
+"Transportation",
+"Transportation Transit",
+"Halifax Open Data",
+"Open Data"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Bridges/FeatureServer/0"
+},
+{
+"service": "Municipal_Facilities_Snow_Contract_Areas",
+"title": "Municipal Facilities Snow Contract Areas",
+"rows": 349,
+"desc": "The dataset was created to show the snow clearing contract areas for vendors/contractors and the public for greater transparency of the winter maintenance for municipal facilities.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Infrastructure Asset Management",
+"Facility",
+"Contract",
+"Vendor",
+"Snow",
+"Clearing",
+"Maintenance",
+"Parking",
+"Lot",
+"Walkway",
+"Driveway",
+"Step"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Municipal_Facilities_Snow_Contract_Areas/FeatureServer/0"
+},
+{
+"service": "Plan_Area_Public_Transit_AGOL",
+"title": "Plan Area Public Transit AGOL",
+"rows": 343,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Plan_Area_Public_Transit_AGOL/FeatureServer/0"
+},
+{
+"service": "Historical_Aerial_Photographs_Index",
+"title": "Historical Aerial Photographs Index",
+"rows": 340,
+"desc": "Point representation of geo-location for historical aerial photographs to act as index which links to digital reproductions of the photographs on the Municipal Archives website.Geographic index to aerial photographs, 1955-2001, available through Halifax Munici",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Dartmouth",
+"Bedford",
+"Aerial photographs",
+"History",
+"Sackville",
+"Urban renewal",
+"planning",
+"development",
+"Culture Society",
+"Boundaries Topo"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Historical_Aerial_Photographs_Index/FeatureServer/0"
+},
+{
+"service": "RC_SMPS_Precincts",
+"title": "RC SMPS Precincts",
+"rows": 328,
+"desc": "Polygon representation of view corridors as defined by the Regional Centre Secondary Municipal Planning Strategy.To identify areas where development is prohibited to protect important view corridors, as defined by Map2 of the Regional Centre Secondary Municipa",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010law",
+"Centre Plan",
+"Regional Centre SMPS Precincts",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_SMPS_Precincts/FeatureServer/0"
+},
+{
+"service": "Commuter_Permit_Parking_Streets",
+"title": "Commuter Permit Parking Streets",
+"rows": 325,
+"desc": "Dataset was created to identify streets where parking permits are required / enforced.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Parking",
+"Permit",
+"Street",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Commuter_Permit_Parking_Streets/FeatureServer/0"
+},
+{
+"service": "Truck_Routes",
+"title": "Truck Routes",
+"rows": 314,
+"desc": "Single line representation of truck routes within the Halifax Regional Municipality, derived from the Street Centrelines dataset and segmentation. Truck routes are defined in\u00a0By-Law T400.The dataset was created to map truck routes as described in By-Law T400.I",
+"keywords": [
+"HRM",
+"Halifax",
+"Halifax Open Data",
+"Truck",
+"Route",
+"Transportation",
+"Street",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Truck_Routes/FeatureServer/0"
+},
+{
+"service": "RC_View_Lines",
+"title": "RC View Lines",
+"rows": 311,
+"desc": "Linear representation of view lines as defined in the Regional Centre Land Use By-law.To identify view lines as represented in Schedule 5 of the Regional Centre Land Use By-law.Reference to the complete package is required to determine permitted land uses in t",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 5",
+"View Line"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_View_Lines/FeatureServer/0"
+},
+{
+"service": "Steps",
+"title": "Steps",
+"rows": 311,
+"desc": "An inventory of steps and ramps applicable for asset management and work order management.Metadata",
+"keywords": [
+"Halifax",
+"Steps",
+"Stairs",
+"Ramps",
+"Asset",
+"Halifax Open Data",
+"Infrastructure Asset Management"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Steps/FeatureServer/0"
+},
+{
+"service": "RC_View_Terminus_Sites",
+"title": "RC View Terminus Sites",
+"rows": 310,
+"desc": "Point representation of view terminus sites as defined in the Regional Centre Land Use By-law.To identify view terminus sites as represented in Schedule 5 of the Regional Centre Land Use By-law.Reference to the complete package is required to determine permitt",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 5",
+"View Terminus Sites"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_View_Terminus_Sites/FeatureServer/0"
+},
+{
+"service": "Accessible_Parking_Spots",
+"title": "Accessible Parking Spots",
+"rows": 306,
+"desc": "The Accessible Parking Spots mapping application\u2019s key features include:\u2022 Display of&nbsp;accessible parking spots in Halifax and Dartmouth areas.&nbsp;This application is intended for the public and is embedded in the following halifax.ca webpage:https://www.",
+"keywords": [
+"Accessibility",
+"Parking",
+"Accessible Parking Spots",
+"Transportation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Accessible_Parking_Spots/FeatureServer/0"
+},
+{
+"service": "Plan_Area_As_Passenger_AGOL",
+"title": "Plan Area As Passenger AGOL",
+"rows": 291,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Plan_Area_As_Passenger_AGOL/FeatureServer/0"
+},
+{
+"service": "Residential_Standards_Violations",
+"title": "Residential Standards Violations",
+"rows": 291,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Residential_Standards_Violations/FeatureServer/0"
+},
+{
+"service": "OpenData_Catalogue",
+"title": "Open Data Catalogue",
+"rows": 288,
+"desc": "A list of all the datasets released in the Open Data catalogue with associated metadata information.The data was compiled for easy access to metadata information about released datasets in the Halifax Open Data catalogue.\u00a0Metadata",
+"keywords": [
+"Open Data",
+"Catalogue",
+"Metadata",
+"Released",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/OpenData_Catalogue/FeatureServer/0"
+},
+{
+"service": "Capital_Projects_2019",
+"title": "Capital Projects 2019",
+"rows": 283,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Capital_Projects_2019/FeatureServer/0"
+},
+{
+"service": "Fire_Response_Zones",
+"title": "Fire Response Zones",
+"rows": 280,
+"desc": "Polygon representation of boundaries for fire station coverage for the Halifax Regional Municipality.The data was created by Halifax Regional Fire for the purpose of delineating fire response zones.\u00a0Metadata",
+"keywords": [
+"hrm",
+"Halifax",
+"Fire",
+"Response",
+"Boundaries",
+"Zones",
+"Halifax Open Data",
+"Community Protection"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Fire_Response_Zones/FeatureServer/0"
+},
+{
+"service": "RC_Special_Area_Boundary",
+"title": "RC Special Area Boundary",
+"rows": 276,
+"desc": "Polygon representation of special areas as defined in the Regional Centre Land Use By-law.To identify special areas as represented in Schedule 4 of the Regional Centre Land Use By-law.Reference to the complete package is required to determine permitted land us",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 4",
+"Special Areas"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Special_Area_Boundary/FeatureServer/0"
+},
+{
+"service": "csa_field_emotion",
+"title": "csa field emotion",
+"rows": 238,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/csa_field_emotion/FeatureServer/0"
+},
+{
+"service": "Development_Street_Closures",
+"title": "Development Street Closures",
+"rows": 223,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Development_Street_Closures/FeatureServer/0"
+},
+{
+"service": "Public_Gardens_Features",
+"title": "Public Gardens Features",
+"rows": 222,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Public_Gardens_Features/FeatureServer/0"
+},
+{
+"service": "PPLC_Residential_Standards_Violations",
+"title": "PPL&C Residential Standards Violations",
+"rows": 220,
+"desc": "The purpose of this data is to provide more transparency to the public on properties where residential standards violations have occurred and owner non-compliance or non-cooperation has forced commencement of legal action (order issued).See By-Law M-200 for mo",
+"keywords": [
+"Halifax",
+"HRM",
+"By-Law",
+"Residential",
+"Standards",
+"M200",
+"Planning Development",
+"Halifax Open Data",
+"Violations",
+"Enforcement"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PPLC_Residential_Standards_Violations/FeatureServer/0"
+},
+{
+"service": "TRN_parking_lot_point_WGS84",
+"title": "TRN parking lot point WGS84",
+"rows": 219,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/TRN_parking_lot_point_WGS84/FeatureServer/0"
+},
+{
+"service": "IMP_Key_Performance_Indictors",
+"title": "IMP Key Performance Indictors",
+"rows": 204,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/IMP_Key_Performance_Indictors/FeatureServer/0"
+},
+{
+"service": "GSA",
+"title": "GSA",
+"rows": 200,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/GSA/FeatureServer/0"
+},
+{
+"service": "ControlledAccessStreets",
+"title": "ControlledAccessStreets",
+"rows": 193,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/ControlledAccessStreets/FeatureServer/0"
+},
+{
+"service": "EMO_Sectors",
+"title": "EMO Sectors",
+"rows": 182,
+"desc": "Polygon boundaries representing Emergency Management Office (EMO) Sectors used to identify areas for emergency preparedness.This data was created by HRM EMO for the purpose of emergency preparedness and identifying areas where populations at risk during an eme",
+"keywords": [
+"Halifax",
+"HRM",
+"EMO",
+"Emergency",
+"Measures",
+"Sectors",
+"Halifax Open Data",
+"Community Protection"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/EMO_Sectors/FeatureServer/0"
+},
+{
+"service": "Draft_HAF_RC_FAR_view",
+"title": "Draft HAF RC FAR view",
+"rows": 181,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Draft_HAF_RC_FAR_view/FeatureServer/0"
+},
+{
+"service": "Parking_Pay_Stations",
+"title": "Parking Pay Stations",
+"rows": 175,
+"desc": "Point representation of parking pay stations within the road right-of-way throughout the municipality.The data was compiled as an inventory of features applicable for asset management and work order management.\u00a0Metadata",
+"keywords": [
+"Halifax",
+"Parking",
+"Pay",
+"Station",
+"Vehicle",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Parking_Pay_Stations/FeatureServer/0"
+},
+{
+"service": "RC_Maximum_Floor_Area_Ratio",
+"title": "RC Maximum Floor Area Ratio",
+"rows": 173,
+"desc": "Polygon representation of areas where a maximum floor area ratio allowed on a property is applied as defined in the Regional Centre Land Use By-law.To identify areas where maximum floor area ratio provisions apply, as defined in Schedule 8 of the Regional Cent",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 8",
+"Municipal Planning Strategy",
+"MPS",
+"Map 2",
+"Maximum Floor Area Ratio",
+"FAR"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Maximum_Floor_Area_Ratio/FeatureServer/0"
+},
+{
+"service": "Building_Symbols_Schools",
+"title": "Building Symbols Schools",
+"rows": 169,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Building_Symbols_Schools/FeatureServer/0"
+},
+{
+"service": "School_Crossing_Guards",
+"title": "School Crossing Guards",
+"rows": 168,
+"desc": "School Crossing Guard was created to provide details on the locations of staffed crosswalks, and to assist parents plan travel routes to elementary schools.&nbsp;Metadata",
+"keywords": [
+"Halifax Open Data",
+"HRM",
+"Halifax",
+"School Crossing Guards",
+"Safety",
+"Traffic",
+"Elementary School",
+"Community Protection"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/School_Crossing_Guards/FeatureServer/0"
+},
+{
+"service": "Proposed_Rapid_Transit_Walksheds",
+"title": "Proposed Rapid Transit Walksheds",
+"rows": 164,
+"desc": "This dataset was created to represent Bus Rapid Transit (BRT) and Ferry Walksheds for use in transportation planning projects.Please refer to the Rapid Transit Strategy webpage for more information. (https://www.halifax.ca/transportation/transportation-project",
+"keywords": [
+"Halifax Open Data",
+"Transportation",
+"Transit",
+"Walkshed",
+"BRT",
+"RTS",
+"routes",
+"lines",
+"bus",
+"ferry",
+"Shannon Park",
+"Mill Cove",
+"red line",
+"yellow line",
+"green line",
+"purple line",
+"Rapid Transit",
+"Woodside",
+"Alderney",
+"Larry Uteck"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Proposed_Rapid_Transit_Walksheds/FeatureServer/0"
+},
+{
+"service": "LakeWatchers_OD_View",
+"title": "LakeWatchers OD View",
+"rows": 156,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/LakeWatchers_OD_View/FeatureServer/0"
+},
+{
+"service": "LW_Monitoring_Site_Editor_View",
+"title": "LW Monitoring Site Editor View",
+"rows": 156,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/LW_Monitoring_Site_Editor_View/FeatureServer/0"
+},
+{
+"service": "Proposed_Rapid_Transit_Network",
+"title": "Proposed Rapid Transit Network",
+"rows": 153,
+"desc": "This dataset was created to represent future BRT and Ferry routes for use in transportation planning projects.Please refer to the Rapid Transit Strategy webpage for more information. (https://www.halifax.ca/transportation/transportation-projects/transforming-t",
+"keywords": [
+"Halifax Open Data",
+"Transportation",
+"Transit",
+"transportation",
+"transit",
+"network",
+"bus",
+"ferry",
+"BRT",
+"routes",
+"RTS",
+"strategy",
+"red line",
+"green line",
+"purple line",
+"yellow line",
+"mill cove",
+"shannon park",
+"alderney",
+"woodside",
+"larry uteck",
+"terminal",
+"station",
+"mobility"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Proposed_Rapid_Transit_Network/FeatureServer/0"
+},
+{
+"service": "Biker_AGOL",
+"title": "Biker AGOL",
+"rows": 151,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Biker_AGOL/FeatureServer/0"
+},
+{
+"service": "RC_Maximum_Streetwall_Heights",
+"title": "RC Maximum Streetwall Heights",
+"rows": 124,
+"desc": "Line representation of maximum streetwall heights in the Downtown Halifax zone as defined by the Regional Centre Land Use By-law.To identify maximum streetwall heights and where they apply in the Downtown Halifax zone, as defined on Schedule 20 of the Regional",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010law",
+"Centre Plan",
+"Schedule 20",
+"Maximum Streetwall Heights",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Maximum_Streetwall_Heights/FeatureServer/0"
+},
+{
+"service": "DryHydrant",
+"title": "DryHydrant",
+"rows": 123,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/DryHydrant/FeatureServer/0"
+},
+{
+"service": "PollingDivisions",
+"title": "Polling Divisions",
+"rows": 116,
+"desc": "A geographic area within a Polling District to assign voters and addresses for a polling station. \u00a0The data was created for the Municipal Election and used by the Election Office.\u00a0Metadata",
+"keywords": [
+"Open Data",
+"Halifax",
+"HRM",
+"division",
+"electoral",
+"municipal",
+"regional",
+"boundaries",
+"polling",
+"election",
+"Halifax Regional Municipality",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PollingDivisions/FeatureServer/0"
+},
+{
+"service": "Integrated_Mobility_Plan_2022_Regional_Centre_Bikeway_Network_Map",
+"title": "Integrated Mobility Plan 2022 Regional Centre Bikeway Network Map",
+"rows": 113,
+"desc": "Identifies the Integrated Mobility Plan proposed cycling infrastructure, including location, proposed type, and status.This data was created for the purpose of communicating the progress of the implementation of the Integrated Mobility Plan.Only contains cycli",
+"keywords": [
+"HRM",
+"Halifax",
+"Halifax Open Data",
+"IMP",
+"Integrated Mobility Plan",
+"Network",
+"Bike",
+"Cycle",
+"Active Transportation",
+"Regional Centre Bikeway Network",
+"All Ages and Abilities",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Integrated_Mobility_Plan_2022_Regional_Centre_Bikeway_Network_Map/FeatureServer/0"
+},
+{
+"service": "Municipal_Cemeteries_Mapping",
+"title": "Municipal Cemeteries Mapping",
+"rows": 111,
+"desc": "Polygon representation of municipal cemetery boundaries and locations. Dataset should be used in conjunction with the\u00a0Municipal Cemeteries Interred\u00a0dataset.\u00a0The data was created to assist in locating interred within the municipal cemeteries.At this time, only",
+"keywords": [
+"HRM",
+"Halifax",
+"Cemetery",
+"Interred",
+"Deceased",
+"Genealogy",
+"Halifax Open Data",
+"Parks Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Municipal_Cemeteries_Mapping/FeatureServer/0"
+},
+{
+"service": "Polling_Divisions_2020",
+"title": "Polling Divisions 2020",
+"rows": 109,
+"desc": "The data was created for election purposes to represent municipal Polling Districts.\u00a0MetadataOpen\nData Licence",
+"keywords": [
+"Elections",
+"Polling Divisions",
+"Administrative Boundaries",
+"Halifax Open Data",
+"Finance City Government",
+"Boundaries Topo"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Polling_Divisions_2020/FeatureServer/0"
+},
+{
+"service": "Polling_Divisions_2016",
+"title": "Polling Divisions 2016",
+"rows": 108,
+"desc": "A geographic area within a Polling District to assign voters and addresses for a polling station from 2016 to 2020.The data was created for election purposes to represent municipal Polling Divisions.\u00a0Metadata",
+"keywords": [
+"Elections",
+"Polling Divisions",
+"Administrative Boundaries",
+"Halifax Open Data",
+"Finance City Government",
+"Boundaries Topo"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Polling_Divisions_2016/FeatureServer/0"
+},
+{
+"service": "PollingDivision2012",
+"title": "PollingDivision2012",
+"rows": 108,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PollingDivision2012/FeatureServer/0"
+},
+{
+"service": "Social_Value_Catering_Registry",
+"title": "Social Value Catering Registry",
+"rows": 105,
+"desc": "The dataset was created to make social value catering options available to municipal staff across every district who are seeking catering services. Metadata",
+"keywords": [
+"Halifax Open Data",
+"Finance City Government",
+"Catering",
+"Women",
+"African Nova Scotians",
+"African Descent",
+"Indigenous",
+"Disabilities",
+"Veterans",
+"Immigrants",
+"Social Enterprises"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Social_Value_Catering_Registry/FeatureServer/0"
+},
+{
+"service": "Crime",
+"title": "Crime",
+"rows": 105,
+"desc": "Points that represent crimes that have occurred in HRM within the last 7 days. Includes the type of crime, the date of the crime and the general location. The information about the event itself is accurate; however the location information is purposefully gene",
+"keywords": [
+"Open Data",
+"Halifax",
+"HRM",
+"Crime",
+"HRP",
+"assault",
+"robbery",
+"RCMP",
+"theft",
+"break and enter",
+"B&E",
+"Halifax Open Data",
+"Community Protection"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Crime/FeatureServer/0"
+},
+{
+"service": "Census_2021_Census_Tracts",
+"title": "Census 2021 Census Tracts",
+"rows": 104,
+"desc": "This dataset is a compilation of Statistics Canada Census Tracts with associated population data from the 2021 Census.This dataset was created for statistical purposes and to perform population calculations.\u00a0\u00a0According to Statistics Canada, Census tracts (CTs)",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Tract"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Census_Tracts/FeatureServer/0"
+},
+{
+"service": "HRCE_English_Program_Elementary",
+"title": "HRCE English Program Elementary",
+"rows": 102,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_English_Program_Elementary/FeatureServer/0"
+},
+{
+"service": "Pla_Area_Walk_AGOL",
+"title": "Pla Area Walk AGOL",
+"rows": 101,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Pla_Area_Walk_AGOL/FeatureServer/0"
+},
+{
+"service": "Census_2016_Census_Tracts",
+"title": "Census 2016 Census Tracts",
+"rows": 98,
+"desc": "This dataset is a compilation of Statistics Canada Census Tracts with associated population data from the 2016 Census.\u00a0 This dataset was created for statistical purposes and to perform population calculations.\u00a0 According to Statistics Canada, Census tracts (CT",
+"keywords": [
+"Halifax Open Data",
+"Culture Society",
+"Statistics",
+"Population",
+"Census",
+"Tract",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Census_Tracts/FeatureServer/0"
+},
+{
+"service": "CensusTract_AGOL",
+"title": "CensusTract AGOL",
+"rows": 98,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/CensusTract_AGOL/FeatureServer/0"
+},
+{
+"service": "Centroids_for_HRM_Mode_Share_Sept_9",
+"title": "Centroids for HRM Mode Share Sept 9",
+"rows": 97,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Centroids_for_HRM_Mode_Share_Sept_9/FeatureServer/0"
+},
+{
+"service": "Transit_Priority_Measures_Operational",
+"title": "Transit Priority Measures (Operational)",
+"rows": 96,
+"desc": "Linear representation of transit priority measures such as transit priority lanes, in lane stops, and separated right-of-way.Transit Priority Corridors are streets that have been strategically chosen to include measures to improve the efficiency of buses along",
+"keywords": [
+"Halifax Open Data",
+"Transportation Transit",
+"Halifax",
+"Transit",
+"Priority",
+"Measures",
+"Integrated Mobility Plan",
+"Rapid Transit Strategy",
+"Lane",
+"Queue Jump",
+"Bus",
+"IMP"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Priority_Measures_Operational/FeatureServer/0"
+},
+{
+"service": "RC_Pedestrian_Oriented_Commercial_Streets",
+"title": "RC Pedestrian Oriented Commercial Streets",
+"rows": 93,
+"desc": "Linear representation of the location of pedestrian oriented commercial streets as defined in the Regional Centre Land Use By-law.To identify pedestrian oriented commercial streets as represented in Schedule 6 of the Regional Centre Land Use By-law.Reference t",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"land use by-law",
+"LUB",
+"Schedule 6",
+"Pedestrian Oriented Commercial Streets"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Pedestrian_Oriented_Commercial_Streets/FeatureServer/0"
+},
+{
+"service": "RC_Maximum_Front_and_Flanking_Yards",
+"title": "RC Maximum Front and Flanking Yards",
+"rows": 90,
+"desc": "Linear representation of maximum front and flanking yard setbacks as defined in the Regional Centre Land Use By-law.To identify where maximum front and flanking yard setbacks apply, as defined in Schedule 10 of the Regional Centre Land Use By-law.Reference to",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 10",
+"Maximum Front and Flanking Yards",
+"Setbacks"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Maximum_Front_and_Flanking_Yards/FeatureServer/0"
+},
+{
+"service": "Designated_Smoking_Areas",
+"title": "Designated Smoking Areas",
+"rows": 89,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Designated_Smoking_Areas/FeatureServer/0"
+},
+{
+"service": "Building_Symbols_Recreation_Facilities",
+"title": "Building Symbols Recreation Facilities",
+"rows": 82,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Building_Symbols_Recreation_Facilities/FeatureServer/0"
+},
+{
+"service": "Transit_Bus_Routes",
+"title": "Transit Bus Routes",
+"rows": 79,
+"desc": "Dataset created to show different classes and routes of HRM's bus system.The data was created for mapping purposes from written descriptions of the bus routes, supplied by Halifax Transit.Bus Routes were originally released on 10-04-2013 but due to schema chan",
+"keywords": [
+"Halifax",
+"Bus",
+"Transit",
+"Route",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Bus_Routes/FeatureServer/0"
+},
+{
+"service": "LakeWatchers_Lake_Volunteer_Status",
+"title": "LakeWatchers Lake Volunteer Status",
+"rows": 77,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/LakeWatchers_Lake_Volunteer_Status/FeatureServer/0"
+},
+{
+"service": "LW_Monitoring_Lake_Sites",
+"title": "LW Monitoring Lake Sites",
+"rows": 77,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/LW_Monitoring_Lake_Sites/FeatureServer/0"
+},
+{
+"service": "2028_Election_Planning___2024_Election_Data_WFL1",
+"title": "2028 Election Planning   2024 Election Data WFL1",
+"rows": 74,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/2028_Election_Planning___2024_Election_Data_WFL1/FeatureServer/0"
+},
+{
+"service": "repealed_legislation",
+"title": "Repealed Legislation",
+"rows": 73,
+"desc": "Table of repealed legislation documents and links to the pdf documents.The data was compiled by the office of the Municipal Clerk to provide access to repealed legislation documents.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Finance City Government",
+"Halifax",
+"Repealed",
+"Legislation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/repealed_legislation/FeatureServer/0"
+},
+{
+"service": "Speed_Display_Signs",
+"title": "Speed Display Signs",
+"rows": 73,
+"desc": "Point representation of speed display signs throughout the municipality.The dataset was compiled to track the location of speed display signs that have been installed in the municipality.\u00a0Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation Transit",
+"Safety",
+"Speed",
+"Sign",
+"Vehicle"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Speed_Display_Signs/FeatureServer/0"
+},
+{
+"service": "LakeWatchers",
+"title": "LakeWatchers",
+"rows": 72,
+"desc": "A feature data collection of\u00a0LakeWatchers monitoring sites with the associated water monitoring testing results.LakeWatchers Monitoring Sites (LW_Monitoring_Site)\u00a0-\u00a0Point locations of water monitoring sites for the LakeWatchers program.\u00a0MetadataLakeWatchers Mo",
+"keywords": [
+"Halifax Open Data",
+"Environment",
+"Halifax",
+"LakeWatchers",
+"Water",
+"Monitoring"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/LakeWatchers/FeatureServer/0"
+},
+{
+"service": "Food_and_Artisan_Vendors",
+"title": "Food and Artisan Vendors",
+"rows": 70,
+"desc": "The purpose of this dataset is to show all the available or occupied locations of Food Trucks, Food Stands and Artisan Stands before applying for an application for a vendor license.Bicycle Wagon locations are not included in this dataset as they are mobile.Me",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Vendor",
+"Food",
+"Artisan",
+"Planning Development",
+"Food Service Vehicles",
+"Food Stands",
+"Artisan Stands"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Food_and_Artisan_Vendors/FeatureServer/0"
+},
+{
+"service": "Development_Street_Closures_Active",
+"title": "Development Street Closures Active",
+"rows": 70,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Development_Street_Closures_Active/FeatureServer/0"
+},
+{
+"service": "BylawAreas",
+"title": "By-Law Areas",
+"rows": 69,
+"desc": "Polygon representation of land use By-Law areas within HRM.\u00a0Metadata",
+"keywords": [
+"bylaw",
+"Halifax Open Data",
+"Open Data",
+"Halifax",
+"HRM",
+"land use",
+"development",
+"plan",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/BylawAreas/FeatureServer/0"
+},
+{
+"service": "Proposed_Bus_Rapid_Transit_and_Ferry_Stops",
+"title": "Proposed Bus Rapid Transit and Ferry Stops",
+"rows": 68,
+"desc": "This dataset was created to represent future Rapid Transit Strategy stop locations for use in transportation planning projects.Please refer to the Rapid Transit Strategy webpage for more information. (https://www.halifax.ca/transportation/transportation-projec",
+"keywords": [
+"Halifax Open Data",
+"Transportation",
+"Transit",
+"network",
+"bus",
+"ferry",
+"BRT",
+"routes",
+"RTS",
+"terminals",
+"rapid",
+"strategy",
+"red line",
+"green line",
+"purple line",
+"yellow line",
+"mill cove",
+"shannon park",
+"alderney",
+"woodside",
+"larry uteck",
+"terminal",
+"station",
+"mobility"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Proposed_Bus_Rapid_Transit_and_Ferry_Stops/FeatureServer/0"
+},
+{
+"service": "Boat_Facilities",
+"title": "Boat Facilities",
+"rows": 67,
+"desc": "Point representation of boat launches, boat docks and wharves.An inventory of boat facilities applicable for asset management and work order management.\u00a0Metadata",
+"keywords": [
+"Halifax",
+"Asset",
+"Transportation",
+"Boat",
+"Wharf",
+"Dock",
+"Launch",
+"Halifax Open Data",
+"Infrastructure Asset Management",
+"Parks Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Boat_Facilities/FeatureServer/0"
+},
+{
+"service": "Height_Precincts",
+"title": "Height Precincts",
+"rows": 62,
+"desc": "Polygon representation of areas with specific regulations regarding height restrictions for buildings within the Halifax Peninsula Land Use By-Law area.The data was created by HRM Planning and Development for the purpose of delineating municipal height precinc",
+"keywords": [
+"HRM",
+"Halifax",
+"Planning",
+"Peninsula Land Use By-Law",
+"Development",
+"Zoning",
+"Building Height",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Height_Precincts/FeatureServer/0"
+},
+{
+"service": "Plan_Area_Bike_AGOL",
+"title": "Plan Area Bike AGOL",
+"rows": 61,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Plan_Area_Bike_AGOL/FeatureServer/0"
+},
+{
+"service": "Transit_Bus_Snow_Routes",
+"title": "Transit Bus Snow Routes",
+"rows": 61,
+"desc": "The data was created for mapping purposes from written descriptions of the bus routes, supplied by Halifax Transit.Metadata",
+"keywords": [
+"Halifax",
+"HRM",
+"Halifax Open Data",
+"Bus",
+"Transit",
+"Route",
+"Snow",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Bus_Snow_Routes/FeatureServer/0"
+},
+{
+"service": "Asset_Measurements_WFL1",
+"title": "Asset Measurements WFL1",
+"rows": 60,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Asset_Measurements_WFL1/FeatureServer/0"
+},
+{
+"service": "Minimum_Front_and_Flanking_Yards",
+"title": "Minimum Front and Flanking Yards",
+"rows": 59,
+"desc": "This dataset provides a linear representation of minimum front and flanking yard setback required by applicable bylaws. It specifies the shortest allowable distance between building and property line. Contact HRM Planning &amp; Development for more info.This d",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By-law",
+"Centre Plan",
+"Building Regulations",
+"Minimum Setback",
+"Bylaw Areas",
+"Schedule 9",
+"Front Yard Setback",
+"Flanking Yard Setback",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Minimum_Front_and_Flanking_Yards/FeatureServer/0"
+},
+{
+"service": "HalifACT_Actions",
+"title": "HalifACT Actions",
+"rows": 57,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HalifACT_Actions/FeatureServer/0"
+},
+{
+"service": "Transit_Priority_Corridors",
+"title": "Transit Priority Corridors",
+"rows": 56,
+"desc": "Linear representation of planned Transit Priority Corridors throughout the HRM municipality.Within the Integrated Mobility Plan and Rapid Transit Strategy policies, there are Transit Priority Corridors defined, which allow transit and planning staff to focus d",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transit",
+"Corridor",
+"Priority",
+"Integrated Mobility Plan",
+"IMP",
+"Rapid Transit Strategy"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Priority_Corridors/FeatureServer/0"
+},
+{
+"service": "Road_Safety_Countermeasures_Tracking",
+"title": "Road Safety Countermeasures Tracking",
+"rows": 54,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Road_Safety_Countermeasures_Tracking/FeatureServer/0"
+},
+{
+"service": "SolidWasteCollectionAreas",
+"title": "Solid Waste Collection Areas",
+"rows": 54,
+"desc": "An area depiction of waste collection service provision boundaries by day of the week.\u00a0Metadata",
+"keywords": [
+"Garage",
+"Compost",
+"Trash",
+"Haulers",
+"Waste Management",
+"Collection",
+"Recyclables",
+"Days of Service",
+"Halifax Open Data",
+"Boundaries Topo",
+"Environment"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/SolidWasteCollectionAreas/FeatureServer/0"
+},
+{
+"service": "FireStations",
+"title": "FireStations",
+"rows": 52,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/FireStations/FeatureServer/0"
+},
+{
+"service": "HistoricSites___Dev",
+"title": "HistoricSites   Dev",
+"rows": 52,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HistoricSites___Dev/FeatureServer/0"
+},
+{
+"service": "Demographic_Scenarios",
+"title": "Demographic Scenarios",
+"rows": 52,
+"desc": "To support planning by providing demographic forecasts for future scenarios for the Halifax Regional Municipality. The Census Geography indicates the geographical boundaries. This data is updated annually and provided by Statistics Canada.This data is based on",
+"keywords": [
+"Planning & Development",
+"Demographic",
+"Population",
+"Household",
+"Forecast",
+"Immigration",
+"Economic Scenarios",
+"Halifax Regional Municipality",
+"Statistics Canada"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Demographic_Scenarios/FeatureServer/0"
+},
+{
+"service": "FinalHeritage",
+"title": "FinalHeritage",
+"rows": 51,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/FinalHeritage/FeatureServer/0"
+},
+{
+"service": "Halifax_Retail_Partners_October_22",
+"title": "Halifax Retail Partners October 22",
+"rows": 48,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Halifax_Retail_Partners_October_22/FeatureServer/0"
+},
+{
+"service": "Height_Precincts_Interpretation",
+"title": "Height Precincts Interpretation",
+"rows": 48,
+"desc": "Polygon representation of areas with specific regulations regarding the interpretation of height restrictions for buildings with the Halifax Peninsula Land Use By-Law Area.The data was created by HRM Planning and Development for the purpose of identifying the",
+"keywords": [
+"HRM",
+"Halifax",
+"Planning",
+"Peninsula Land Use By-Law",
+"Building Height",
+"Development",
+"Zoning",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Height_Precincts_Interpretation/FeatureServer/0"
+},
+{
+"service": "Bonus_Zoning_Rate_Districts",
+"title": "Bonus Zoning Rate Districts",
+"rows": 48,
+"desc": "This dataset provides a polygon representation of incentive or bonus zoning rate districts as defined by applicable by-laws. Reference to official By-laws is required. For more information, contact HRM Planning &amp; Development.This dataset is currently filte",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By-law",
+"Centre Plan",
+"Schedule 50",
+"Bonus Zoning Rate Districts",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Bonus_Zoning_Rate_Districts/FeatureServer/0"
+},
+{
+"service": "HRM_Public_Washrooms",
+"title": "HRM Public Washrooms",
+"rows": 47,
+"desc": "Point representation of public washroom locations that are maintained by Halifax Regional Municipality. Includes washrooms in Parks, Transit &amp; Ferry Terminals and Halifax Public Libraries.The data was created in response to the Corona virus to show the cit",
+"keywords": [
+"HRM",
+"Halifax",
+"Parks",
+"Public",
+"Washrooms",
+"Libraries",
+"Halifax Open Data",
+"Parks Recreation",
+"Infrastructure Asset Management"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Public_Washrooms/FeatureServer/0"
+},
+{
+"service": "RC_Shadow_Impact_Assessment_Areas",
+"title": "RC Shadow Impact Assessment Areas",
+"rows": 46,
+"desc": "Polygon representation of shadow impact assessment areas as defined in the Regional Centre Land Use By-law.To identify areas as represented in Schedule 27 which fall under the provisions of Appendix 2 of the Regional Centre LUB.Reference to the complete packag",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Schedule 2",
+"SIAP",
+"Shadow Impact Assessment Protocol"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Shadow_Impact_Assessment_Areas/FeatureServer/0"
+},
+{
+"service": "RC_View_Corridors",
+"title": "RC View Corridors",
+"rows": 45,
+"desc": "Linear representation of view corridor extents as defined in the Regional Centre Land Use By-law.To identify view corridors as represented in Schedules 14-23 of the Regional Centre Land Use By-law.Reference to the complete package is required to determine perm",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"View Corridor",
+"Land Use By-law",
+"LUB"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_View_Corridors/FeatureServer/0"
+},
+{
+"service": "RC_Citadel_Ramparts",
+"title": "RC Citadel Ramparts",
+"rows": 45,
+"desc": "Point representation of viewing positions and rampart point elevations within the Halifax Citadel as defined in the Regional Centre Land Use By-law.To show viewing positions and rampart point elevations within the Halifax Citadel as defined in Schedule 12 of t",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Land Use By-Law",
+"LUB",
+"Citadel Ramparts",
+"Viewing Position",
+"Rampart Point Elevation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Citadel_Ramparts/FeatureServer/0"
+},
+{
+"service": "HRCE_English_Program_Junior_High",
+"title": "HRCE English Program Junior High",
+"rows": 44,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_English_Program_Junior_High/FeatureServer/0"
+},
+{
+"service": "Volunteer_Recruitment_Areas",
+"title": "Volunteer Recruitment Areas",
+"rows": 44,
+"desc": "Polygon representation of station boundaries for volunteer fire fighter recruitment in the Halifax Regional Municipality.The data was created by Halifax Regional Fire for the purpose of delineating volunteer fire fighter recruitment boundariesMetadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Fire",
+"HRFE",
+"Community Protection",
+"Volunteer",
+"Fire Fighter"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Volunteer_Recruitment_Areas/FeatureServer/0"
+},
+{
+"service": "RC_Downtown_Dartmouth_Precincts",
+"title": "RC Downtown Dartmouth Precincts",
+"rows": 39,
+"desc": "Polygon representation of Downtown Dartmouth precincts as defined in the Regional Centre Secondary Municipal Planning Strategy.To identify Downtown Dartmouth precincts as represented in Map 4 of the Regional Centre Secondary Municipal Planning Strategy.Referen",
+"keywords": [
+"HRM",
+"Halifax Open Data",
+"Planning Development",
+"Regional Centre Plan",
+"Municipal Planning Strategy",
+"MPS"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Downtown_Dartmouth_Precincts/FeatureServer/0"
+},
+{
+"service": "SpringWeightRestrictions_2022",
+"title": "SpringWeightRestrictions 2022",
+"rows": 39,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/SpringWeightRestrictions_2022/FeatureServer/0"
+},
+{
+"service": "Service_Requirements",
+"title": "Service Requirements",
+"rows": 39,
+"desc": "Polygon representation of areas with Halifax Regional Municipality where municipal services are required for a subdivision as defined under Schedule &quot;B&quot; of the Regional Subdivision By-Law.\u00a0The data was created by HRM Planning and Development for the",
+"keywords": [
+"HRM",
+"Halifax",
+"Urban",
+"Service",
+"Water",
+"Sewer",
+"Requirement",
+"Halifax Open Data",
+"Planning Development",
+"Land Use",
+"Subdivision"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Service_Requirements/FeatureServer/0"
+},
+{
+"service": "Bike_Related__Features",
+"title": "Bike Related  Features",
+"rows": 38,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Bike_Related__Features/FeatureServer/0"
+},
+{
+"service": "Modeled_Acutal_Emissions",
+"title": "Modeled Acutal Emissions",
+"rows": 35,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Modeled_Acutal_Emissions/FeatureServer/0"
+},
+{
+"service": "HAF_Pkg_B_sites_view",
+"title": "HAF Pkg B sites view",
+"rows": 33,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HAF_Pkg_B_sites_view/FeatureServer/0"
+},
+{
+"service": "ModeShare_AGOL_March11",
+"title": "ModeShare AGOL March11",
+"rows": 33,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/ModeShare_AGOL_March11/FeatureServer/0"
+},
+{
+"service": "Plan_Area_Centres",
+"title": "Plan Area Centres",
+"rows": 33,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Plan_Area_Centres/FeatureServer/0"
+},
+{
+"service": "Plan_Area_Poly",
+"title": "Plan Area Poly",
+"rows": 33,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Plan_Area_Poly/FeatureServer/0"
+},
+{
+"service": "RC_Landmark_Building_Sites",
+"title": "RC Landmark Building Sites",
+"rows": 33,
+"desc": "Polygon representation of sites containing landmark buildings as defined by the Regional Centre Land Use By-law.To identify landmark building sites within the Regional Centre as defined by Schedule 9 of the Regional Centre Land Use By\u2010law.Reference to the comp",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010Law",
+"Schedule 9",
+"Landmark Buildings",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Landmark_Building_Sites/FeatureServer/0"
+},
+{
+"service": "EV_Charging_Station",
+"title": "EV Charging Station",
+"rows": 33,
+"desc": "The purpose of the dataset is to show all the locations of HRM owned EV charging stations and to view information about each charging station.\u00a0Metadata",
+"keywords": [
+"EV",
+"Electric Vehicle",
+"Charging Station",
+"HRM",
+"Halifax",
+"Environment",
+"Energy",
+"Halifax Open  Data",
+"Infrastructure Asset Management",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/EV_Charging_Station/FeatureServer/0"
+},
+{
+"service": "Street_Winter_Maintenance_Areas",
+"title": "Street Winter Maintenance Areas",
+"rows": 32,
+"desc": "Polygon representation of areas that define winter maintenance service areas specific to street assets.This dataset was created to support the winter maintenance service delivery for streets in the Halifax Regional Municipality.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation",
+"Winter",
+"Street",
+"Snow",
+"Maintenance",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Winter_Maintenance_Areas/FeatureServer/0"
+},
+{
+"service": "Flood_Current_GFLUM",
+"title": "Flood Current GFLUM",
+"rows": 31,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Flood_Current_GFLUM/FeatureServer/0"
+},
+{
+"service": "Building_Symbols_HRM_Police_Facilities",
+"title": "Building Symbols HRM Police Facilities",
+"rows": 29,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Building_Symbols_HRM_Police_Facilities/FeatureServer/0"
+},
+{
+"service": "HRCE_Early_French_Immersion_Elementary",
+"title": "HRCE Early French Immersion Elementary",
+"rows": 27,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_Early_French_Immersion_Elementary/FeatureServer/0"
+},
+{
+"service": "Naturalization_Initiatives",
+"title": "Naturalization Initiatives",
+"rows": 27,
+"desc": "Point representations of biodiverse landscapes initiatives, including naturalization and tree planting, which have taken place in the municipality.The purpose of this dataset is to raise public awareness regarding the benefits of biodiverse landscapes and loca",
+"keywords": [
+"Biodiversity",
+"Landscapes",
+"Naturalization",
+"Parks",
+"Trees",
+"Halifax Open Data",
+"Parks Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Naturalization_Initiatives/FeatureServer/0"
+},
+{
+"service": "Street_Closures_Mobility_Response",
+"title": "Street Closures Mobility Response",
+"rows": 27,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Closures_Mobility_Response/FeatureServer/0"
+},
+{
+"service": "HRCE_Late_French_Immersion_Junior_High",
+"title": "HRCE Late French Immersion Junior High",
+"rows": 26,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_Late_French_Immersion_Junior_High/FeatureServer/0"
+},
+{
+"service": "Private_Road_Area_Rates",
+"title": "Private Road Area Rates",
+"rows": 24,
+"desc": "Polygon boundaries representing finance area rates for private road charges.\u00a0\u00a0The data was created for taxation purposes.\u00a0 See\u00a0HRM Tax Rates\u00a0dataset for more information.\u00a0Metadata",
+"keywords": [
+"Halifax Open Data",
+"Finance City Government",
+"Tax Rate",
+"Commercial",
+"Residential",
+"Resource",
+"Area",
+"Private Road",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Private_Road_Area_Rates/FeatureServer/0"
+},
+{
+"service": "Street_Closures_Active",
+"title": "Street Closures Active",
+"rows": 24,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Closures_Active/FeatureServer/0"
+},
+{
+"service": "HRCE_English_Program_High",
+"title": "HRCE English Program High",
+"rows": 23,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_English_Program_High/FeatureServer/0"
+},
+{
+"service": "survey123_6b7ded0d88874bfba691d7532e2771a4",
+"title": "survey123 6b7ded0d88874bfba691d7532e2771a4",
+"rows": 23,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/survey123_6b7ded0d88874bfba691d7532e2771a4/FeatureServer/0"
+},
+{
+"service": "survey123_6b7ded0d88874bfba691d7532e2771a4_form",
+"title": "survey123 6b7ded0d88874bfba691d7532e2771a4 form",
+"rows": 23,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/survey123_6b7ded0d88874bfba691d7532e2771a4_form/FeatureServer/0"
+},
+{
+"service": "Detailed_Plan_Sub_Areas",
+"title": "Detailed Plan Sub-Areas",
+"rows": 23,
+"desc": "Polygon representation of detailed plan sub-areas within detailed plan areas where specific land use policies apply.The data was created by HRM Planning and Development for the purpose of delineating municipal detailed plan sub-areas within detailed plan areas",
+"keywords": [
+"HRM",
+"Halifax",
+"Municipal Planning Strategy",
+"Land Use Policy",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Detailed_Plan_Sub_Areas/FeatureServer/0"
+},
+{
+"service": "Sidewalk_Winter_Maintenance_Areas",
+"title": "Sidewalk Winter Maintenance Areas",
+"rows": 23,
+"desc": "Polygon representation of areas that define winter maintenance service areas specific to sidewalk assets.This dataset was created to support the winter maintenance service delivery for sidewalks in the Halifax Regional Municipality.Metadata",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation",
+"Winter",
+"Sidewalk",
+"Snow",
+"Maintenance",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Sidewalk_Winter_Maintenance_Areas/FeatureServer/0"
+},
+{
+"service": "Community_Plan_Areas",
+"title": "Community Plan Areas",
+"rows": 22,
+"desc": "Polygon representation of community plan area boundaries governed by a municipal planning strategy for HRM Planning &amp; Development.The data was created by HRM Planning and Development for the purpose of municipal community plan boundary representation.\u00a0Meta",
+"keywords": [
+"Halifax",
+"Dartmouth",
+"Bedford",
+"Sackville",
+"Municipal",
+"Planning",
+"Strategy",
+"Bylaw",
+"Development",
+"Land",
+"Use",
+"Policy",
+"Community Plan",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Community_Plan_Areas/FeatureServer/0"
+},
+{
+"service": "FortNeedhamCommemorativeElements",
+"title": "FortNeedhamCommemorativeElements",
+"rows": 20,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/FortNeedhamCommemorativeElements/FeatureServer/0"
+},
+{
+"service": "Community_Facilities_and_Services_Area_Rates",
+"title": "Community Facilities and Services Area Rates",
+"rows": 20,
+"desc": "Polygon boundaries representing finance area rates for community facilities and services charges.The data was created for taxation purposes.\u00a0\u00a0See\u00a0HRM Tax Rates\u00a0dataset for more information.\u00a0Metadata",
+"keywords": [
+"Halifax Open Data",
+"Finance City Government",
+"Tax Rate",
+"Commercial",
+"Residential",
+"Resource",
+"Area",
+"Community Facilities",
+"Halifax Regional Municipality"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Community_Facilities_and_Services_Area_Rates/FeatureServer/0"
+},
+{
+"service": "Active_and_Proposed_Heritage_Conservation_Districts",
+"title": "Active and Proposed Heritage Conservation Districts",
+"rows": 20,
+"desc": "Polygon representation of active and proposed Heritage Conservation Districts.To identify heritage conservation districts which have been implemented, or proposed for consideration, by Halifax Regional Council.Status Values - Proposed: sent to Council for cons",
+"keywords": [
+"HRM",
+"Heritage Conservation District",
+"Halifax Open Data",
+"Planning Development",
+"Proposed",
+"Pending",
+"In Effect"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Active_and_Proposed_Heritage_Conservation_Districts/FeatureServer/0"
+},
+{
+"service": "RC_SMPS_View_Corridors",
+"title": "RC SMPS View Corridors",
+"rows": 20,
+"desc": "Line representation of view corridors as defined by the Regional Centre Secondary Municipal Planning Strategy.To identify areas where development is prohibited to protect important view corridors, as defined by Map 15 of the Regional Centre Secondary Municipal",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010law",
+"Centre Plan",
+"Map 15 SMPS View Corridors",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_SMPS_View_Corridors/FeatureServer/0"
+},
+{
+"service": "RC_LUB_View_Corridors",
+"title": "RC LUB View Corridors",
+"rows": 19,
+"desc": "Polygon representation of view corridors as defined by the Regional Centre Land Use By-law.To identify areas where development is prohibited to protect important view corridors, as defined by Schedules 29 to 47 of the Regional Centre Land Use By\u2010law.Reference",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010law",
+"Centre Plan",
+"LUB View Corridors",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_LUB_View_Corridors/FeatureServer/0"
+},
+{
+"service": "RC_Transportation_Reserves",
+"title": "RC Transportation Reserves",
+"rows": 19,
+"desc": "Polygon representation of transportation reserves as defined by the Regional Centre Land Use By-law.To identify areas where a transportation reserve applies as defined by Schedule 6 of the Regional Centre Land Use By\u2010law.\u00a0Reference to the complete package is r",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010law",
+"Centre Plan",
+"Schedule 6",
+"Tranportation Reserve",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Transportation_Reserves/FeatureServer/0"
+},
+{
+"service": "HRCE_Early_French_Immersion_Junior_High",
+"title": "HRCE Early French Immersion Junior High",
+"rows": 18,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_Early_French_Immersion_Junior_High/FeatureServer/0"
+},
+{
+"service": "HRCE_Late_French_Immersion_High",
+"title": "HRCE Late French Immersion High",
+"rows": 18,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_Late_French_Immersion_High/FeatureServer/0"
+},
+{
+"service": "Post_Bonus_Building_Height",
+"title": "Post Bonus Building Height",
+"rows": 18,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Post_Bonus_Building_Height/FeatureServer/0"
+},
+{
+"service": "Detailed_Plan_Areas",
+"title": "Detailed Plan Areas",
+"rows": 17,
+"desc": "Polygon representation of areas within community plan areas where specific land use policies apply.The data was created by HRM Planning and Development for the purpose of delineating detailed plan areas within community and secondary plan areas.This dataset is",
+"keywords": [
+"HRM",
+"Halifax",
+"Municipal Planning Strategy",
+"Land Use Policy",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Detailed_Plan_Areas/FeatureServer/0"
+},
+{
+"service": "ADM_Polling_District",
+"title": "ADM Polling District",
+"rows": 16,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/ADM_Polling_District/FeatureServer/0"
+},
+{
+"service": "ADM_Polling_District2024",
+"title": "ADM Polling District2024",
+"rows": 16,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/ADM_Polling_District2024/FeatureServer/0"
+},
+{
+"service": "Parks_and_Rec_Zones",
+"title": "Parks and Rec Zones",
+"rows": 16,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Parks_and_Rec_Zones/FeatureServer/0"
+},
+{
+"service": "Polling_Districts_2016",
+"title": "Polling Districts 2016",
+"rows": 16,
+"desc": "The data was created for election purposes to represent municipal Polling Districts.\u00a0Metadata",
+"keywords": [
+"Elections",
+"Polling Districts",
+"Administrative Boundaries"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Polling_Districts_2016/FeatureServer/0"
+},
+{
+"service": "Polling_Districts_2020",
+"title": "Polling Districts 2020",
+"rows": 16,
+"desc": "The data was created for election purposes to represent municipal Polling Districts.\u00a0Metadata",
+"keywords": [
+"Elections",
+"Polling Districts",
+"Administrative Boundaries"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Polling_Districts_2020/FeatureServer/0"
+},
+{
+"service": "PollingDistrict",
+"title": "PollingDistrict",
+"rows": 16,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PollingDistrict/FeatureServer/0"
+},
+{
+"service": "PollingDistricts2012",
+"title": "Polling Districts 2012",
+"rows": 16,
+"desc": "A geographic area that represents municipal electoral districts from 2012 to 2016. Boundaries are established by the UARB (Nova Scotia Utility and Review Board).  The data was created for election purposes to represent municipal Polling Districts.\u00a0Metadata",
+"keywords": [
+"Elections",
+"Polling Districts",
+"Administrative Boundaries",
+"Halifax Open Data",
+"Finance City Government",
+"Boundaries Topo"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/PollingDistricts2012/FeatureServer/0"
+},
+{
+"service": "Who_Is_My_Councillor_WFL1",
+"title": "Who Is My Councillor WFL1",
+"rows": 16,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Who_Is_My_Councillor_WFL1/FeatureServer/0"
+},
+{
+"service": "Pre_Bonus_Building_Height",
+"title": "Pre Bonus Building Height",
+"rows": 16,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Pre_Bonus_Building_Height/FeatureServer/0"
+},
+{
+"service": "Permit_Parking_Zones",
+"title": "Permit Parking Zones",
+"rows": 16,
+"desc": "Polygon representation of areas covered by the permit parking zones used in the annual resident, annual visitor parking permit and commuter permit programs.The data was compiled to assist residents and staff to easily identify the parking zone serving a given",
+"keywords": [
+"Halifax",
+"HRM",
+"Parking",
+"Permit",
+"Resident",
+"Vistor",
+"Commuter",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Permit_Parking_Zones/FeatureServer/0"
+},
+{
+"service": "Special_Planning_Areas",
+"title": "Special Planning Areas",
+"rows": 16,
+"desc": "This dataset shows boundaries of Provincial Special Planning Areas designated under the Housing in Halifax Regional Municipality Act. These areas were established to accelerate housing supply by granting the Minister authority over planning decisions.Boundarie",
+"keywords": [
+"Halifax Open Data",
+"Boundary Topo",
+"Planning and Development",
+"Special Planning Area",
+"SPA"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Special_Planning_Areas/FeatureServer/0"
+},
+{
+"service": "Street_Closures_Upcoming",
+"title": "Street Closures Upcoming",
+"rows": 16,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Street_Closures_Upcoming/FeatureServer/0"
+},
+{
+"service": "Park_and_Ride_Points",
+"title": "Park and Ride Points",
+"rows": 15,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Park_and_Ride_Points/FeatureServer/0"
+},
+{
+"service": "Park_Ride",
+"title": "Park & Ride",
+"rows": 15,
+"desc": "The Polygon data was created to show HRM Park &amp; Ride locations with data provided by Halifax Transit.Metadata",
+"keywords": [
+"Park & Ride",
+"Halifax Transit",
+"Parking",
+"Bus",
+"Halifax Open  Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Park_Ride/FeatureServer/0"
+},
+{
+"service": "View_Planes",
+"title": "View Planes",
+"rows": 15,
+"desc": "Polygon representation of protected view planes. View Planes are areas of restricted development to protect historic views of particular areas in Halifax and Dartmouth.The data was created by HRM Planning and Development for the purpose of deliniating areas wh",
+"keywords": [
+"Halifax",
+"Dartmouth",
+"Citadel",
+"View",
+"Plane",
+"Development",
+"Planning",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/View_Planes/FeatureServer/0"
+},
+{
+"service": "HRCE_Early_French_Immersion_High",
+"title": "HRCE Early French Immersion High",
+"rows": 14,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRCE_Early_French_Immersion_High/FeatureServer/0"
+},
+{
+"service": "Transit_Signal_Priority_Operational",
+"title": "Transit Signal Priority (Operational)",
+"rows": 14,
+"desc": "Point representations of signalized intersections that have operational transit signals installed, which allow for efficient movement of buses through these locations.The purpose of this dataset is to provide Halifax Transit with a mapped inventory of operatio",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation Transit",
+"Transit",
+"Signal",
+"Priority",
+"Integrated Mobility Plan",
+"Rapid Transit Strategy",
+"IMP"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Transit_Signal_Priority_Operational/FeatureServer/0"
+},
+{
+"service": "survey123_e8082c86bfc64a6788f747cb9bd3f121",
+"title": "survey123 e8082c86bfc64a6788f747cb9bd3f121",
+"rows": 12,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/survey123_e8082c86bfc64a6788f747cb9bd3f121/FeatureServer/0"
+},
+{
+"service": "survey123_e8082c86bfc64a6788f747cb9bd3f121_results",
+"title": "survey123 e8082c86bfc64a6788f747cb9bd3f121 results",
+"rows": 12,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/survey123_e8082c86bfc64a6788f747cb9bd3f121_results/FeatureServer/0"
+},
+{
+"service": "NSDPW_Capital_Projects_Work_Plan_2025_2030",
+"title": "NSDPW Capital Projects Work Plan 2025 2030",
+"rows": 11,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/NSDPW_Capital_Projects_Work_Plan_2025_2030/FeatureServer/0"
+},
+{
+"service": "SpecialElection2019District15PollingDivisions",
+"title": "Special Election 2019 - District 15 Polling Divisions",
+"rows": 11,
+"desc": "A geographic area that represents municipal electoral district of District 15 - Lower Sackville, for the 2019 Special Election detailed polling divisions (11) were created.\u00a0The purpose of the divisions is to create a smaller geographic area within the Polling",
+"keywords": [
+"Elections",
+"Polling Divisions",
+"Administrative Boundaries",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/SpecialElection2019District15PollingDivisions/FeatureServer/0"
+},
+{
+"service": "SpecialElection2019District15PollingDivisionsResults",
+"title": "Special Election 2019 - District 15 Polling Divisions Results",
+"rows": 11,
+"desc": "The election results of the municipal electoral district of District 15 - Lower Sackville, for the 2019 Special Election by polling division.\u00a0The data was created for the municipal election to show the polling division results by a smaller geographic area.Data",
+"keywords": [
+"HRM",
+"Elections",
+"Polling Divisions",
+"Election",
+"Special Election",
+"By-Election",
+"Results",
+"Vote",
+"Lower Sackville",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/SpecialElection2019District15PollingDivisionsResults/FeatureServer/0"
+},
+{
+"service": "Parking_Pay_Zones",
+"title": "Parking Pay Zones",
+"rows": 10,
+"desc": "Polygon representation of areas covered by the parking pay zones used by the parking pay stations for downtown Halifax and Dartmouth.The data was compiled to assist the public and staff to easily identify the parking pay zone serving a given area.\u00a0Metadata",
+"keywords": [
+"Halifax",
+"Dartmouth",
+"HRM",
+"Parking",
+"Pay",
+"Zone",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Parking_Pay_Zones/FeatureServer/0"
+},
+{
+"service": "Mobility_Counters",
+"title": "Mobility Counters",
+"rows": 10,
+"desc": "Point representation of mobility counters throughout the municipality. This dataset can be used in conjunction with the\u00a0Bicycle Counts\u00a0dataset.The dataset was compiled to track the location of mobility counters that have been installed in the municipality.\u00a0Met",
+"keywords": [
+"Halifax Open Data",
+"Halifax",
+"Transportation Transit",
+"Mobility",
+"Counter",
+"IMP",
+"Pedestrian",
+"Bicycle"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Mobility_Counters/FeatureServer/0"
+},
+{
+"service": "2031_Commuting_Mode_Share_Targets",
+"title": "2031 Commuting Mode Share Targets",
+"rows": 9,
+"desc": "A table representing the commuting mode share targets for the Halifax Regional Municipality.The Regional Plan and the IMP set a goal of increasing the number of trips made by active transportation and transit in the municipality. This data represents the mode",
+"keywords": [
+"Halifax",
+"HRM",
+"IMP",
+"KPI",
+"Performance",
+"Indicators",
+"Mobility",
+"Transportation Transit",
+"Halifax Open Data",
+"Bicycle",
+"Bikeway",
+"Cycling",
+"Pedestrians",
+"Walking",
+"Rolling",
+"TDM",
+"MFTP",
+"Parking",
+"Mode Share",
+"Road",
+"Safety",
+"Integrated",
+"Active Transportation",
+"Targets"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/2031_Commuting_Mode_Share_Targets/FeatureServer/0"
+},
+{
+"service": "BIDs_Mode_Share",
+"title": "BIDs Mode Share",
+"rows": 9,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/BIDs_Mode_Share/FeatureServer/0"
+},
+{
+"service": "Com_N_Corp_GHGEmissions",
+"title": "Com N Corp GHGEmissions",
+"rows": 9,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Com_N_Corp_GHGEmissions/FeatureServer/0"
+},
+{
+"service": "HCD_proposed_2_view",
+"title": "HCD proposed 2 view",
+"rows": 9,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HCD_proposed_2_view/FeatureServer/0"
+},
+{
+"service": "BidAreaRates",
+"title": "BID Area Rates",
+"rows": 9,
+"desc": "Polygon boundary representing finance area rates for business improvement districts.See\u00a0HRM Tax Rates\u00a0for more information.Metadata",
+"keywords": [
+"Open Data",
+"Halifax Regional Municipality",
+"area",
+"improvement",
+"commercial",
+"tax",
+"business",
+"rate",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/BidAreaRates/FeatureServer/0"
+},
+{
+"service": "Community_Emissions_bySector",
+"title": "Community Emissions bySector",
+"rows": 8,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Community_Emissions_bySector/FeatureServer/0"
+},
+{
+"service": "GHGTableAGOL",
+"title": "GHGTableAGOL",
+"rows": 8,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/GHGTableAGOL/FeatureServer/0"
+},
+{
+"service": "Youth_Advocate_Program",
+"title": "Youth Advocate Program",
+"rows": 8,
+"desc": "Polygon representation of Youth Advocate Program Serviced Areas in HRM. The data was compiled to provide youth, parents, community members and the public information on Youth Advocate Programs. Amendments to Youth Advocate boundaries will only change if counci",
+"keywords": [
+"HRM",
+"Halifax",
+"Halifax Open Data",
+"Youth",
+"Advocate",
+"Program",
+"YAP",
+"Parks Recreation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Youth_Advocate_Program/FeatureServer/0"
+},
+{
+"service": "HRM_Building_Permit",
+"title": "HRM Building Permit",
+"rows": 8,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HRM_Building_Permit/FeatureServer/0"
+},
+{
+"service": "African_Nova_Scotian_Communities",
+"title": "African Nova Scotian Communities",
+"rows": 8,
+"desc": "This polygon feature class outlines African Nova Scotian Communities in the municipality, giving planners geospatial data for strategic planning. It aids mapping and targeted efforts to support inclusive growth and economic prosperity.African Nova Scotian comm",
+"keywords": [
+"Community Boundaries",
+"African Nova Scotian Communities",
+"Planning",
+"ANSAIO",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/African_Nova_Scotian_Communities/FeatureServer/0"
+},
+{
+"service": "Census_2016_Census_Subdivisions",
+"title": "Census 2016 Census Subdivisions",
+"rows": 6,
+"desc": "According to Statistics Canada, Census Subdivisions are municipalities or an areas deemed to be equivalent to a municipality for statistical reporting purposes. Municipal status is defined by laws in effect by province or territory.Statistics Canada 2016 Censu",
+"keywords": [
+"Statistics Canada",
+"Stats",
+"Census",
+"Subdivision",
+"2016",
+"Halifax",
+"Halifax Open Data",
+"Culture Society"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Census_Subdivisions/FeatureServer/0"
+},
+{
+"service": "HAFb_RCsites_view",
+"title": "HAFb RCsites view",
+"rows": 6,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HAFb_RCsites_view/FeatureServer/0"
+},
+{
+"service": "TransitAreaRates",
+"title": "Transit Area Rates",
+"rows": 6,
+"desc": "Polygon boundary delineating the parcels within one kilometer of any Metro Transit bus stop or community transit route.\u00a0See\u00a0HRM Tax Rates\u00a0for more information.Metadata",
+"keywords": [
+"Open Data",
+"Halifax Regional Municipality",
+"Nova Scotia",
+"area",
+"bus",
+"tax",
+"rate",
+"transit",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/TransitAreaRates/FeatureServer/0"
+},
+{
+"service": "Land_Use_Schedules",
+"title": "Land Use Schedules",
+"rows": 6,
+"desc": "Polygon representation of areas defined within land use by-law areas where specific land use regulations apply.The data was created by HRM Planning and Development for the purpose of delineating schedule areas where specific land\nuse regulations apply within a",
+"keywords": [
+"HRM",
+"Halifax",
+"Land Use By-Law",
+"Schedule",
+"Development",
+"Planning",
+"Zoning",
+"Regulation",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Land_Use_Schedules/FeatureServer/0"
+},
+{
+"service": "Census_2021_Census_Subdivisions",
+"title": "Census 2021 Census Subdivisions",
+"rows": 5,
+"desc": "According to Statistics Canada, Census Subdivisions are municipalities or an areas deemed to beequivalent to a municipality for statistical reporting purposes. Municipal status is defined by laws ineffect by province or territory.Statistics Canada 2021 Census",
+"keywords": [
+"Statistics Canada",
+"Stats",
+"Census",
+"Subdivision",
+"2021",
+"Halifax",
+"Halifax Open Data",
+"Culture Society"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Census_Subdivisions/FeatureServer/0"
+},
+{
+"service": "phonesPointPleasant",
+"title": "phonesPointPleasant",
+"rows": 5,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/phonesPointPleasant/FeatureServer/0"
+},
+{
+"service": "TaxDesignation",
+"title": "Tax Designation",
+"rows": 5,
+"desc": "Collection of polygon feature class showing urban, suburban and rural areas.&nbsp;See&nbsp;HRM Tax Rates for more information.&nbsp;Metadata&nbsp;",
+"keywords": [
+"Open Data",
+"Halifax",
+"HRM",
+"Halifax Regional Municipality",
+"area",
+"rural",
+"taxation",
+"tax",
+"suburban",
+"revenue",
+"rate",
+"urban",
+"finance",
+"taxes",
+"tax designation",
+"area rate",
+"BID",
+"fire protection",
+"local improvement",
+"recreation",
+"regional transit",
+"resident association",
+"local transit.",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/TaxDesignation/FeatureServer/0"
+},
+{
+"service": "Commercial_General_Rates",
+"title": "Commercial General Rates",
+"rows": 5,
+"desc": "The data was created for taxation purposes.\u00a0See\u00a0HRM Tax Rates\u00a0dataset for more information.Metadata",
+"keywords": [
+"Boundaries",
+"Administrative",
+"Tax",
+"Rate",
+"Area",
+"Commercial Area",
+"Business Parks",
+"Industrial Park"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Commercial_General_Rates/FeatureServer/0"
+},
+{
+"service": "CommunityCouncilBoundaries",
+"title": "Community Council Boundaries",
+"rows": 4,
+"desc": "A geographic area that represents specific municipal districts for the purpose of considering local matters, makerecommendations to Regional Council and provide opportunities for public input.\u00a0 The data was created for mapping purposes to represent Community C",
+"keywords": [
+"Elections",
+"Community Council",
+"Administrative Boundaries",
+"Halifax Open Data",
+"Finance City Government",
+"Boundaries Topo"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/CommunityCouncilBoundaries/FeatureServer/0"
+},
+{
+"service": "Rural_Recreation_Strategy_Areas",
+"title": "Rural Recreation Strategy Areas",
+"rows": 4,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Rural_Recreation_Strategy_Areas/FeatureServer/0"
+},
+{
+"service": "Sackville_Rivers_Floodplain_2017_Study",
+"title": "Sackville Rivers Floodplain 2017 Study",
+"rows": 4,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Sackville_Rivers_Floodplain_2017_Study/FeatureServer/0"
+},
+{
+"service": "Sackville_Rivers_Floodplain_2024_Study_Update",
+"title": "Sackville Rivers Floodplain 2024 Study Update",
+"rows": 4,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Sackville_Rivers_Floodplain_2024_Study_Update/FeatureServer/0"
+},
+{
+"service": "bikePoints",
+"title": "bikePoints",
+"rows": 3,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/bikePoints/FeatureServer/0"
+},
+{
+"service": "Ferry_Routes",
+"title": "Ferry Routes",
+"rows": 2,
+"desc": "Line representation of the ferry routes between the ferry terminals located in Halifax and Dartmouth.This data was created for mapping purposes to represent the ferry routes between Halifax and Dartmouth.\u00a0Metadata",
+"keywords": [
+"Halifax",
+"Dartmouth",
+"Ferry",
+"Route",
+"Transit",
+"Halifax Harbour",
+"Terminal",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Ferry_Routes/FeatureServer/0"
+},
+{
+"service": "Growth_Control_Areas",
+"title": "Growth Control Areas",
+"rows": 2,
+"desc": "This data provides the public transparency on the areas affected by the growth control.Metadata",
+"keywords": [
+"Halifax Regional Municipality",
+"Halifax",
+"HRM",
+"Planning Development",
+"Growth",
+"Control",
+"Boundary",
+"Hammonds Plains",
+"Beaver Bank"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Growth_Control_Areas/FeatureServer/0"
+},
+{
+"service": "Shubenacadie_Lakes_Floodplain_Study",
+"title": "Shubenacadie Lakes Floodplain Study",
+"rows": 2,
+"desc": "This dataset delineates the recommended Shubenacadie Lakes 1:20 year and 1:100 year floodplains. For informing floodplain zoning boundary updates, land use planning, and community knowledge.For informational purposes related to land use planning. Not indicativ",
+"keywords": [
+"Halifax",
+"Dartmouth",
+"Shubenacadie Lakes",
+"Lake Charles",
+"Lake William",
+"Lake Thomas",
+"Fletchers Lake",
+"Flood",
+"Flooding",
+"Floodplain",
+"Planning",
+"Development",
+"Halifax Open Data",
+"Planning & Development",
+"Climate Change",
+"Future Projections"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Shubenacadie_Lakes_Floodplain_Study/FeatureServer/0"
+},
+{
+"service": "Wildfire_Perimeter_Layer",
+"title": "Wildfire Perimeter Layer",
+"rows": 2,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Wildfire_Perimeter_Layer/FeatureServer/0"
+},
+{
+"service": "Planning_Advisory_Committee_Boundaries",
+"title": "Planning Advisory Committee Boundaries",
+"rows": 2,
+"desc": "Polygon representation of areas served by a Planning Advisory Committee as approved by Halifax Regional Municipality Community Councils.A Planning Advisory Committee (PAC) advises a community council on planning strategies, land use by-laws and development app",
+"keywords": [
+"HRM",
+"Halifax",
+"Halifax Regional Municipality",
+"PAC",
+"Planning",
+"Planning Advisory Committee",
+"Development",
+"Halifax Open Data",
+"Finance City Government",
+"Boundaries Topo"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Planning_Advisory_Committee_Boundaries/FeatureServer/0"
+},
+{
+"service": "Airport_Runways",
+"title": "Airport Runways",
+"rows": 2,
+"desc": "Polygon representation of airport runways in Halifax Regional Municipality.This data was created for mapping purposes to represent airport runway boundaries.\u00a0Metadata",
+"keywords": [
+"Halifax",
+"Runway",
+"Airport",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Airport_Runways/FeatureServer/0"
+},
+{
+"service": "RC_Accessory_Parking_Prohibited_Areas",
+"title": "RC Accessory Parking Prohibited Areas",
+"rows": 2,
+"desc": "Polygon representation of accessory parking prohibition areas in the Downtown Halifax zone as defined in the Regional Centre Land Use By-law.To identify areas where accessory surface parking lots are prohibited in the Downtown Halifax zone, as defined in Sched",
+"keywords": [
+"Halifax",
+"HRM",
+"Regional Centre Land Use By\u2010Law",
+"Schedule 49",
+"Accessory parking Prohibitation",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/RC_Accessory_Parking_Prohibited_Areas/FeatureServer/0"
+},
+{
+"service": "Regional_Centre_and_Suburban_Plan_Study_Area",
+"title": "Regional Centre and Suburban Plan Study Area",
+"rows": 2,
+"desc": "The Community Planning program simplifies the planning framework. The current process is for the Suburban Plan Study Area, defined as land within the Urban Service Boundary, but outside the RC, designated Urban Settlement and Harbour in the Regional Plan.The p",
+"keywords": [
+"Halifax Open Data",
+"Boundary Topo",
+"Community",
+"Culture",
+"Planning Development",
+"Regional Plan",
+"Community Plan Area"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Regional_Centre_and_Suburban_Plan_Study_Area/FeatureServer/0"
+},
+{
+"service": "Census_2016_Census_Divisions",
+"title": "Census 2016 Census Divisions",
+"rows": 1,
+"desc": "According to Statistics Canada, Census division (CD) is the general term for provincially legislated areas (counties). Census divisions are intermediate geographic areas between the province/territory level and the municipality (census subdivision).Statistics",
+"keywords": [
+"Statistics Canada",
+"Stats",
+"Census",
+"2016",
+"Division",
+"Halifax"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Census_Divisions/FeatureServer/0"
+},
+{
+"service": "Census_2016_Census_Metropolitan_Areas",
+"title": "Census 2016 Census Metropolitan Areas",
+"rows": 1,
+"desc": "According to Statistics Canada, Census Metropolitan Areas consisting of one or more neighbouring municipalities situated around a core. A census metropolitan area must have a total population of at least 100,000 of which 50,000 or more live in the core.Statist",
+"keywords": [
+"Statistics Canada",
+"Stats",
+"Census",
+"Metropolitan",
+"Area",
+"2016",
+"Halifax"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2016_Census_Metropolitan_Areas/FeatureServer/0"
+},
+{
+"service": "Census_2021_Census_Divisions",
+"title": "Census 2021 Census Divisions",
+"rows": 1,
+"desc": "According to Statistics Canada, Census division (CD) is the general term for provincially legislated areas (counties). Census divisions are intermediate geographic areas between the province/territory level and the municipality (census subdivision).Statistics",
+"keywords": [
+"Statistics Canada",
+"Stats",
+"Census",
+"2021",
+"Division",
+"Halifax",
+"Halifax Open Data",
+"Culture Society"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Census_Divisions/FeatureServer/0"
+},
+{
+"service": "Census_2021_Census_Metropolitan_Areas",
+"title": "Census 2021 Census Metropolitan Areas",
+"rows": 1,
+"desc": "According to Statistics Canada, Census Metropolitan Areas consisting of one or more neighbouring municipalities situated around a core. A census metropolitan area must have a total population of at least 100,000 of which 50,000 or more live in the core.Statist",
+"keywords": [
+"Statistics Canada",
+"Stats",
+"Census",
+"Metropolitan",
+"Area",
+"Halifax",
+"Halifax Open Data",
+"Culture",
+"2021"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Census_2021_Census_Metropolitan_Areas/FeatureServer/0"
+},
+{
+"service": "Drivetime_Pop",
+"title": "Drivetime Pop",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Drivetime_Pop/FeatureServer/0"
+},
+{
+"service": "Map1",
+"title": "Map1",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Map1/FeatureServer/0"
+},
+{
+"service": "noDogsAfter10_PointPleasant",
+"title": "noDogsAfter10 PointPleasant",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/noDogsAfter10_PointPleasant/FeatureServer/0"
+},
+{
+"service": "NSPW_HRM_Service_Exchange_Boundary_1996",
+"title": "NSPW HRM Service Exchange Boundary 1996",
+"rows": 1,
+"desc": "The boundary was created to delineate the boundary between HRM and NSPW service for streets.The boundary represents the general service area for HRM PW but there are some exceptions where streets outside the boundary could be owned by HRM and some inside the c",
+"keywords": [
+"Halifax",
+"HRM",
+"Street",
+"Boundary",
+"Core",
+"Service",
+"Maintenance",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/NSPW_HRM_Service_Exchange_Boundary_1996/FeatureServer/0"
+},
+{
+"service": "NSPW_HRM_Service_Exchange_Boundary_2006_",
+"title": "NSPW HRM Service Exchange Boundary 2006 ",
+"rows": 1,
+"desc": "The HRM and Nova Scotia Public Works (NSPW) service exchange boundary to determine the responsibility for street maintenance. This dataset was formerly called HRM NSTIR Exchange Boundary and renamed on June 29th, 2022.The boundary was created to delineate the",
+"keywords": [
+"Halifax",
+"HRM",
+"Street",
+"Boundary",
+"Core",
+"Service",
+"Maintenance",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/NSPW_HRM_Service_Exchange_Boundary_2006_/FeatureServer/0"
+},
+{
+"service": "NSPW_HRM_Service_Exchange_Boundary_2022",
+"title": "NSPW HRM Service Exchange Boundary 2022",
+"rows": 1,
+"desc": "The HRM and Nova Scotia Pubic Works service exchange boundary to determine the responsibility for street maintenance.The boundary was created to delineate the boundary between HRM and NSPW service for streets.The boundary represents the general service area fo",
+"keywords": [
+"Halifax",
+"HRM",
+"Street",
+"Boundary",
+"Core",
+"Service",
+"Maintenance",
+"Halifax Open Data",
+"Transportation Transit"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/NSPW_HRM_Service_Exchange_Boundary_2022/FeatureServer/0"
+},
+{
+"service": "Rural_Area_for_Short_Term_Rentals",
+"title": "Rural Area for Short Term Rentals",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Rural_Area_for_Short_Term_Rentals/FeatureServer/0"
+},
+{
+"service": "TransportationAreaRates",
+"title": "Transportation Area Rates ",
+"rows": 1,
+"desc": "Polygon boundaries\nrepresenting finance area rates for Regional Transportation charges.\u00a0Note: This dataset was retired in 2022 as the area rate is\u00a0no longer active.\n\nMetadata",
+"keywords": [
+"Open Data",
+"Halifax Regional Municipality",
+"Area",
+"regional",
+"tax",
+"transportation",
+"rate",
+"Nova Scotia",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/TransportationAreaRates/FeatureServer/0"
+},
+{
+"service": "UrbanTransitServiceBoundary",
+"title": "Urban Transit Service Boundary",
+"rows": 1,
+"desc": "The Urban Transit Service Boundary was derived from the Regional Plan (2014) but is also linked to the Moving Forward Together Plan (2016), and the Integrated Mobility Plan (2017).Metadata",
+"keywords": [
+"Transit",
+"Urban",
+"Bus",
+"Halifax Open Data",
+"Planning Development"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/UrbanTransitServiceBoundary/FeatureServer/0"
+},
+{
+"service": "Windsor_Street_Exchange_PubMap_WFL1",
+"title": "Windsor Street Exchange PubMap WFL1",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Windsor_Street_Exchange_PubMap_WFL1/FeatureServer/0"
+},
+{
+"service": "Winter_Parking_Ban",
+"title": "Winter Parking Ban",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Winter_Parking_Ban/FeatureServer/0"
+},
+{
+"service": "FireProtectionAreaRates",
+"title": "Fire Protection Area Rates",
+"rows": 1,
+"desc": "Boundary delineating the parcels within one kilometer of any fire hydrant used for fire protection.\u00a0See\u00a0HRM Tax Rates\u00a0for more information.Metadata",
+"keywords": [
+"Open Data",
+"Halifax Regional Municipality",
+"area",
+"water",
+"tax",
+"rate",
+"protection",
+"Nova Scotia",
+"hydrant",
+"fire",
+"Halifax Open Data",
+"Finance City Government"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/FireProtectionAreaRates/FeatureServer/0"
+},
+{
+"service": "Right_of_Way_Charge_Boundary",
+"title": "Right of Way Charge Boundary",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Right_of_Way_Charge_Boundary/FeatureServer/0"
+},
+{
+"service": "Active_Transportation_Area_Rates",
+"title": "Active Transportation Area Rates",
+"rows": 1,
+"desc": "The data was created for taxation purposes and to show areas where area rates are applied for the building and maintenance of sidewalks and multi-use pathways in rural communities.Metadata",
+"keywords": [
+"Tax Rate",
+"Commercial",
+"Residential",
+"Resource",
+"Area",
+"Active",
+"Transportation"
+],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Active_Transportation_Area_Rates/FeatureServer/0"
+},
+{
+"service": "Development_Street_Closures_Upcoming",
+"title": "Development Street Closures Upcoming",
+"rows": 1,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/Development_Street_Closures_Upcoming/FeatureServer/0"
+},
+{
+"service": "HAF_Opportunty_Sites_30April2024_view",
+"title": "HAF Opportunty Sites 30April2024 view",
+"rows": 0,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/HAF_Opportunty_Sites_30April2024_view/FeatureServer/0"
+},
+{
+"service": "survey123_e1874a707f5f491c93cfd821503f6e69_form",
+"title": "survey123 e1874a707f5f491c93cfd821503f6e69 form",
+"rows": 0,
+"desc": "",
+"keywords": [],
+"url": "https://services2.arcgis.com/11XBiaBYA9Ep0yNJ/arcgis/rest/services/survey123_e1874a707f5f491c93cfd821503f6e69_form/FeatureServer/0"
+}
+],
+"token_required": [
+"Coastal_Flood_Extent_1_in_100_year_2100",
+"Coastal_Flood_Extent_1_in_20_year_2100",
+"Pluvial_Fluvial_Flood_Extent_1_in_100_year_2100",
+"Pluvial_Fluvial_Flood_Extent_1_in_20_year_2100"
+]
+}
